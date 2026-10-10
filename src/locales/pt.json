@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "home": "Início",
+    "collections": "Coleções",
+    "about": "Sobre Nós",
+    "why": "Por Que Nós",
+    "blog": "Blog",
+    "contact": "Contato",
+    "quote": "Solicitar Cotação",
+    "classic": "Sandálias Kolhapuri",
+    "ladies": "Kolhapuri Femininas & Sandálias",
+    "menu": "Menu",
+    "close": "Fechar",
+    "catalogue": "Catálogo",
+    "catalogueAll": "Todos os produtos"
+  },
+  "hero": {
+    "eyebrow": "Artesanato genuíno em Kolhapur, Índia",
+    "title": "Autênticas Sandálias Kolhapuri, Exportadas para o Mundo",
+    "subtitle": "Sandálias artesanais em couro legítimo, tradição secular adaptada para compradores e distribuidores globais.",
+    "cta1": "Ver Coleção",
+    "cta2": "Conversar no WhatsApp",
+    "chip1": "100% Couro Legítimo",
+    "chip2": "Costura Manual Tradicional",
+    "browseCatalogue": "Ver catálogo completo →"
+  },
+  "highlights": {
+    "designs": "Modelos no catálogo",
+    "ranges": "Linhas exclusivas",
+    "sizes": "Tamanhos (UK/IN)",
+    "whatsapp": "Suporte via WhatsApp"
+  },
+  "collections": {
+    "title": "Nossas Coleções",
+    "subtitle": "Duas linhas exclusivas produzidas rigorosamente pelo método tradicional.",
+    "classic": {
+      "title": "Sandálias Kolhapuri Clássicas",
+      "desc": "Sandálias atemporais em couro com anel de dedo no estilo característico de Kolhapur."
+    },
+    "ladies": {
+      "title": "Kolhapuri Femininas & Sandálias Abertas",
+      "desc": "Sandálias em couro leves e elegantes com abertura frontal para uso diário ou ocasiões especiais."
+    },
+    "explore": "Explorar"
+  },
+  "featured": {
+    "title": "Modelos em Destaque",
+    "subtitle": "Uma seleção exclusiva do nosso catálogo de exportação.",
+    "allDesigns": "Todos os Modelos",
+    "priceOnRequest": "Preço sob consulta (B2B)",
+    "enquire": "Consultar no WhatsApp",
+    "viewAll": "Ver Catálogo Completo",
+    "bulkInquiry": "Procura pedidos por atacado, marca própria ou modelos sob medida?"
+  },
+  "about": {
+    "title": "Raízes em Kolhapur. Feitas para o Mundo.",
+    "text": "A Local Exim leva o calçado tradicional em couro de Kolhapur a compradores internacionais. Trabalhamos diretamente com mestres artesãos locais para garantir autenticidade e padrão superior.",
+    "p1": "Couro artesanal legítimo",
+    "p2": "Designs de herança tradicional",
+    "p3": "Fornecimento direto dos artesãos"
+  },
+  "why": {
+    "title": "Por Que Escolher a Local Exim",
+    "i1t": "Ofício Autêntico",
+    "i1d": "Modelos tradicionais confeccionados minuciosamente por artesãos especializados.",
+    "i2t": "Amplo Portfólio",
+    "i2d": "Modelos masculinos e femininos em ampla variedade de tamanhos e acabamentos.",
+    "i3t": "Embalagem Cuidadosa",
+    "i3d": "Cada par é embalado com proteção reforçada para transporte internacional seguro.",
+    "i4t": "Comunicação Eficiente",
+    "i4d": "Atendimento ágil pelo WhatsApp e e-mail no seu idioma de preferência."
+  },
+  "how": {
+    "title": "Como Comprar",
+    "s1t": "Envie sua Consulta",
+    "s1d": "Informe os modelos e volumes desejados para seu negócio.",
+    "s2t": "Receba a Cotação",
+    "s2d": "Apresentamos tabela de preços de atacado e opções de frete internacional.",
+    "s3t": "Confirme o Pedido",
+    "s3d": "Definição de especificações, cronograma de produção e termos de pagamento.",
+    "s4t": "Despacho & Envio",
+    "s4d": "Sua remessa é inspecionada, embalada e enviada pontualmente ao destino."
+  },
+  "contact": {
+    "title": "Fale Conosco",
+    "subtitle": "Envie sua solicitação e nossa equipe comercial retornará prontamente.",
+    "name": "Seu nome",
+    "company": "Empresa (opcional)",
+    "country": "País",
+    "email": "E-mail comercial",
+    "message": "Detalhes do seu pedido ou necessidade de calçados...",
+    "send": "Enviar Mensagem",
+    "sending": "Enviando...",
+    "sent": "Obrigado! Entraremos em contato com você muito em breve.",
+    "error": "Erro ao enviar formulário. Fale conosco diretamente pelo WhatsApp ou e-mail.",
+    "sendAnother": "Enviar Outra Consulta"
+  },
+  "footer": {
+    "tagline": "Comércio Global · Raízes Locais",
+    "desc": "Calçados artesanais em couro de Kolhapur, conectando uma herança secular indiana a compradores internacionais com qualidade impecável.",
+    "rights": "Todos os direitos reservados.",
+    "quick": "Links Rápidos",
+    "reach": "Contato",
+    "address": "Kolhapur, Maharashtra, Índia",
+    "madeWithPride": "Fabricado com orgulho em Kolhapur, Índia",
+    "company": "Empresa",
+    "productsHeading": "Catálogo",
+    "getInTouch": "Entre em Contato",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "location": "Localização do Escritório",
+    "backToTop": "Voltar ao topo"
+  },
+  "whatsapp": {
+    "floatingAria": "Conversar com a equipe da Local Exim pelo WhatsApp",
+    "inquiryPrefix": "Olá Local Exim, gostaria de consultar sobre"
+  },
+  "testimonials": {
+    "title": "Depoimentos de Clientes",
+    "subtitle": "O que parceiros internacionais dizem sobre trabalhar conosco"
+  },
+  "blog": {
+    "title": "Artigos e Notícias de Comércio",
+    "subtitle": "Histórias do artesanato em couro e guias práticos de importação de calçados.",
+    "empty": "Artigos em breve. Estamos preparando guias completos de exportação.",
+    "backHome": "Voltar ao Início",
+    "readMore": "Ler Artigo",
+    "spotlightTag": "Destaque do Produto",
+    "spotlightSubtitle": "Uma visão detalhada de alguns modelos do nosso catálogo. Artigos completos em breve."
+  },
+  "catalogue": {
+    "title": "Catálogo Completo",
+    "subtitle": "Explore toda a nossa coleção. Toque em qualquer modelo para consultar pelo WhatsApp.",
+    "searchPlaceholder": "Pesquisar modelos…",
+    "filterAll": "Todos",
+    "cat": {
+      "mensKolhapuri": "Kolhapuri Masculino",
+      "mensKapshi": "Kapshi & Mojdi Masculino",
+      "ladies": "Kolhapuri e Sandálias Femininas"
+    },
+    "priceNote": "Preços de atacado e exportação sob consulta",
+    "enquire": "Consultar no WhatsApp",
+    "loadMore": "Carregar mais",
+    "empty": "Nenhum modelo encontrado para sua pesquisa.",
+    "photoComingSoon": "Atualização de foto em andamento"
+  }
+}

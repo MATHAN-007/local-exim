@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "collections": "Kollektionen",
+    "about": "Über Uns",
+    "why": "Vorteile",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "quote": "Angebot anfordern",
+    "classic": "Kolhapuri Sandalen",
+    "ladies": "Damen Kolhapuri & Sandalen",
+    "menu": "Menü",
+    "close": "Schließen",
+    "catalogue": "Katalog",
+    "catalogueAll": "Alle Produkte"
+  },
+  "hero": {
+    "eyebrow": "Handgefertigt in Kolhapur, Indien",
+    "title": "Authentische Kolhapuri Sandalen, Weltweit Geliefert",
+    "subtitle": "Handgefertigte Ledersandalen und Zehenstegschuhe in traditionsreicher Handwerkskunst für gewerbliche Einkäufer weltweit.",
+    "cta1": "Kollektion ansehen",
+    "cta2": "Auf WhatsApp chatten",
+    "chip1": "100% Echtes Leder",
+    "chip2": "Handgenähte Qualität",
+    "browseCatalogue": "Gesamten Katalog ansehen →"
+  },
+  "highlights": {
+    "designs": "Katalog-Designs",
+    "ranges": "Modellreihen",
+    "sizes": "Größen (UK/IN)",
+    "whatsapp": "WhatsApp-Support"
+  },
+  "collections": {
+    "title": "Unsere Kollektionen",
+    "subtitle": "Zwei charakteristische Kollektionen nach überlieferter Handwerkstradition.",
+    "classic": {
+      "title": "Klassische Kolhapuri Sandalen",
+      "desc": "Zeitlose Zehenring-Ledersandalen im originalen Kolhapuri-Stil."
+    },
+    "ladies": {
+      "title": "Damen Kolhapuri & Offene Sandalen",
+      "desc": "Leichte, elegante offene Ledersandalen für Alltag und festliche Anlässe."
+    },
+    "explore": "Entdecken"
+  },
+  "featured": {
+    "title": "Ausgewählte Designs",
+    "subtitle": "Eine erlesene Auswahl aus unserem Exportkatalog.",
+    "allDesigns": "Alle Designs",
+    "priceOnRequest": "Preis auf Anfrage",
+    "enquire": "Per WhatsApp anfragen",
+    "viewAll": "Gesamten Katalog ansehen",
+    "bulkInquiry": "Sie suchen maßgefertigte Designs, Private-Label oder Großbestellungen?"
+  },
+  "about": {
+    "title": "Verwurzelt in Kolhapur. Gefertigt für die Welt.",
+    "text": "Local Exim bringt traditionelle Kolhapuri-Lederschuhe zu Händlern weltweit. Wir arbeiten unmittelbar mit lokalen Meistern zusammen, um höchste Qualität und Authentizität zu gewährleisten.",
+    "p1": "Handgefertigtes Leder",
+    "p2": "Traditionsreiche Entwürfe",
+    "p3": "Direktbezug von Kunsthandwerkern"
+  },
+  "why": {
+    "title": "Warum Local Exim",
+    "i1t": "Authentisches Handwerk",
+    "i1d": "Klassische Kolhapuri-Designs, meisterhaft gefertigt von erfahrenen Handwerkern.",
+    "i2t": "Vielseitiges Sortiment",
+    "i2d": "Herren- und Damenmodelle in zahlreichen Größen und Farbvarianten.",
+    "i3t": "Sorgfältige Verpackung",
+    "i3d": "Jedes Paar wird transportsicher für den weltweiten Export verpackt.",
+    "i4t": "Direkte Kommunikation",
+    "i4d": "Schnelle Antworten via WhatsApp und E-Mail in Ihrer Sprache."
+  },
+  "how": {
+    "title": "Bestellablauf",
+    "s1t": "Anfrage senden",
+    "s1d": "Teilen Sie uns die gewünschten Modelle und Stückzahlen mit.",
+    "s2t": "Angebot erhalten",
+    "s2d": "Wir erstellen Ihr B2B-Angebot inklusive Frachtoptionen.",
+    "s3t": "Bestellung bestätigen",
+    "s3d": "Abstimmung der Auftragsdetails und Zahlungskonditionen.",
+    "s4t": "Versand & Lieferung",
+    "s4d": "Ihre Sendung wird geprüft, verpackt und zuverlässig versandt."
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Senden Sie uns Ihre Anfrage – wir melden uns umgehend bei Ihnen.",
+    "name": "Ihr Name",
+    "company": "Unternehmen (optional)",
+    "country": "Land",
+    "email": "E-Mail-Adresse",
+    "message": "Ihre Nachricht oder Stückzahlbedarf",
+    "send": "Anfrage absenden",
+    "sending": "Wird gesendet...",
+    "sent": "Vielen Dank! Wir setzen uns schnellstmöglich mit Ihnen in Verbindung.",
+    "error": "Fehler beim Senden. Bitte kontaktieren Sie uns direkt per WhatsApp oder E-Mail.",
+    "sendAnother": "Weitere Anfrage senden"
+  },
+  "footer": {
+    "tagline": "Globaler Handel · Lokale Wurzeln",
+    "desc": "Handgefertigte Kolhapuri-Lederschuhe, die jahrhundertealtes indisches Kunsthandwerk in kompromissloser Qualität zu Händlern weltweit bringen.",
+    "rights": "Alle Rechte vorbehalten.",
+    "quick": "Direktlinks",
+    "reach": "Kontakt",
+    "address": "Kolhapur, Maharashtra, Indien",
+    "madeWithPride": "Mit Stolz gefertigt in Kolhapur, Indien",
+    "company": "Unternehmen",
+    "productsHeading": "Katalog",
+    "getInTouch": "Kontakt",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "location": "Bürostandort",
+    "backToTop": "Nach oben"
+  },
+  "whatsapp": {
+    "floatingAria": "WhatsApp-Chat mit dem Local Exim Team starten",
+    "inquiryPrefix": "Hallo Local Exim, ich interessiere mich für"
+  },
+  "testimonials": {
+    "title": "Kundenstimmen",
+    "subtitle": "Erfahrungsberichte internationaler Partner über unsere Zusammenarbeit"
+  },
+  "blog": {
+    "title": "Fachbeiträge & Export-Journal",
+    "subtitle": "Branchenwissen, Lederhandwerkskunst und Praxisleitfäden für den internationalen Schuhimport.",
+    "empty": "Artikel folgen in Kürze. Wir bereiten umfassende Export- und Handwerksleitfäden vor.",
+    "backHome": "Zurück zur Startseite",
+    "readMore": "Artikel lesen",
+    "spotlightTag": "Produkt im Fokus",
+    "spotlightSubtitle": "Ein genauerer Blick auf ausgewählte Designs aus unserem Katalog. Vollständige Artikel folgen."
+  },
+  "catalogue": {
+    "title": "Gesamter Katalog",
+    "subtitle": "Entdecken Sie das vollständige Sortiment. Kontaktieren Sie uns per WhatsApp für jedes Design.",
+    "searchPlaceholder": "Modelle suchen…",
+    "filterAll": "Alle",
+    "cat": {
+      "mensKolhapuri": "Herren-Kolhapuri",
+      "mensKapshi": "Herren-Kapshi & Mojdi",
+      "ladies": "Damen-Kolhapuri & Sandalen"
+    },
+    "priceNote": "Großhandels- und Exportpreise auf Anfrage",
+    "enquire": "Per WhatsApp anfragen",
+    "loadMore": "Mehr laden",
+    "empty": "Keine Modelle entsprechen Ihrer Suche.",
+    "photoComingSoon": "Fotoaktualisierung läuft"
+  }
+}

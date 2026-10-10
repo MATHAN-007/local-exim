@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "collections": "Colecciones",
+    "about": "Nosotros",
+    "why": "¿Por qué elegirnos?",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "quote": "Cotizar",
+    "classic": "Sandalias Kolhapuri",
+    "ladies": "Kolhapuri y Sandalias para Mujer",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "catalogue": "Catálogo",
+    "catalogueAll": "Todos los productos"
+  },
+  "hero": {
+    "eyebrow": "Elaboradas a mano en Kolhapur, India",
+    "title": "Auténticas Sandalias Kolhapuri, Exportadas al Mundo",
+    "subtitle": "Sandalias artesanales de cuero genuino elaboradas con maestría tradicional para compradores y distribuidores globales.",
+    "cta1": "Ver Colección",
+    "cta2": "Chatear por WhatsApp",
+    "chip1": "100% Cuero Genuino",
+    "chip2": "Artesanía Cosida a Mano",
+    "browseCatalogue": "Ver catálogo completo →"
+  },
+  "highlights": {
+    "designs": "Diseños en catálogo",
+    "ranges": "Líneas de producto",
+    "sizes": "Tallas (UK/IN)",
+    "whatsapp": "Atención por WhatsApp"
+  },
+  "collections": {
+    "title": "Nuestras Colecciones",
+    "subtitle": "Dos líneas distintivas confeccionadas siguiendo el método tradicional.",
+    "classic": {
+      "title": "Sandalias Kolhapuri Clásicas",
+      "desc": "Clásicas sandalias de cuero con anillo para el dedo pulgar en el estilo tradicional de Kolhapur."
+    },
+    "ladies": {
+      "title": "Sandalias Abiertas para Mujer",
+      "desc": "Sandalias de cuero elegantes y ligeras con punta abierta para uso diario o festivo."
+    },
+    "explore": "Explorar"
+  },
+  "featured": {
+    "title": "Diseños Destacados",
+    "subtitle": "Una selección exclusiva de nuestro catálogo de exportación.",
+    "allDesigns": "Todos los Diseños",
+    "priceOnRequest": "Precio a solicitud",
+    "enquire": "Consultar por WhatsApp",
+    "viewAll": "Ver Catálogo Completo",
+    "bulkInquiry": "¿Busca diseños personalizados, marca blanca o pedidos por volumen?"
+  },
+  "about": {
+    "title": "Arraigados en Kolhapur. Hechos para el Mundo.",
+    "text": "Local Exim conecta el calzado artesanal de cuero de Kolhapur con importadores de todo el mundo. Trabajamos directamente con maestros artesanos locales para garantizar autenticidad inigualable.",
+    "p1": "Cuero artesanal legítimo",
+    "p2": "Diseños tradicionales",
+    "p3": "Suministro directo de artesanos"
+  },
+  "why": {
+    "title": "¿Por qué elegir Local Exim?",
+    "i1t": "Oficio Auténtico",
+    "i1d": "Diseños tradicionales de Kolhapuri creados por artesanos expertos.",
+    "i2t": "Amplia Variedad",
+    "i2d": "Estilos para dama y caballero en múltiples tallas y acabados.",
+    "i3t": "Embalaje Cuidadoso",
+    "i3d": "Cada par se embala minuciosamente para un transporte internacional seguro.",
+    "i4t": "Comunicación Fluida",
+    "i4d": "Respuestas rápidas vía WhatsApp y correo en su idioma."
+  },
+  "how": {
+    "title": "Cómo Comprar",
+    "s1t": "Envíe su Consulta",
+    "s1d": "Indíquenos los modelos y volúmenes requeridos.",
+    "s2t": "Reciba una Cotización",
+    "s2d": "Le enviaremos tarifas B2B y opciones de flete internacional.",
+    "s3t": "Confirme el Pedido",
+    "s3d": "Acordamos detalles técnicos y condiciones de pago.",
+    "s4t": "Despacho y Envío",
+    "s4d": "Su pedido es inspeccionado, empacado y enviado puntualmente."
+  },
+  "contact": {
+    "title": "Hablemos de Negocios",
+    "subtitle": "Envíe su consulta y nuestro equipo le responderá a la brevedad.",
+    "name": "Su nombre",
+    "company": "Empresa (opcional)",
+    "country": "País",
+    "email": "Correo electrónico",
+    "message": "Detalles de su pedido o requerimiento",
+    "send": "Enviar Consulta",
+    "sending": "Enviando...",
+    "sent": "¡Gracias por contactarnos! Responderemos muy pronto.",
+    "error": "Error al enviar el formulario. Contáctenos directamente por WhatsApp o correo.",
+    "sendAnother": "Enviar Otra Consulta"
+  },
+  "footer": {
+    "tagline": "Comercio Global · Raíces Locales",
+    "desc": "Calzado artesanal de cuero de Kolhapur, llevando un legado secular a compradores de todo el mundo con calidad insuperable.",
+    "rights": "Todos los derechos reservados.",
+    "quick": "Enlaces Rápidos",
+    "reach": "Contacto",
+    "address": "Kolhapur, Maharashtra, India",
+    "madeWithPride": "Elaborado con orgullo en Kolhapur, India",
+    "company": "Empresa",
+    "productsHeading": "Catálogo",
+    "getInTouch": "Contáctenos",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "location": "Ubicación de oficina",
+    "backToTop": "Volver arriba"
+  },
+  "whatsapp": {
+    "floatingAria": "Chatear por WhatsApp con el equipo de Local Exim",
+    "inquiryPrefix": "Hola Local Exim, quisiera consultar sobre"
+  },
+  "testimonials": {
+    "title": "Opiniones de Clientes",
+    "subtitle": "Experiencias de importadores internacionales al colaborar con nosotros"
+  },
+  "blog": {
+    "title": "Artículos y Actualidad del Comercio",
+    "subtitle": "Conocimiento de la industria, historias del cuero artesanal y guías de importación de calzado.",
+    "empty": "Artículos disponibles muy pronto. Estamos preparando guías completas de exportación.",
+    "backHome": "Volver al Inicio",
+    "readMore": "Leer Artículo",
+    "spotlightTag": "Producto Destacado",
+    "spotlightSubtitle": "Una mirada más cercana a diseños selectos de nuestro catálogo. Artículos completos pronto."
+  },
+  "catalogue": {
+    "title": "Catálogo Completo",
+    "subtitle": "Explore nuestra colección completa. Toque cualquier diseño para consultar por WhatsApp.",
+    "searchPlaceholder": "Buscar diseños…",
+    "filterAll": "Todos",
+    "cat": {
+      "mensKolhapuri": "Kolhapuri para Hombre",
+      "mensKapshi": "Kapshi y Mojdi para Hombre",
+      "ladies": "Kolhapuri y Sandalias para Mujer"
+    },
+    "priceNote": "Precios al por mayor y exportación a solicitud",
+    "enquire": "Consultar por WhatsApp",
+    "loadMore": "Cargar más",
+    "empty": "No se encontraron diseños que coincidan con su búsqueda.",
+    "photoComingSoon": "Actualización de foto en curso"
+  }
+}

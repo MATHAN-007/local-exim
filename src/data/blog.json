@@ -1,0 +1,47 @@
+{
+  "_note": "Placeholder 'Product Spotlight' cards for the Blog page until real articles exist. Swap to real posts later by adding date/body/slug fields to this same file -- no component changes needed.",
+  "spotlights": [
+    {
+      "id": "sankeshwari-kolhapuri",
+      "productId": "sankeshwari-kolhapuri",
+      "title": "Sankeshwari Kolhapuri",
+      "image": "/catalogue/sankeshwari-kolhapuri.webp",
+      "blurb": "A classic toe-ring silhouette, hand-stitched in traditional Kolhapuri style."
+    },
+    {
+      "id": "export-kolhapuri",
+      "productId": "export-kolhapuri",
+      "title": "Export Kolhapuri",
+      "image": "/catalogue/export-kolhapuri.webp",
+      "blurb": "Built for the export range, finished for everyday comfort."
+    },
+    {
+      "id": "amdar-kapshi",
+      "productId": "amdar-kapshi",
+      "title": "Amdar Kapshi",
+      "image": "/catalogue/amdar-kapshi.webp",
+      "blurb": "An open-toe kapshi design with a relaxed, woven strap."
+    },
+    {
+      "id": "kapshi-ladies-kolhapuri",
+      "productId": "kapshi-ladies-kolhapuri",
+      "title": "Kapshi Ladies Kolhapuri",
+      "image": "/catalogue/kapshi-ladies-kolhapuri.webp",
+      "blurb": "A lighter, open-toe take on the Kolhapuri for everyday wear."
+    },
+    {
+      "id": "gatto-kolhapuri-ladies",
+      "productId": "gatto-kolhapuri-ladies",
+      "title": "Gatto Kolhapuri Ladies",
+      "image": "/catalogue/gatto-kolhapuri-ladies.webp",
+      "blurb": "Detailed strap-work for a dressier Kolhapuri look."
+    },
+    {
+      "id": "ladies-antique-kolhapuri",
+      "productId": "ladies-antique-kolhapuri",
+      "title": "Ladies Antique Kolhapuri",
+      "image": "/catalogue/ladies-antique-kolhapuri.webp",
+      "blurb": "An antique-finish leather pair with a softer, worn-in tone."
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "home": "首页",
+    "collections": "产品系列",
+    "about": "关于我们",
+    "why": "为何选择我们",
+    "blog": "博客",
+    "contact": "联系我们",
+    "quote": "获取报价",
+    "classic": "经典戈尔哈布尔凉鞋",
+    "ladies": "女士系列与露趾凉鞋",
+    "menu": "菜单",
+    "close": "关闭",
+    "catalogue": "产品目录",
+    "catalogueAll": "全部产品"
+  },
+  "hero": {
+    "eyebrow": "印度戈尔哈布尔纯手工精制",
+    "title": "正宗印度戈尔哈布尔手工皮革凉鞋，全球直达",
+    "subtitle": "世代传承的手工皮革凉鞋与露趾鞋履，以传统精湛工艺服务全球采购商与品牌商。",
+    "cta1": "浏览系列",
+    "cta2": "WhatsApp 咨询",
+    "chip1": "100% 天然真皮",
+    "chip2": "传统手工缝制",
+    "browseCatalogue": "浏览完整产品目录 →"
+  },
+  "highlights": {
+    "designs": "产品目录款式",
+    "ranges": "多元系列",
+    "sizes": "尺码范围 (UK/IN)",
+    "whatsapp": "全天候 WhatsApp 支持"
+  },
+  "collections": {
+    "title": "精选产品系列",
+    "subtitle": "两大标志性系列，严格遵循传统手工技艺打造。",
+    "classic": {
+      "title": "经典戈尔哈布尔凉鞋",
+      "desc": "传统套趾皮革凉鞋，体现戈尔哈布尔数百年悠久制鞋传统。"
+    },
+    "ladies": {
+      "title": "女士戈尔哈布尔与露趾凉鞋",
+      "desc": "轻巧雅致的真皮露趾凉鞋，适合日常穿着与正式节日场合。"
+    },
+    "explore": "探索系列"
+  },
+  "featured": {
+    "title": "精选款式",
+    "subtitle": "来自我们出口产品目录的典范之作。",
+    "allDesigns": "全部款式",
+    "priceOnRequest": "按需报价 (B2B)",
+    "enquire": "WhatsApp 询价",
+    "viewAll": "查看完整产品目录",
+    "bulkInquiry": "寻找大宗批发、定制款式或贴牌加工 (OEM)？"
+  },
+  "about": {
+    "title": "植根戈尔哈布尔，服务全球贸易。",
+    "text": "Local Exim 致力于将印度正宗传统戈尔哈布尔皮革鞋履带给世界各地的采购商。我们直接与技艺娴熟的当地手工艺人合作，确保每一双鞋履都保留其原始而独特的匠心品质。",
+    "p1": "纯手工天然真皮制作",
+    "p2": "历史悠久的传统设计",
+    "p3": "手工艺人直源采购"
+  },
+  "why": {
+    "title": "为何选择 Local Exim",
+    "i1t": "正宗传统工艺",
+    "i1d": "由资深手工艺大师手工打造的原汁原味戈尔哈布尔款式。",
+    "i2t": "丰富的产品线",
+    "i2d": "涵盖男士与女士款式，提供多样化的尺码与配色选择。",
+    "i3t": "严密专业包装",
+    "i3d": "每双鞋履均经过精心独立包装，确保长途国际运输完好无损。",
+    "i4t": "高效顺畅沟通",
+    "i4d": "通过 WhatsApp 和电子邮件快速响应，提供多语言贴心支持。"
+  },
+  "how": {
+    "title": "订购流程",
+    "s1t": "发送询盘",
+    "s1d": "告知我们您所需的款式编号与预估采购数量。",
+    "s2t": "获取正式报价",
+    "s2d": "我们将提供具有竞争力的外贸价格与货运物流方案。",
+    "s3t": "确认订单细节",
+    "s3d": "双方确定生产规格、交期及付款方式与条款。",
+    "s4t": "检验包装与发运",
+    "s4d": "严格质检后打包出运，快速发往您的全球目的港。"
+  },
+  "contact": {
+    "title": "与我们洽谈",
+    "subtitle": "提交您的采购意向，我们的出口外贸团队将第一时间与您联系。",
+    "name": "您的姓名",
+    "company": "公司名称 (选填)",
+    "country": "所在国家/地区",
+    "email": "商务邮箱",
+    "message": "请说明您所需的产品款式或订购数量...",
+    "send": "提交询盘",
+    "sending": "正在发送...",
+    "sent": "感谢您的垂询！我们将尽快回复您的邮件。",
+    "error": "提交失败，请直接通过 WhatsApp 或电子邮件联系我们。",
+    "sendAnother": "发送另一条询盘"
+  },
+  "footer": {
+    "tagline": "全球贸易 · 本土根基",
+    "desc": "手工制作的印度传统戈尔哈布尔真皮鞋履，以卓越品质为全球买家传递百年匠心工艺。",
+    "rights": "版权所有。",
+    "quick": "快捷链接",
+    "reach": "联系方式",
+    "address": "印度马哈拉施特拉邦戈尔哈布尔",
+    "madeWithPride": "源自印度戈尔哈布尔的骄傲之作",
+    "company": "公司",
+    "productsHeading": "产品目录",
+    "getInTouch": "联系我们",
+    "email": "电子邮件",
+    "phone": "电话",
+    "location": "办公地址",
+    "backToTop": "返回顶部"
+  },
+  "whatsapp": {
+    "floatingAria": "通过 WhatsApp 联系 Local Exim 外贸团队",
+    "inquiryPrefix": "您好 Local Exim，我想咨询有关"
+  },
+  "testimonials": {
+    "title": "客户评价",
+    "subtitle": "国际合作伙伴对与我们合作的真实反馈"
+  },
+  "blog": {
+    "title": "行业资讯与外贸专栏",
+    "subtitle": "制鞋皮革工艺故事、手工传承与国际鞋履外贸指南。",
+    "empty": "文章即将上线，我们正在整理详尽的外贸出口指南与匠人故事。",
+    "backHome": "返回首页",
+    "readMore": "阅读全文",
+    "spotlightTag": "精选款式",
+    "spotlightSubtitle": "精选目录中特色款式的详细介绍。完整深度文章即将推出。"
+  },
+  "catalogue": {
+    "title": "完整产品目录",
+    "subtitle": "浏览完整系列。点击任意款式即可通过 WhatsApp 洽询。",
+    "searchPlaceholder": "搜索款式…",
+    "filterAll": "全部",
+    "cat": {
+      "mensKolhapuri": "男士科尔哈普里凉鞋",
+      "mensKapshi": "男士卡普什与莫吉迪凉鞋",
+      "ladies": "女士科尔哈普里与露趾凉鞋"
+    },
+    "priceNote": "批量及出口价格按需提供",
+    "enquire": "通过 WhatsApp 洽询",
+    "loadMore": "加载更多",
+    "empty": "未找到符合您搜索条件的款式。",
+    "photoComingSoon": "图片更新中"
+  }
+}

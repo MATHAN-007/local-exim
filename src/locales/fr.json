@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "collections": "Collections",
+    "about": "À Propos",
+    "why": "Pourquoi Nous",
+    "blog": "Blog",
+    "contact": "Contact",
+    "quote": "Devis",
+    "classic": "Sandales Kolhapuri",
+    "ladies": "Kolhapuri & Sandales Femme",
+    "menu": "Menu",
+    "close": "Fermer",
+    "catalogue": "Catalogue",
+    "catalogueAll": "Tous les produits"
+  },
+  "hero": {
+    "eyebrow": "Fabriqué à la main à Kolhapur, Inde",
+    "title": "Authentiques Sandales Kolhapuri, Exportées dans le Monde",
+    "subtitle": "Sandales artisanales en cuir véritable, savoir-faire séculaire au service des professionnels et acheteurs internationaux.",
+    "cta1": "Découvrir la Collection",
+    "cta2": "Discuter sur WhatsApp",
+    "chip1": "100% Cuir Véritable",
+    "chip2": "Cousu Main Traditionnel",
+    "browseCatalogue": "Parcourir le catalogue complet →"
+  },
+  "highlights": {
+    "designs": "Modèles au catalogue",
+    "ranges": "Gammes distinctes",
+    "sizes": "Tailles (UK/IN)",
+    "whatsapp": "Assistance WhatsApp"
+  },
+  "collections": {
+    "title": "Nos Collections",
+    "subtitle": "Deux lignes emblématiques conçues selon les traditions ancestrales.",
+    "classic": {
+      "title": "Sandales Kolhapuri Classiques",
+      "desc": "Sandales intemporelles en cuir à boucle d'orteil selon la pure tradition de Kolhapur."
+    },
+    "ladies": {
+      "title": "Kolhapuri & Sandales pour Femmes",
+      "desc": "Sandales en cuir légères et raffinées, à bout ouvert, adaptées au quotidien comme aux célébrations."
+    },
+    "explore": "Explorer"
+  },
+  "featured": {
+    "title": "Modèles Phares",
+    "subtitle": "Une sélection soignée de notre catalogue d'exportation.",
+    "allDesigns": "Tous les Modèles",
+    "priceOnRequest": "Prix sur demande",
+    "enquire": "Demander via WhatsApp",
+    "viewAll": "Consulter le Catalogue Complet",
+    "bulkInquiry": "Vous recherchez des commandes volumineuses ou des créations sur-mesure ?"
+  },
+  "about": {
+    "title": "Enracinés à Kolhapur. Façonnés pour le Monde.",
+    "text": "Local Exim connecte le soulier traditionnel en cuir de Kolhapur aux acheteurs du monde entier. Nous collaborons directement avec des maîtres artisans locaux pour préserver l'authenticité de chaque pièce.",
+    "p1": "Cuir façonné à la main",
+    "p2": "Dessins patrimoniaux",
+    "p3": "Approvisionnement direct artisans"
+  },
+  "why": {
+    "title": "Pourquoi Choisir Local Exim",
+    "i1t": "Artisanat Authentique",
+    "i1d": "Lignes traditionnelles confectionnées avec minutie par des artisans chevronnés.",
+    "i2t": "Gamme Diversifiée",
+    "i2d": "Modèles hommes et femmes dans un large éventail de pointures.",
+    "i3t": "Emballage Soigné",
+    "i3d": "Chaque paire est soigneusement protégée pour le transport international.",
+    "i4t": "Échange Fluide",
+    "i4d": "Réponses réactives par WhatsApp et email dans votre langue."
+  },
+  "how": {
+    "title": "Comment Commander",
+    "s1t": "Envoyez votre Demande",
+    "s1d": "Précisez les modèles et volumes souhaités pour votre commande.",
+    "s2t": "Recevez un Devis",
+    "s2d": "Nous vous transmettons notre grille tarifaire et les options d'expédition.",
+    "s3t": "Validez la Commande",
+    "s3d": "Accord sur les spécifications et les conditions de paiement.",
+    "s4t": "Expédition Internationale",
+    "s4d": "Votre commande est soigneusement conditionnée puis expédiée."
+  },
+  "contact": {
+    "title": "Échangeons Ensemble",
+    "subtitle": "Transmettez votre demande et notre équipe vous recontactera promptement.",
+    "name": "Votre nom",
+    "company": "Entreprise (optionnel)",
+    "country": "Pays",
+    "email": "Email professionnel",
+    "message": "Détails de votre besoin ou volume souhaité",
+    "send": "Envoyer la Demande",
+    "sending": "Envoi en cours...",
+    "sent": "Merci ! Notre équipe vous répondra très prochainement.",
+    "error": "Échec de l'envoi. Veuillez nous contacter directement via WhatsApp ou email.",
+    "sendAnother": "Envoyer une Autre Demande"
+  },
+  "footer": {
+    "tagline": "Commerce Mondial · Racines Locales",
+    "desc": "Sandales en cuir de Kolhapur confectionnées à la main, offrant un savoir-faire séculaire aux acheteurs internationaux avec une qualité irréprochable.",
+    "rights": "Tous droits réservés.",
+    "quick": "Liens Rapides",
+    "reach": "Contact",
+    "address": "Kolhapur, Maharashtra, Inde",
+    "madeWithPride": "Fabriqué avec fierté à Kolhapur, Inde",
+    "company": "Entreprise",
+    "productsHeading": "Catalogue",
+    "getInTouch": "Contactez-nous",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "location": "Adresse du bureau",
+    "backToTop": "Retour en haut"
+  },
+  "whatsapp": {
+    "floatingAria": "Discuter avec l'équipe Local Exim sur WhatsApp",
+    "inquiryPrefix": "Bonjour Local Exim, je souhaite me renseigner au sujet de"
+  },
+  "testimonials": {
+    "title": "Témoignages Clients",
+    "subtitle": "Ce que nos partenaires internationaux disent de leur collaboration avec nous"
+  },
+  "blog": {
+    "title": "Articles et Actualités du Commerce",
+    "subtitle": "Connaissance du secteur, savoir-faire du cuir artisanal et guides d'importation de chaussures.",
+    "empty": "Articles à paraître très prochainement. Nous préparons des guides d'exportation complets.",
+    "backHome": "Retour à l'Accueil",
+    "readMore": "Lire l'Article",
+    "spotlightTag": "Zoom Produit",
+    "spotlightSubtitle": "Un aperçu détaillé de modèles phares de notre catalogue. Articles complets bientôt."
+  },
+  "catalogue": {
+    "title": "Catalogue Complet",
+    "subtitle": "Découvrez la collection complète. Cliquez sur un modèle pour échanger sur WhatsApp.",
+    "searchPlaceholder": "Rechercher des modèles…",
+    "filterAll": "Tous",
+    "cat": {
+      "mensKolhapuri": "Kolhapuri Homme",
+      "mensKapshi": "Kapshi & Mojdi Homme",
+      "ladies": "Kolhapuri & Sandales Femme"
+    },
+    "priceNote": "Tarifs de gros et export sur demande",
+    "enquire": "Demander sur WhatsApp",
+    "loadMore": "Charger plus",
+    "empty": "Aucun modèle ne correspond à votre recherche.",
+    "photoComingSoon": "Mise à jour photo en cours"
+  }
+}

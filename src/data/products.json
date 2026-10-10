@@ -1,0 +1,17 @@
+{
+  "_note": "Home-page featured products, taken from the WhatsApp catalogue (+91 70384 05530). Images are 480px placeholders upscaled from 240px thumbnails: replace each file in /public/products/ with the original photo (same filename) when available. `priceInr` is the catalogue retail price, kept for reference only; it is NOT shown on the site (siteConfig.showPrices = false).",
+  "collections": [
+    { "id": "classic", "nameKey": "collections.classic.title", "descKey": "collections.classic.desc", "image": "/products/sankeshwari-kolhapuri.webp" },
+    { "id": "ladies", "nameKey": "collections.ladies.title", "descKey": "collections.ladies.desc", "image": "/products/ladies-bingri-kolhapuri.webp" }
+  ],
+  "products": [
+    { "id": "sankeshwari-kolhapuri", "collection": "classic", "name": "Sankeshwari Kolhapuri", "image": "/products/sankeshwari-kolhapuri.webp", "priceInr": 999, "catalogueName": "Sankeshwari kolhapuri" },
+    { "id": "aavaj-wali-kolhapuri", "collection": "classic", "name": "Aavaj Wali Kolhapuri", "image": "/products/aavaj-wali-kolhapuri.webp", "priceInr": 1200, "catalogueName": "Aavaj wali offer wali" },
+    { "id": "aavaj-wali-premium", "collection": "classic", "name": "Aavaj Wali Premium", "image": "/products/aavaj-wali-premium.webp", "priceInr": 1999, "catalogueName": "aavaj wali premium" },
+    { "id": "bhuiwadi-paytan", "collection": "classic", "name": "Bhuiwadi Paytan", "image": "/products/bhuiwadi-paytan.webp", "priceInr": 1650, "catalogueName": "भुईवादी पयताण" },
+    { "id": "khas-kapshi", "collection": "classic", "name": "Kapshi Open-Toe Sandal", "image": "/products/khas-kapshi.webp", "priceInr": 5500, "catalogueName": "khas आमदार kapshi" },
+    { "id": "ladies-bingri-kolhapuri", "collection": "ladies", "name": "Ladies Bingri Kolhapuri", "image": "/products/ladies-bingri-kolhapuri.webp", "priceInr": 550, "catalogueName": "ladies bingri kolhapuri" },
+    { "id": "ladies-kolhapuri-biscuit", "collection": "ladies", "name": "Ladies Kolhapuri Biscuit", "image": "/products/ladies-kolhapuri-biscuit.webp", "priceInr": 550, "catalogueName": "ladies kolhapuri biscuit" },
+    { "id": "ladies-gatto-kolhapuri", "collection": "ladies", "name": "Ladies Gatto Kolhapuri", "image": "/products/ladies-gatto-kolhapuri.webp", "priceInr": 699, "catalogueName": "gatto kolhapuri ladies" }
+  ]
+}

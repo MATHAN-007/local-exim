@@ -1,0 +1,144 @@
+{
+  "nav": {
+    "home": "Home",
+    "collections": "Collections",
+    "about": "About",
+    "why": "Why Us",
+    "contact": "Contact",
+    "quote": "Get Quote",
+    "classic": "Kolhapuri Chappals",
+    "ladies": "Ladies' Kolhapuri & Sandals",
+    "blog": "Blog",
+    "catalogue": "Catalogue",
+    "catalogueAll": "All Products",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "hero": {
+    "eyebrow": "Handcrafted in Kolhapur, India",
+    "title": "Authentic Kolhapuri Chappals, Delivered Worldwide",
+    "subtitle": "Handcrafted leather chappals and open-toe sandals, traditional craftsmanship made for global buyers.",
+    "cta1": "View Collection",
+    "cta2": "Chat on WhatsApp",
+    "browseCatalogue": "Browse full catalogue →",
+    "chip1": "100% Genuine Leather",
+    "chip2": "Direct Artisan Sourcing"
+  },
+  "highlights": {
+    "designs": "Designs in catalogue",
+    "ranges": "Ranges",
+    "sizes": "Sizes (UK/IN)",
+    "whatsapp": "WhatsApp support"
+  },
+  "collections": {
+    "title": "Our Collections",
+    "subtitle": "Two signature ranges, made the traditional way.",
+    "classic": {
+      "title": "Kolhapuri Chappals",
+      "desc": "Classic toe-ring leather chappals in traditional Kolhapuri styles."
+    },
+    "ladies": {
+      "title": "Ladies' Kolhapuri & Open-Toe Sandals",
+      "desc": "Light, elegant open-toe leather sandals for everyday and festive wear."
+    },
+    "explore": "Explore"
+  },
+  "featured": {
+    "title": "Featured Designs",
+    "subtitle": "A selection from our catalogue.",
+    "priceOnRequest": "Price on request",
+    "enquire": "Enquire on WhatsApp",
+    "viewAll": "View Full Catalogue",
+    "allDesigns": "All Designs",
+    "bulkInquiry": "Need bulk pricing or custom assortment for international retail?"
+  },
+  "about": {
+    "title": "Rooted in Kolhapur. Made for the World.",
+    "text": "Local Exim brings traditional Kolhapuri leather footwear to buyers around the globe. We work directly with skilled local artisans, so every pair keeps its authentic character.",
+    "p1": "Handcrafted leather",
+    "p2": "Traditional designs",
+    "p3": "Direct artisan sourcing"
+  },
+  "why": {
+    "title": "Why Choose Local Exim",
+    "i1t": "Authentic Craft",
+    "i1d": "Traditional Kolhapuri designs made by skilled artisans.",
+    "i2t": "Wide Range",
+    "i2d": "Men's and women's styles in many designs and sizes.",
+    "i3t": "Careful Packing",
+    "i3d": "Pairs are packed carefully for safe international shipping.",
+    "i4t": "Easy Communication",
+    "i4d": "Quick replies on WhatsApp and email, in your language."
+  },
+  "how": {
+    "title": "How to Order",
+    "s1t": "Send an Enquiry",
+    "s1d": "Tell us the designs and quantities you need.",
+    "s2t": "Get a Quote",
+    "s2d": "We share pricing and shipping options.",
+    "s3t": "Confirm Order",
+    "s3d": "Agree on details and payment terms.",
+    "s4t": "We Ship",
+    "s4d": "Your order is packed and dispatched."
+  },
+  "contact": {
+    "title": "Let's Talk",
+    "subtitle": "Send your enquiry and we'll reply soon.",
+    "name": "Your name",
+    "company": "Company (optional)",
+    "country": "Country",
+    "email": "Email",
+    "message": "Tell us what you need",
+    "send": "Send Enquiry",
+    "sending": "Sending...",
+    "sent": "Thank you! We'll get back to you soon.",
+    "error": "Failed to send message. Please reach out via WhatsApp or email directly.",
+    "sendAnother": "Send another enquiry"
+  },
+  "footer": {
+    "company": "Company",
+    "productsHeading": "Catalogue",
+    "getInTouch": "Get in Touch",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Office Location",
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top",
+    "tagline": "Global Trade · Local Roots",
+    "quick": "Quick Links",
+    "reach": "Contact"
+  },
+  "whatsapp": {
+    "floatingAria": "Chat with Local Exim on WhatsApp",
+    "inquiryPrefix": "Hello Local Exim, I would like to enquire about"
+  },
+  "testimonials": {
+    "title": "What Our Partners Say",
+    "subtitle": "Trusted by global retailers, boutiques, and footwear distributors."
+  },
+  "blog": {
+    "title": "Insights & Updates",
+    "subtitle": "Export guides and news from Local Exim.",
+    "empty": "New articles are on the way. Check back soon, or follow us on WhatsApp for updates.",
+    "backHome": "Back to Home",
+    "readMore": "Read Article",
+    "spotlightTag": "Product Spotlight",
+    "spotlightSubtitle": "A closer look at a few designs from our catalogue. Full articles coming soon."
+  },
+  "catalogue": {
+    "title": "Full Catalogue",
+    "subtitle": "Browse the complete range. Tap any design to enquire on WhatsApp.",
+    "searchPlaceholder": "Search designs…",
+    "filterAll": "All",
+    "cat": {
+      "mensKolhapuri": "Men's Kolhapuri",
+      "mensKapshi": "Men's Kapshi & Mojdi",
+      "ladies": "Ladies' Kolhapuri & Sandals"
+    },
+    "priceNote": "Bulk / export pricing on request",
+    "enquire": "Enquire on WhatsApp",
+    "loadMore": "Load More",
+    "empty": "No designs match your search. Try a different term or category.",
+    "photoComingSoon": "Photo coming soon"
+  }
+}
