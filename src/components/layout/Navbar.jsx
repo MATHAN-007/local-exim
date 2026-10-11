@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { Globe, ChevronDown, Menu, X, MessageCircle, Check } from 'lucide-react';
 import { siteConfig } from '../../siteConfig';
 import { loadLanguageAsync } from '../../i18n';
+import { waLink } from '../../lib/whatsapp';
+import DownloadCatalogueButton from '../ui/DownloadCatalogueButton';
 
 export default function Navbar({ currentRoute = '/', onNavigate }) {
   const { t, i18n } = useTranslation();
@@ -183,9 +185,7 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
 
   navItems.push({ id: 'contact', label: t('nav.contact'), href: '#contact' });
 
-  const whatsappUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
-    t('whatsapp.inquiryPrefix') + ' ' + siteConfig.name
-  )}`;
+  const whatsappUrl = waLink(siteConfig.waMessages?.general);
 
   return (
     <>
@@ -339,10 +339,10 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
                 <ChevronDown className={`w-3 h-3 text-ink/60 transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              {/* Desktop Dropdown: 2-column grid (5 rows x 2 cols) */}
+              {/* Desktop Dropdown: 2-column grid (now 15 languages, scrollable) */}
               {isLangOpen && (
-                <div className="absolute top-full end-0 mt-2 w-72 sm:w-80 p-2.5 bg-cream/95 backdrop-blur-xl border border-gold-500/40 rounded-2xl shadow-xl z-50">
-                  <div className="grid grid-cols-2 gap-1.5">
+                <div className="absolute top-full end-0 mt-2 w-80 sm:w-[360px] max-h-[70vh] sm:max-h-[360px] overflow-y-auto p-2.5 bg-cream/95 backdrop-blur-xl border border-gold-500/40 rounded-2xl shadow-2xl z-50">
+                  <div className="grid grid-cols-2 gap-1.5 pe-0.5">
                     {siteConfig.languages.map((lang) => {
                       const isActive = currentLang === lang.code;
                       return (
@@ -485,6 +485,11 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
                     </div>
                   );
                 })}
+              </div>
+
+              {/* Download Catalogue PDF Button below nav links */}
+              <div className="pb-4">
+                <DownloadCatalogueButton variant="secondary" className="w-full" />
               </div>
 
               {/* Language Selector in Drawer: Single column with internal scroll */}

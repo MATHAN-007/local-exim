@@ -12,6 +12,25 @@ const initialResources = {
   en: { translation: enData },
 };
 
+let i18nVersion = 0;
+const i18nListeners = new Set();
+
+export const subscribeI18n = (listener) => {
+  i18nListeners.add(listener);
+  return () => i18nListeners.delete(listener);
+};
+
+export const getI18nSnapshot = () => {
+  const lng = i18n.language ? i18n.language.split('-')[0] : 'en';
+  const ready = i18n.hasResourceBundle(lng, 'translation') ? 'ready' : 'pending';
+  return `${lng}-${ready}-${i18nVersion}`;
+};
+
+export const notifyI18n = () => {
+  i18nVersion++;
+  i18nListeners.forEach((fn) => fn());
+};
+
 // Lazy loader for non-English locales
 export const loadLanguageAsync = async (lng) => {
   if (!supportedLanguages.includes(lng)) return;
@@ -56,11 +75,29 @@ export const loadLanguageAsync = async (lng) => {
         case 'pt':
           translationModule = await import('./locales/pt.json');
           break;
+        case 'ja':
+          translationModule = await import('./locales/ja.json');
+          break;
+        case 'ko':
+          translationModule = await import('./locales/ko.json');
+          break;
+        case 'it':
+          translationModule = await import('./locales/it.json');
+          break;
+        case 'tr':
+          translationModule = await import('./locales/tr.json');
+          break;
+        case 'id':
+          translationModule = await import('./locales/id.json');
+          break;
         default:
           return;
       }
       i18n.addResourceBundle(lng, 'translation', translationModule.default || translationModule, true, true);
       await i18n.changeLanguage(lng);
+      i18n.emit('languageChanged', lng);
+      i18n.emit('loaded');
+      notifyI18n();
     } catch (err) {
       console.error(`Error loading locale "${lng}":`, err);
     }
@@ -87,6 +124,11 @@ i18n
     supportedLngs: supportedLanguages,
     interpolation: {
       escapeValue: false,
+    },
+    react: {
+      useSuspense: false,
+      bindI18n: 'languageChanged loaded',
+      bindI18nStore: 'added removed',
     },
     detection: {
       order: ['querystring', 'localStorage', 'navigator'],

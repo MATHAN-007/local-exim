@@ -12,7 +12,8 @@
     "menu": "Menu",
     "close": "Fechar",
     "catalogue": "Catálogo",
-    "catalogueAll": "Todos os produtos"
+    "catalogueAll": "Todos os produtos",
+    "moreLanguages": "Mais idiomas (tradução automática)"
   },
   "hero": {
     "eyebrow": "Artesanato genuíno em Kolhapur, Índia",
@@ -20,9 +21,12 @@
     "subtitle": "Sandálias artesanais em couro legítimo, tradição secular adaptada para compradores e distribuidores globais.",
     "cta1": "Ver Coleção",
     "cta2": "Conversar no WhatsApp",
-    "chip1": "100% Couro Legítimo",
+    "chip1": "Couro Artesanal",
     "chip2": "Costura Manual Tradicional",
-    "browseCatalogue": "Ver catálogo completo →"
+    "browseCatalogue": "Ver catálogo completo →",
+    "pause": "Pausar apresentação",
+    "play": "Reproduzir apresentação",
+    "slide": "Mostrar modelo {{n}}"
   },
   "highlights": {
     "designs": "Modelos no catálogo",
@@ -142,6 +146,8 @@
     "enquire": "Consultar no WhatsApp",
     "loadMore": "Carregar mais",
     "empty": "Nenhum modelo encontrado para sua pesquisa.",
-    "photoComingSoon": "Atualização de foto em andamento"
+    "photoComingSoon": "Atualização de foto em andamento",
+    "download": "Baixar Catálogo (PDF)",
+    "downloadHint": "Todos os modelos com fotos, códigos e detalhes"
   }
 }

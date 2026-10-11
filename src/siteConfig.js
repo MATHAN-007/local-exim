@@ -2,19 +2,30 @@
 export const siteConfig = {
   name: "Local Exim",
   tagline: "Global Trade · Local Roots",
-  whatsappNumber: "917038405530",          // catalogue WhatsApp number (UNCHANGED)
-  email: "shubhhampatill@localexim.com",
+  whatsappNumber: "919356447373",          // Single source of truth (digits only)
   phone: "+91 93564 47373",
+  email: "shubhhampatill@localexim.com",
   address: "Office No. 1846, Shivshambo Nagar, Ward No. 4, Tal. Karvir, Dist. Kolhapur – 416234, Maharashtra, India",
   social: { instagram: "", facebook: "", linkedin: "", youtube: "" }, // empty = icon hidden
-  showPrices: false,          // B2B: show "Request price list" instead of INR retail prices
-  showTestimonials: false,    // no reviews yet
-  showFaq: false,             // later page
-  showBlog: true,             // route: /blog
-  highlights: [               // small number strip under hero (edit freely)
+  heroSlideshow: {
+    intervalMs: 3000
+  },
+  catalogueDownload: {
+    file: "/downloads/Local-Exim-Catalogue.pdf",
+    sizeLabel: "PDF · 1.8 MB"
+  },
+  waMessages: {
+    general: "Hello Local Exim, I would like to enquire about your Kolhapuri footwear.",
+    product: "Hello Local Exim, I am interested in {name} (Code: {code}). Please share details."
+  },
+  showPrices: false,
+  showTestimonials: false,
+  showFaq: false,
+  showBlog: true,
+  highlights: [
     { value: "60+", labelKey: "highlights.designs" },
     { value: "Men & Women", labelKey: "highlights.ranges" },
-    { value: "5–11", labelKey: "highlights.sizes" },     // sizes: gents 6–11, ladies 5–10
+    { value: "5–11", labelKey: "highlights.sizes" },
     { value: "24/7", labelKey: "highlights.whatsapp" }
   ],
   languages: [
@@ -27,7 +38,12 @@ export const siteConfig = {
     { code: "zh", native: "中文" },
     { code: "ta", native: "தமிழ்" },
     { code: "ru", native: "Русский" },
-    { code: "pt", native: "Português" }
+    { code: "pt", native: "Português" },
+    { code: "ja", native: "日本語" },
+    { code: "ko", native: "한국어" },
+    { code: "it", native: "Italiano" },
+    { code: "tr", native: "Türkçe" },
+    { code: "id", native: "Bahasa Indonesia" }
   ],
-  formEndpoint: import.meta.env.VITE_WEB3FORMS_KEY // add key in .env
+  formEndpoint: import.meta.env.VITE_WEB3FORMS_KEY
 };

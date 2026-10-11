@@ -1,10 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, Sparkles } from 'lucide-react';
+import { waLink, productMessage } from '../../lib/whatsapp';
 
 export default function ProductCard({
   product,
-  whatsappNumber,
   showPrices = false,
   showPrice = true,
   showPriceNote = false,
@@ -12,40 +12,42 @@ export default function ProductCard({
 }) {
   const { t } = useTranslation();
 
-  const messageText = `Hello Local Exim, I would like to inquire about the "${product.name}" (ID: ${product.id}). Could you please share the pricing, MOQ, and export details?`;
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(messageText)}`;
+  // Use single-source-of-truth waLink with prefilled product details
+  const messageText = productMessage(product);
+  const whatsappUrl = waLink(messageText);
 
   const isNeedsPhoto = product.photoQuality === 'needs-photo';
 
   return (
     <div className="group bg-white rounded-2xl border border-gold-500/25 shadow-soft hover:shadow-xl hover:border-gold-500/70 transition-all duration-300 flex flex-col justify-between overflow-hidden">
-      
       {/* Product Image Frame */}
       <div className="relative aspect-square bg-[#FFFFFF] p-6 flex items-center justify-center overflow-hidden border-b border-gold-500/10">
-        
-        {/* Subtle photo update in progress corner badge */}
-        {isNeedsPhoto && (
-          <div className="absolute top-3 start-3 z-10">
-            <span className="px-2.5 py-1 text-[10px] font-medium tracking-wide bg-cream/95 text-gold-700 rounded-lg border border-gold-500/50 shadow-xs">
+        {isNeedsPhoto ? (
+          /* Neutral 'Photo coming soon' placeholder tile */
+          <div className="w-full h-full flex flex-col items-center justify-center bg-cream/70 border border-gold-500/20 rounded-xl p-4 text-center">
+            <div className="w-10 h-10 rounded-full bg-gold-500/15 flex items-center justify-center text-gold-700 mb-2">
+              <Sparkles className="w-5 h-5 text-gold-600" />
+            </div>
+            <span className="text-xs font-medium text-ink/60">
               {t('catalogue.photoComingSoon')}
             </span>
           </div>
+        ) : (
+          <img
+            src={product.image}
+            alt={product.name}
+            width="480"
+            height="480"
+            loading={isEager ? 'eager' : 'lazy'}
+            fetchpriority={isEager ? 'high' : 'auto'}
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+          />
         )}
-
-        <img
-          src={product.image}
-          alt={product.name}
-          width="480"
-          height="480"
-          loading={isEager ? 'eager' : 'lazy'}
-          fetchPriority={isEager ? 'high' : 'auto'}
-          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-        />
 
         {/* Hover overlay pill */}
         <div className="absolute top-3 end-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
           <span className="px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider bg-forest-900/90 text-gold-300 rounded-full backdrop-blur-sm">
-            Genuine Leather
+            {t('hero.chip1')}
           </span>
         </div>
       </div>
@@ -53,11 +55,18 @@ export default function ProductCard({
       {/* Product Info */}
       <div className="p-5 flex flex-col flex-grow justify-between bg-white">
         <div>
+          {/* Product Code Badge */}
+          {product.code && (
+            <span className="inline-block text-[10px] sm:text-[11px] font-mono font-semibold tracking-wider text-gold-700 bg-gold-500/10 border border-gold-500/20 px-2 py-0.5 rounded-md mb-2">
+              {product.code}
+            </span>
+          )}
+
           <h3 className="text-base sm:text-lg font-serif font-bold text-forest-900 mb-2 group-hover:text-brandGreen-800 transition-colors line-clamp-1">
             {product.name}
           </h3>
 
-          {/* Pricing area (hidden when showPrice is false) */}
+          {/* Pricing area (hidden when showPrice is false, e.g. Home page) */}
           {showPrice && (
             <div className="mb-4">
               {showPriceNote ? (
@@ -93,7 +102,6 @@ export default function ProductCard({
           <span>{t('catalogue.enquire', { defaultValue: t('featured.enquire') })}</span>
         </a>
       </div>
-
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { MessageCircle, Sparkles } from 'lucide-react';
 import blogData from '../../data/blog.json';
 import { siteConfig } from '../../siteConfig';
+import { waLink } from '../../lib/whatsapp';
 
 export default function BlogIndex() {
   const { t } = useTranslation();
@@ -50,7 +51,7 @@ export default function BlogIndex() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {items.map((item) => {
             const message = `Hello Local Exim, I would like to inquire about the "${item.title}". Could you please share export details?`;
-            const whatsappUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(message)}`;
+            const whatsappUrl = waLink(message);
 
             return (
               <article

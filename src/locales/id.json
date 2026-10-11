@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "collections": "Koleksi",
+    "about": "Tentang Kami",
+    "why": "Mengapa Memilih Kami",
+    "contact": "Kontak",
+    "quote": "Minta Penawaran",
+    "classic": "Chappal Kolhapuri",
+    "ladies": "Kolhapuri & Sandal Wanita",
+    "blog": "Blog",
+    "catalogue": "Katalog",
+    "catalogueAll": "Semua Produk",
+    "menu": "Menu",
+    "close": "Tutup"
+  },
+  "hero": {
+    "eyebrow": "Dibuat Tangan di Kolhapur, India",
+    "title": "Chappal Kolhapuri Asli, Dikirim ke Seluruh Dunia",
+    "subtitle": "Chappal kulit dan sandal ujung terbuka buatan tangan, kerajinan tradisional untuk pembeli global.",
+    "cta1": "Lihat Koleksi",
+    "cta2": "Chat via WhatsApp",
+    "browseCatalogue": "Jelajahi katalog lengkap →",
+    "chip1": "Kulit Buatan Tangan",
+    "chip2": "Pasokan Langsung dari Pengrajin",
+    "pause": "Jeda tayangan slide",
+    "play": "Putar tayangan slide",
+    "slide": "Tampilkan desain {{n}}"
+  },
+  "highlights": {
+    "designs": "Desain dalam katalog",
+    "ranges": "Lini produk",
+    "sizes": "Ukuran (UK/IN)",
+    "whatsapp": "Dukungan WhatsApp"
+  },
+  "collections": {
+    "title": "Koleksi Kami",
+    "subtitle": "Dua lini khas, dibuat dengan cara tradisional.",
+    "classic": {
+      "title": "Chappal Kolhapuri",
+      "desc": "Chappal kulit klasik dengan cincin jempol kaki, gaya Kolhapuri tradisional."
+    },
+    "ladies": {
+      "title": "Kolhapuri & Sandal Ujung Terbuka Wanita",
+      "desc": "Sandal kulit ujung terbuka yang ringan dan elegan, untuk sehari-hari maupun acara spesial."
+    },
+    "explore": "Jelajahi"
+  },
+  "featured": {
+    "title": "Desain Unggulan",
+    "subtitle": "Pilihan dari katalog kami.",
+    "priceOnRequest": "Harga sesuai permintaan",
+    "enquire": "Tanya via WhatsApp",
+    "viewAll": "Lihat Katalog Lengkap",
+    "allDesigns": "Semua Desain",
+    "bulkInquiry": "Butuh harga grosir atau pilihan khusus untuk ritel internasional?"
+  },
+  "about": {
+    "title": "Berakar di Kolhapur. Dibuat untuk Dunia.",
+    "text": "Local Exim menghadirkan alas kaki kulit Kolhapuri tradisional kepada pembeli di seluruh dunia. Kami bekerja langsung dengan pengrajin lokal berpengalaman, sehingga setiap pasang tetap menjaga karakter aslinya.",
+    "p1": "Kulit buatan tangan",
+    "p2": "Desain tradisional",
+    "p3": "Sumber langsung dari pengrajin"
+  },
+  "why": {
+    "title": "Mengapa Memilih Local Exim",
+    "i1t": "Kerajinan Asli",
+    "i1d": "Desain Kolhapuri tradisional buatan pengrajin ahli.",
+    "i2t": "Pilihan Lengkap",
+    "i2d": "Model pria dan wanita dalam berbagai desain dan ukuran.",
+    "i3t": "Pengemasan yang Cermat",
+    "i3d": "Setiap pasang dikemas dengan hati-hati untuk pengiriman internasional yang aman.",
+    "i4t": "Komunikasi Mudah",
+    "i4d": "Respons cepat melalui WhatsApp dan email, dalam bahasa Anda."
+  },
+  "how": {
+    "title": "Cara Memesan",
+    "s1t": "Kirim Pertanyaan",
+    "s1d": "Beri tahu kami desain dan jumlah yang Anda butuhkan.",
+    "s2t": "Dapatkan Penawaran",
+    "s2d": "Kami akan mengirimkan harga dan opsi pengiriman.",
+    "s3t": "Konfirmasi Pesanan",
+    "s3d": "Sepakati detail dan syarat pembayaran.",
+    "s4t": "Kami Kirim",
+    "s4d": "Pesanan Anda dikemas dan dikirim."
+  },
+  "contact": {
+    "title": "Mari Berbicara",
+    "subtitle": "Kirim pertanyaan Anda dan kami akan segera membalas.",
+    "name": "Nama Anda",
+    "company": "Perusahaan (opsional)",
+    "country": "Negara",
+    "email": "Email",
+    "message": "Beri tahu kami apa yang Anda butuhkan",
+    "send": "Kirim Pertanyaan",
+    "sent": "Terima kasih! Kami akan segera menghubungi Anda.",
+    "sending": "Mengirim...",
+    "error": "Gagal mengirim pesan. Silakan hubungi kami langsung melalui WhatsApp atau email.",
+    "sendAnother": "Kirim pesan lainnya"
+  },
+  "footer": {
+    "company": "Perusahaan",
+    "productsHeading": "Katalog",
+    "getInTouch": "Hubungi Kami",
+    "email": "Email",
+    "phone": "Telepon",
+    "location": "Lokasi Kantor",
+    "rights": "Hak cipta dilindungi.",
+    "backToTop": "Kembali ke atas",
+    "tagline": "Perdagangan Global · Akar Lokal",
+    "quick": "Tautan Cepat",
+    "reach": "Kontak"
+  },
+  "blog": {
+    "title": "Wawasan & Pembaruan",
+    "subtitle": "Panduan ekspor dan berita dari Local Exim.",
+    "empty": "Artikel baru akan segera hadir. Kunjungi lagi nanti, atau ikuti kami di WhatsApp untuk pembaruan.",
+    "back": "Kembali ke Beranda",
+    "spotlightTag": "Sorotan Produk",
+    "spotlightSubtitle": "Sekilas tentang beberapa desain dari katalog kami. Artikel lengkap segera hadir.",
+    "backHome": "Kembali ke Beranda",
+    "readMore": "Baca Artikel"
+  },
+  "catalogue": {
+    "title": "Katalog Lengkap",
+    "subtitle": "Jelajahi seluruh koleksi. Ketuk desain mana pun untuk bertanya via WhatsApp.",
+    "searchPlaceholder": "Cari desain…",
+    "filterAll": "Semua",
+    "cat": {
+      "mensKolhapuri": "Kolhapuri Pria",
+      "mensKapshi": "Kapshi & Mojdi Pria",
+      "ladies": "Kolhapuri & Sandal Wanita"
+    },
+    "priceNote": "Harga grosir/ekspor sesuai permintaan",
+    "enquire": "Tanya via WhatsApp",
+    "loadMore": "Muat Lebih Banyak",
+    "empty": "Tidak ada desain yang cocok dengan pencarian Anda. Coba kata kunci atau kategori lain.",
+    "photoComingSoon": "Foto segera hadir",
+    "download": "Unduh Katalog (PDF)",
+    "downloadHint": "Semua desain lengkap dengan foto, kode, dan detail"
+  },
+  "whatsapp": {
+    "floatingAria": "Chat dengan Local Exim di WhatsApp",
+    "inquiryPrefix": "Halo Local Exim, saya ingin menanyakan tentang"
+  },
+  "testimonials": {
+    "title": "Apa Kata Mitra Kami",
+    "subtitle": "Dipercaya oleh peritel global, butik, dan distributor alas kaki."
+  }
+}

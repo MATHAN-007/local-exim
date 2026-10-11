@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "collections": "Koleksiyonlar",
+    "about": "Hakkımızda",
+    "why": "Neden Biz",
+    "contact": "İletişim",
+    "quote": "Teklif Al",
+    "classic": "Kolhapuri Çarıklar",
+    "ladies": "Kadın Kolhapuri ve Sandaletler",
+    "blog": "Blog",
+    "catalogue": "Katalog",
+    "catalogueAll": "Tüm Ürünler",
+    "menu": "Menü",
+    "close": "Kapat"
+  },
+  "hero": {
+    "eyebrow": "Hindistan, Kolhapur'da El Yapımı",
+    "title": "Otantik Kolhapuri Çarıklar, Dünyaya Gönderiliyor",
+    "subtitle": "Global alıcılar için üretilmiş, geleneksel el sanatıyla yapılmış deri çarıklar ve açık uçlu sandaletler.",
+    "cta1": "Koleksiyonu İncele",
+    "cta2": "WhatsApp'tan Yazın",
+    "browseCatalogue": "Kataloğun tamamına göz atın →",
+    "chip1": "El Yapımı Deri",
+    "chip2": "Doğrudan Zanaatkarlardan Tedarik",
+    "pause": "Slayt gösterisini duraklat",
+    "play": "Slayt gösterisini oynat",
+    "slide": "Model {{n}}'i göster"
+  },
+  "highlights": {
+    "designs": "Katalogdaki tasarım sayısı",
+    "ranges": "Ürün grupları",
+    "sizes": "Numara (UK/IN)",
+    "whatsapp": "WhatsApp desteği"
+  },
+  "collections": {
+    "title": "Koleksiyonlarımız",
+    "subtitle": "Geleneksel yöntemle üretilmiş iki özel seri.",
+    "classic": {
+      "title": "Kolhapuri Çarıklar",
+      "desc": "Geleneksel Kolhapuri stilinde klasik parmak halkalı deri çarıklar."
+    },
+    "ladies": {
+      "title": "Kadın Kolhapuri ve Açık Uçlu Sandaletler",
+      "desc": "Günlük ve özel günler için hafif, zarif, açık uçlu deri sandaletler."
+    },
+    "explore": "Keşfet"
+  },
+  "featured": {
+    "title": "Öne Çıkan Tasarımlar",
+    "subtitle": "Katalogumuzdan seçmeler.",
+    "priceOnRequest": "Fiyat için iletişime geçin",
+    "enquire": "WhatsApp'tan Sor",
+    "viewAll": "Tüm Kataloğu Gör",
+    "allDesigns": "Tüm Modeller",
+    "bulkInquiry": "Uluslararası perakende için toptan fiyatlandırmaya veya özel ürün çeşitliliğine mi ihtiyacınız var?"
+  },
+  "about": {
+    "title": "Kolhapur'da Kökler, Dünya İçin Üretim.",
+    "text": "Local Exim, geleneksel Kolhapuri deri ayakkabıları dünyanın dört bir yanındaki alıcılarla buluşturuyor. Yetenekli yerel ustalarla doğrudan çalışarak her çiftin özgün karakterini koruyoruz.",
+    "p1": "El yapımı deri",
+    "p2": "Geleneksel tasarımlar",
+    "p3": "Ustadan doğrudan tedarik"
+  },
+  "why": {
+    "title": "Neden Local Exim",
+    "i1t": "Otantik El İşçiliği",
+    "i1d": "Usta zanaatkarlar tarafından yapılan geleneksel Kolhapuri tasarımlar.",
+    "i2t": "Geniş Ürün Yelpazesi",
+    "i2d": "Pek çok tasarım ve numarada erkek ve kadın modelleri.",
+    "i3t": "Özenli Paketleme",
+    "i3d": "Güvenli uluslararası sevkiyat için özenle paketlenir.",
+    "i4t": "Kolay İletişim",
+    "i4d": "WhatsApp ve e-posta üzerinden, kendi dilinizde hızlı yanıt."
+  },
+  "how": {
+    "title": "Nasıl Sipariş Verilir",
+    "s1t": "Talep Gönderin",
+    "s1d": "İhtiyacınız olan tasarım ve miktarları bize bildirin.",
+    "s2t": "Teklif Alın",
+    "s2d": "Fiyat ve sevkiyat seçeneklerini paylaşırız.",
+    "s3t": "Siparişi Onaylayın",
+    "s3d": "Detaylar ve ödeme koşullarında anlaşılır.",
+    "s4t": "Gönderiyoruz",
+    "s4d": "Siparişiniz paketlenip gönderilir."
+  },
+  "contact": {
+    "title": "Bize Ulaşın",
+    "subtitle": "Talebinizi gönderin, en kısa sürede yanıtlayalım.",
+    "name": "Adınız",
+    "company": "Şirket (isteğe bağlı)",
+    "country": "Ülke",
+    "email": "E-posta",
+    "message": "İhtiyacınızı bize anlatın",
+    "send": "Talebi Gönder",
+    "sent": "Teşekkürler! En kısa sürede size döneceğiz.",
+    "sending": "Gönderiliyor...",
+    "error": "Mesaj gönderilemedi. Lütfen doğrudan WhatsApp veya e-posta yoluyla iletişime geçin.",
+    "sendAnother": "Başka bir talep gönder"
+  },
+  "footer": {
+    "company": "Şirket",
+    "productsHeading": "Katalog",
+    "getInTouch": "Bize Ulaşın",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "location": "Ofis Adresi",
+    "rights": "Tüm hakları saklıdır.",
+    "backToTop": "Yukarı çık",
+    "tagline": "Küresel Ticaret · Yerel Kökler",
+    "quick": "Hızlı Bağlantılar",
+    "reach": "İletişim"
+  },
+  "blog": {
+    "title": "Haberler ve Güncellemeler",
+    "subtitle": "Local Exim'den ihracat rehberleri ve haberler.",
+    "empty": "Yeni yazılar yakında. Daha sonra tekrar uğrayın veya güncellemeler için bizi WhatsApp'tan takip edin.",
+    "back": "Ana Sayfaya Dön",
+    "spotlightTag": "Ürün Vitrini",
+    "spotlightSubtitle": "Katalogumuzdan birkaç tasarıma yakından bakış. Tam yazılar yakında.",
+    "backHome": "Ana Sayfaya Dön",
+    "readMore": "Makaleyi Oku"
+  },
+  "catalogue": {
+    "title": "Tüm Katalog",
+    "subtitle": "Tüm ürün yelpazesine göz atın. İlgilendiğiniz tasarıma dokunup WhatsApp'tan sorun.",
+    "searchPlaceholder": "Tasarım ara…",
+    "filterAll": "Tümü",
+    "cat": {
+      "mensKolhapuri": "Erkek Kolhapuri",
+      "mensKapshi": "Erkek Kapshi ve Mojdi",
+      "ladies": "Kadın Kolhapuri ve Sandaletler"
+    },
+    "priceNote": "Toplu/ihracat fiyatı için iletişime geçin",
+    "enquire": "WhatsApp'tan Sor",
+    "loadMore": "Daha Fazla Yükle",
+    "empty": "Aramanızla eşleşen tasarım bulunamadı. Farklı bir terim veya kategori deneyin.",
+    "photoComingSoon": "Fotoğraf yakında",
+    "download": "Kataloğu İndir (PDF)",
+    "downloadHint": "Fotoğraflar, kodlar ve ayrıntılarla tüm modeller"
+  },
+  "whatsapp": {
+    "floatingAria": "WhatsApp üzerinden Local Exim ile sohbet edin",
+    "inquiryPrefix": "Merhaba Local Exim, hakkında bilgi almak istiyorum:"
+  },
+  "testimonials": {
+    "title": "İş Ortaklarımız Ne Diyor",
+    "subtitle": "Dünya çapındaki perakendeciler, butikler ve ayakkabı distribütörleri tarafından güvenilmektedir."
+  }
+}

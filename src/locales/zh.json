@@ -12,7 +12,8 @@
     "menu": "菜单",
     "close": "关闭",
     "catalogue": "产品目录",
-    "catalogueAll": "全部产品"
+    "catalogueAll": "全部产品",
+    "moreLanguages": "更多语言（自动翻译）"
   },
   "hero": {
     "eyebrow": "印度戈尔哈布尔纯手工精制",
@@ -20,9 +21,12 @@
     "subtitle": "世代传承的手工皮革凉鞋与露趾鞋履，以传统精湛工艺服务全球采购商与品牌商。",
     "cta1": "浏览系列",
     "cta2": "WhatsApp 咨询",
-    "chip1": "100% 天然真皮",
+    "chip1": "手工精制皮革",
     "chip2": "传统手工缝制",
-    "browseCatalogue": "浏览完整产品目录 →"
+    "browseCatalogue": "浏览完整产品目录 →",
+    "pause": "暂停幻灯片",
+    "play": "播放幻灯片",
+    "slide": "显示款式 {{n}}"
   },
   "highlights": {
     "designs": "产品目录款式",
@@ -142,6 +146,8 @@
     "enquire": "通过 WhatsApp 洽询",
     "loadMore": "加载更多",
     "empty": "未找到符合您搜索条件的款式。",
-    "photoComingSoon": "图片更新中"
+    "photoComingSoon": "图片更新中",
+    "download": "下载产品目录 (PDF)",
+    "downloadHint": "所有款式均配有照片、编号和详情"
   }
 }

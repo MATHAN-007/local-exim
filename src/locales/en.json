@@ -21,8 +21,11 @@
     "cta1": "View Collection",
     "cta2": "Chat on WhatsApp",
     "browseCatalogue": "Browse full catalogue →",
-    "chip1": "100% Genuine Leather",
-    "chip2": "Direct Artisan Sourcing"
+    "chip1": "Handcrafted Leather",
+    "chip2": "Direct Artisan Sourcing",
+    "pause": "Pause slideshow",
+    "play": "Play slideshow",
+    "slide": "Show design {{n}}"
   },
   "highlights": {
     "designs": "Designs in catalogue",
@@ -139,6 +142,8 @@
     "enquire": "Enquire on WhatsApp",
     "loadMore": "Load More",
     "empty": "No designs match your search. Try a different term or category.",
-    "photoComingSoon": "Photo coming soon"
+    "photoComingSoon": "Photo coming soon",
+    "download": "Download Catalogue (PDF)",
+    "downloadHint": "All designs with photos, codes and details"
   }
 }

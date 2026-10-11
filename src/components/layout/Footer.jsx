@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Instagram, Facebook, Linkedin, Youtube } from 'lucide-react';
 import { siteConfig } from '../../siteConfig';
+import DownloadCatalogueButton from '../ui/DownloadCatalogueButton';
 import catalogueData from '../../data/catalogue.json';
 
 export default function Footer({ onNavigate }) {
@@ -148,6 +149,9 @@ export default function Footer({ onNavigate }) {
                 </li>
               ))}
             </ul>
+            <div className="mt-5 pt-3 border-t border-white/10">
+              <DownloadCatalogueButton variant="link" />
+            </div>
           </div>
 
           {/* Column C: Get in Touch (3 labeled rows: email, phone, location) */}

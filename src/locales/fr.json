@@ -12,7 +12,8 @@
     "menu": "Menu",
     "close": "Fermer",
     "catalogue": "Catalogue",
-    "catalogueAll": "Tous les produits"
+    "catalogueAll": "Tous les produits",
+    "moreLanguages": "Plus de langues (traduction automatique)"
   },
   "hero": {
     "eyebrow": "Fabriqué à la main à Kolhapur, Inde",
@@ -20,9 +21,12 @@
     "subtitle": "Sandales artisanales en cuir véritable, savoir-faire séculaire au service des professionnels et acheteurs internationaux.",
     "cta1": "Découvrir la Collection",
     "cta2": "Discuter sur WhatsApp",
-    "chip1": "100% Cuir Véritable",
+    "chip1": "Cuir Fait Main",
     "chip2": "Cousu Main Traditionnel",
-    "browseCatalogue": "Parcourir le catalogue complet →"
+    "browseCatalogue": "Parcourir le catalogue complet →",
+    "pause": "Mettre en pause le diaporama",
+    "play": "Lire le diaporama",
+    "slide": "Afficher le modèle {{n}}"
   },
   "highlights": {
     "designs": "Modèles au catalogue",
@@ -142,6 +146,8 @@
     "enquire": "Demander sur WhatsApp",
     "loadMore": "Charger plus",
     "empty": "Aucun modèle ne correspond à votre recherche.",
-    "photoComingSoon": "Mise à jour photo en cours"
+    "photoComingSoon": "Mise à jour photo en cours",
+    "download": "Télécharger le Catalogue (PDF)",
+    "downloadHint": "Tous les modèles avec photos, codes et détails"
   }
 }

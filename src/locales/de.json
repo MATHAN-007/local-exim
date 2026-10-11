@@ -12,7 +12,8 @@
     "menu": "Menü",
     "close": "Schließen",
     "catalogue": "Katalog",
-    "catalogueAll": "Alle Produkte"
+    "catalogueAll": "Alle Produkte",
+    "moreLanguages": "Weitere Sprachen (automatisch übersetzt)"
   },
   "hero": {
     "eyebrow": "Handgefertigt in Kolhapur, Indien",
@@ -20,9 +21,12 @@
     "subtitle": "Handgefertigte Ledersandalen und Zehenstegschuhe in traditionsreicher Handwerkskunst für gewerbliche Einkäufer weltweit.",
     "cta1": "Kollektion ansehen",
     "cta2": "Auf WhatsApp chatten",
-    "chip1": "100% Echtes Leder",
+    "chip1": "Handgefertigtes Leder",
     "chip2": "Handgenähte Qualität",
-    "browseCatalogue": "Gesamten Katalog ansehen →"
+    "browseCatalogue": "Gesamten Katalog ansehen →",
+    "pause": "Diashow pausieren",
+    "play": "Diashow abspielen",
+    "slide": "Design {{n}} anzeigen"
   },
   "highlights": {
     "designs": "Katalog-Designs",
@@ -142,6 +146,8 @@
     "enquire": "Per WhatsApp anfragen",
     "loadMore": "Mehr laden",
     "empty": "Keine Modelle entsprechen Ihrer Suche.",
-    "photoComingSoon": "Fotoaktualisierung läuft"
+    "photoComingSoon": "Fotoaktualisierung läuft",
+    "download": "Katalog herunterladen (PDF)",
+    "downloadHint": "Alle Designs mit Fotos, Codes und Details"
   }
 }

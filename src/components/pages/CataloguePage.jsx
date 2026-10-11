@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Search, X, PackageX, Sparkles } from 'lucide-react';
 import ProductCard from '../ui/ProductCard';
+import DownloadCatalogueButton from '../ui/DownloadCatalogueButton';
 import catalogueData from '../../data/catalogue.json';
 import { siteConfig } from '../../siteConfig';
 
@@ -106,19 +107,33 @@ export default function CataloguePage({ initialCategory, onNavigate }) {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Page Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-600 text-xs font-semibold uppercase tracking-widest mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-gold-600" />
-            <span>Direct Artisan Export</span>
+        <div className="mb-10 sm:mb-14">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="text-center md:text-start max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-600 text-xs font-semibold uppercase tracking-widest mb-4">
+                <Sparkles className="w-3.5 h-3.5 text-gold-600" />
+                <span>Direct Artisan Export</span>
+              </div>
+
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-forest-900 tracking-tight mb-4">
+                {t('catalogue.title')}
+              </h1>
+
+              <p className="text-base sm:text-lg text-ink/70 leading-relaxed">
+                {t('catalogue.subtitle')}
+              </p>
+            </div>
+
+            {/* Desktop Download Button next to title */}
+            <div className="hidden md:flex flex-shrink-0 items-center justify-end">
+              <DownloadCatalogueButton variant="primary" />
+            </div>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-forest-900 tracking-tight mb-4">
-            {t('catalogue.title')}
-          </h1>
-
-          <p className="text-base sm:text-lg text-ink/70 leading-relaxed max-w-2xl mx-auto">
-            {t('catalogue.subtitle')}
-          </p>
+          {/* Mobile Download Button as a full-width button under title */}
+          <div className="mt-6 md:hidden w-full">
+            <DownloadCatalogueButton variant="primary" className="w-full" />
+          </div>
         </div>
 
         {/* Sticky Filter & Search Bar */}

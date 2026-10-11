@@ -1,0 +1,30 @@
+{
+  "_note": "Hero slideshow, in display order. Add/remove entries to change the slides.",
+  "slides": [
+    {
+      "id": "sankeshwari-kolhapuri",
+      "name": "Sankeshwari Kolhapuri",
+      "image": "/hero/sankeshwari-kolhapuri-cutout.webp"
+    },
+    {
+      "id": "aavaj-wali-kolhapuri",
+      "name": "Aavaj Wali Kolhapuri",
+      "image": "/hero/aavaj-wali-kolhapuri-cutout.webp"
+    },
+    {
+      "id": "bhuiwadi-paytan",
+      "name": "Bhuiwadi Paytan",
+      "image": "/hero/bhuiwadi-paytan-cutout.webp"
+    },
+    {
+      "id": "khas-aamdar-kapshi",
+      "name": "Khas Aamdar Kapshi",
+      "image": "/hero/khas-kapshi-cutout.webp"
+    },
+    {
+      "id": "ladies-bingri-kolhapuri",
+      "name": "Ladies Bingri Kolhapuri",
+      "image": "/hero/ladies-bingri-kolhapuri-cutout.webp"
+    }
+  ]
+}

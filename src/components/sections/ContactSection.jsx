@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Mail, Phone, MapPin, MessageCircle, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import { siteConfig } from '../../siteConfig';
+import { waLink } from '../../lib/whatsapp';
 
 export default function ContactSection() {
   const { t } = useTranslation();
@@ -79,9 +80,7 @@ export default function ContactSection() {
     }
   };
 
-  const whatsappUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
-    t('whatsapp.inquiryPrefix') + ' ' + siteConfig.name
-  )}`;
+  const whatsappUrl = waLink(siteConfig.waMessages?.general);
 
   return (
     <section id="contact" className="py-20 lg:py-28 relative bg-forest-900 text-cream overflow-hidden">

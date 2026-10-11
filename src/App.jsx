@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useSyncExternalStore } from 'react';
+import { subscribeI18n, getI18nSnapshot } from './i18n';
 import { useLenis } from './hooks/useLenis';
 import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
@@ -17,6 +18,9 @@ import FloatingWhatsApp from './components/ui/FloatingWhatsApp';
 import BackToTop from './components/ui/BackToTop';
 
 export default function App() {
+  // Synchronize React with i18n on-demand lazy bundle additions
+  useSyncExternalStore(subscribeI18n, getI18nSnapshot);
+
   // Initialize Lenis smooth scroll
   useLenis();
 

@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "home": "홈",
+    "collections": "컬렉션",
+    "about": "회사 소개",
+    "why": "선택 이유",
+    "contact": "문의하기",
+    "quote": "견적 요청",
+    "classic": "콜하푸리 차팔",
+    "ladies": "여성용 콜하푸리 & 샌들",
+    "blog": "블로그",
+    "catalogue": "카탈로그",
+    "catalogueAll": "전체 상품",
+    "menu": "메뉴",
+    "close": "닫기"
+  },
+  "hero": {
+    "eyebrow": "인도 콜하푸르에서 수작업으로 제작",
+    "title": "정통 콜하푸리 차팔, 전 세계로 배송",
+    "subtitle": "전통 장인 정신으로 만든 가죽 차팔과 오픈토 샌들을 전 세계 바이어에게.",
+    "cta1": "컬렉션 보기",
+    "cta2": "왓츠앱으로 문의",
+    "browseCatalogue": "전체 카탈로그 보기 →",
+    "chip1": "핸드크래프트 가죽",
+    "chip2": "장인 직접 공급",
+    "pause": "슬라이드쇼 일시중지",
+    "play": "슬라이드쇼 재생",
+    "slide": "디자인 {{n}} 보기"
+  },
+  "highlights": {
+    "designs": "카탈로그 디자인 수",
+    "ranges": "제품 라인",
+    "sizes": "사이즈(UK/IN)",
+    "whatsapp": "왓츠앱 지원"
+  },
+  "collections": {
+    "title": "컬렉션",
+    "subtitle": "전통 방식으로 제작한 두 가지 대표 라인.",
+    "classic": {
+      "title": "콜하푸리 차팔",
+      "desc": "전통적인 콜하푸리 스타일의 클래식 토링 가죽 차팔."
+    },
+    "ladies": {
+      "title": "여성용 콜하푸리 & 오픈토 샌들",
+      "desc": "일상과 특별한 날 모두 어울리는 가볍고 우아한 가죽 오픈토 샌들."
+    },
+    "explore": "더 보기"
+  },
+  "featured": {
+    "title": "추천 디자인",
+    "subtitle": "카탈로그에서 선별한 제품.",
+    "priceOnRequest": "가격 문의",
+    "enquire": "왓츠앱으로 문의",
+    "viewAll": "전체 카탈로그 보기",
+    "allDesigns": "모든 디자인",
+    "bulkInquiry": "해외 소매용 대량 가격 또는 맞춤형 구성이 필요하신가요?"
+  },
+  "about": {
+    "title": "콜하푸르에 뿌리를 두고, 세계를 향해.",
+    "text": "Local Exim은 전통 콜하푸리 가죽 신발을 전 세계 바이어에게 선보입니다. 숙련된 현지 장인과 직접 협력하여 모든 제품의 고유한 특성을 지켜갑니다.",
+    "p1": "수제 가죽",
+    "p2": "전통 디자인",
+    "p3": "장인 직접 소싱"
+  },
+  "why": {
+    "title": "Local Exim을 선택하는 이유",
+    "i1t": "정통 수공예",
+    "i1d": "숙련된 장인이 만드는 전통 콜하푸리 디자인.",
+    "i2t": "다양한 제품군",
+    "i2d": "다양한 디자인과 사이즈의 남녀 신발.",
+    "i3t": "꼼꼼한 포장",
+    "i3d": "안전한 국제 배송을 위한 세심한 포장.",
+    "i4t": "원활한 소통",
+    "i4d": "왓츠앱과 이메일로 빠르고 편하게, 원하는 언어로 소통."
+  },
+  "how": {
+    "title": "주문 방법",
+    "s1t": "문의 보내기",
+    "s1d": "필요한 디자인과 수량을 알려주세요.",
+    "s2t": "견적 받기",
+    "s2d": "가격과 배송 옵션을 안내해 드립니다.",
+    "s3t": "주문 확정",
+    "s3d": "세부 사항과 결제 조건에 합의합니다.",
+    "s4t": "배송",
+    "s4d": "주문 상품을 포장하여 발송합니다."
+  },
+  "contact": {
+    "title": "문의하기",
+    "subtitle": "문의를 보내주시면 빠르게 답변드리겠습니다.",
+    "name": "이름",
+    "company": "회사명(선택)",
+    "country": "국가",
+    "email": "이메일",
+    "message": "필요하신 내용을 알려주세요",
+    "send": "문의 보내기",
+    "sent": "감사합니다! 곧 연락드리겠습니다.",
+    "sending": "전송 중...",
+    "error": "메시지 전송에 실패했습니다. WhatsApp이나 이메일로 직접 문의해 주세요.",
+    "sendAnother": "다른 문의 보내기"
+  },
+  "footer": {
+    "company": "회사",
+    "productsHeading": "카탈로그",
+    "getInTouch": "문의하기",
+    "email": "이메일",
+    "phone": "전화",
+    "location": "사업장 주소",
+    "rights": "모든 권리 보유.",
+    "backToTop": "맨 위로",
+    "tagline": "글로벌 무역 · 로컬 루트",
+    "quick": "빠른 링크",
+    "reach": "문의하기"
+  },
+  "blog": {
+    "title": "인사이트 & 업데이트",
+    "subtitle": "Local Exim의 수출 가이드와 소식.",
+    "empty": "새로운 글을 준비 중입니다. 곧 찾아뵙겠습니다. 왓츠앱으로도 소식을 받아보실 수 있습니다.",
+    "back": "홈으로 돌아가기",
+    "spotlightTag": "제품 스포트라이트",
+    "spotlightSubtitle": "카탈로그 속 몇 가지 디자인을 소개합니다. 정식 게시글은 곧 공개됩니다.",
+    "backHome": "홈으로 돌아가기",
+    "readMore": "자세히 보기"
+  },
+  "catalogue": {
+    "title": "전체 카탈로그",
+    "subtitle": "전체 제품을 둘러보세요. 원하는 디자인을 선택하여 왓츠앱으로 문의하세요.",
+    "searchPlaceholder": "디자인 검색…",
+    "filterAll": "전체",
+    "cat": {
+      "mensKolhapuri": "남성용 콜하푸리",
+      "mensKapshi": "남성용 카프시 & 모지디",
+      "ladies": "여성용 콜하푸리 & 샌들"
+    },
+    "priceNote": "대량/수출 가격은 문의 바랍니다",
+    "enquire": "왓츠앱으로 문의",
+    "loadMore": "더 보기",
+    "empty": "검색 조건에 맞는 디자인이 없습니다. 다른 검색어나 카테고리를 시도해 보세요.",
+    "photoComingSoon": "사진 준비 중",
+    "download": "카탈로그 다운로드 (PDF)",
+    "downloadHint": "사진, 상품 코드, 상세 정보를 포함한 전체 디자인"
+  },
+  "whatsapp": {
+    "floatingAria": "WhatsApp으로 Local Exim에 문의하기",
+    "inquiryPrefix": "안녕하세요 Local Exim, 상품에 대해 문의하고 싶습니다:"
+  },
+  "testimonials": {
+    "title": "파트너들의 평가",
+    "subtitle": "글로벌 소매업체, 부티크 및 신발 유통업체의 신뢰를 받고 있습니다."
+  }
+}

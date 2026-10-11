@@ -12,7 +12,8 @@
     "menu": "Menú",
     "close": "Cerrar",
     "catalogue": "Catálogo",
-    "catalogueAll": "Todos los productos"
+    "catalogueAll": "Todos los productos",
+    "moreLanguages": "Más idiomas (traducción automática)"
   },
   "hero": {
     "eyebrow": "Elaboradas a mano en Kolhapur, India",
@@ -20,9 +21,12 @@
     "subtitle": "Sandalias artesanales de cuero genuino elaboradas con maestría tradicional para compradores y distribuidores globales.",
     "cta1": "Ver Colección",
     "cta2": "Chatear por WhatsApp",
-    "chip1": "100% Cuero Genuino",
+    "chip1": "Cuero Hecho a Mano",
     "chip2": "Artesanía Cosida a Mano",
-    "browseCatalogue": "Ver catálogo completo →"
+    "browseCatalogue": "Ver catálogo completo →",
+    "pause": "Pausar presentación",
+    "play": "Reproducir presentación",
+    "slide": "Mostrar diseño {{n}}"
   },
   "highlights": {
     "designs": "Diseños en catálogo",
@@ -142,6 +146,8 @@
     "enquire": "Consultar por WhatsApp",
     "loadMore": "Cargar más",
     "empty": "No se encontraron diseños que coincidan con su búsqueda.",
-    "photoComingSoon": "Actualización de foto en curso"
+    "photoComingSoon": "Actualización de foto en curso",
+    "download": "Descargar Catálogo (PDF)",
+    "downloadHint": "Todos los diseños con fotos, códigos y detalles"
   }
 }

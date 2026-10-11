@@ -2,13 +2,12 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { MessageCircle } from 'lucide-react';
 import { siteConfig } from '../../siteConfig';
+import { waLink } from '../../lib/whatsapp';
 
 export default function FloatingWhatsApp() {
   const { t } = useTranslation();
 
-  const whatsappUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
-    t('whatsapp.inquiryPrefix') + ' ' + siteConfig.name
-  )}`;
+  const whatsappUrl = waLink(siteConfig.waMessages?.general);
 
   return (
     <aside

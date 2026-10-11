@@ -1,31 +1,59 @@
-LOCAL EXIM: UPDATE PASS (same project, do not rebuild from scratch)
+LOCAL EXIM: HERO SLIDESHOW + WHATSAPP NUMBER + PDF CATALOGUE DOWNLOAD
 
-0. SETUP
-Replace src/siteConfig.js and src/locales/en.json with the two files in the attached update pack (they already contain the new contact details, the full language list with native names, and new "nav.blog" / "blog.*" keys).
+0. SETUP (files from the pack, overwrite existing)
+- public/downloads/Local-Exim-Catalogue.pdf  (new)
+- public/catalogue/*.webp  (refreshed images, overwrite all)
+- public/hero/ladies-bingri-kolhapuri-cutout.webp  (new 5th hero image)
+- src/data/catalogue.json  (overwrite: adds `code`, corrected photoQuality flags)
+- src/data/heroSlides.json  (new)
+- tools/build_catalogue_pdf.py  (new, do not run it unless asked)
+Do NOT overwrite src/siteConfig.js or src/locales/*.json; edit them as described below.
 
-1. CONTACT & ADDRESS UPDATE
-Phone, email and address now come only from siteConfig.js — do not hardcode them anywhere.
-- Phone: +91 93564 47373
-- Email: shubhhampatill@localexim.com
-- Address: Office No. 1846, Shivshambo Nagar, Ward No. 4, Tal. Karvir, Dist. Kolhapur – 416234, Maharashtra, India
-Update every place these appear: the Contact section info cards, the footer contact column, the WhatsApp float button's underlying number stays UNCHANGED (still siteConfig.whatsappNumber, the catalogue number), and the JSON-LD Organization schema / meta tags if present. Grep the codebase for the old placeholder email/address and remove any hardcoded duplicates.
+1. HERO AUTO SLIDESHOW
+Extend the existing hero featured-design selector (currently 4 items) to the 5 slides in src/data/heroSlides.json. Do not rebuild the hero layout.
+- Autoplay every 3000 ms (put `heroSlideshow: { intervalMs: 3000 }` in siteConfig.js and read it from there).
+- Crossfade (~600 ms) between slides stacked in the same gold-ringed frame; subtle scale 1.00 -> 1.04 during the show is fine. Keep the existing CSS float animation on the wrapper, NOT on each image.
+- The 5 numbered dots stay and become clickable; clicking a dot shows that slide and restarts the 3 s timer.
+- Pause on hover/focus-within, when the browser tab is hidden (visibilitychange), and when the hero is off-screen (IntersectionObserver).
+- Add a small pause/play toggle button next to the dots (aria-label from locale keys hero.pause / hero.play). This is required for accessibility because the content moves automatically for more than 5 s.
+- prefers-reduced-motion: do NOT autoplay (start paused), no crossfade scale; the user can still press play or click dots.
+- Performance: first slide eager with fetchpriority=high; preload the other 4 after window load (idle callback); container has fixed width/height so there is no layout shift. Images are shown at max ~300px wide, never stretched.
+- Keep the dot buttons' aria-labels from locale key hero.slide ("Show design {{n}}").
 
-2. BLOG (nav + placeholder page only — no articles yet)
-- Add "Blog" to the main nav and the mobile drawer, between "About" and "Contact", shown only if siteConfig.showBlog is true. Route: /blog.
-- Build a simple BlogIndex page in the same brand style (cream background, gold hairline cards) styled like horizonexim.co.in/blog's card grid: each card has a date badge (day + month/year), a thumbnail, and a title link — but since there are no posts yet, render an empty state instead: an icon, the text from blog.title / blog.subtitle / blog.empty (locale keys provided), and a "Back to Home" button. Build the card component now so real posts can be dropped into src/data/blog.json later with zero redesign.
-- Footer "Quick Links" also gets a Blog link, same visibility rule.
-- This is a single extra route; it does not need its own language-specific SEO work beyond reusing the existing meta pattern.
+2. WHATSAPP NUMBER: 9356447373 (SINGLE SOURCE OF TRUTH)
+- In src/siteConfig.js set whatsappNumber: "919356447373" (digits only, country code first) and add:
+    waMessages: {
+      general: "Hello Local Exim, I would like to enquire about your Kolhapuri footwear.",
+      product: "Hello Local Exim, I am interested in {name} (Code: {code}). Please share details."
+    }
+  Keep phone: "+91 93564 47373" (it is the same number).
+- Create src/lib/whatsapp.js exporting waLink(message): digits-only number (if exactly 10 digits, prefix 91), returns `https://wa.me/${number}?text=${encodeURIComponent(message)}`; and productMessage(product) that fills {name} and {code} from waMessages.product.
+- EVERY WhatsApp entry point must use waLink(): hero "Chat on WhatsApp", mobile drawer WhatsApp button, floating WhatsApp button, "Enquire on WhatsApp" on Home featured cards, /catalogue cards, /blog spotlight cards, the Contact section, and the footer. Use general message for generic buttons and productMessage() for product buttons.
+- Implement every one as a plain <a href={waLink(...)} target="_blank" rel="noopener noreferrer">. Do NOT use window.open in click handlers (popup blockers / iOS Safari), do NOT use whatsapp:// or api.whatsapp.com/send. wa.me works on both: it opens the WhatsApp app on mobile and WhatsApp Web / Desktop on computers.
+- Search the whole codebase (src, index.html, public, JSON-LD, meta) for the old number 917038405530 / 7038405530 and any other hardcoded phone or wa.me URL, and replace them with the siteConfig values. Phone rows use tel:+919356447373; email rows use mailto:. JSON-LD telephone = "+919356447373".
 
-3. LANGUAGES (10 total)
-siteConfig.languages is now an ordered list of { code, native } — use it to drive the switcher instead of a hardcoded array. Keep the 6 already working (en, ar, es, fr, de, hi) and add 4 new locale files with full, natural translations of every key in en.json: zh (Simplified Chinese), ta (Tamil), ru (Russian), pt (Portuguese). Lazy-load each file as before.
-Dropdown layout, since 10 languages is too long for a single column:
-- Desktop: panel opens as a 2-column grid (5 rows x 2 cols), each row = flag/code + native name, active language has a gold left-border + tick icon, hover = soft green tint.
-- Mobile drawer: single column, max-height with internal scroll (not pushing the rest of the drawer down), same row styling.
-- Keep existing persistence (localStorage) and browser-language detection logic; just source the list from siteConfig.languages.
-- Chinese and Tamil are not RTL — only Arabic keeps dir="rtl". No layout mirroring needed for the new ones.
+3. PDF CATALOGUE DOWNLOAD
+The PDF is pre-built and static (46 designs, product code, photo, price, tappable enquire links). Do NOT generate PDFs in the browser and do not add a PDF library.
+- Add to siteConfig.js: catalogueDownload: { file: "/downloads/Local-Exim-Catalogue.pdf", sizeLabel: "PDF · 1.8 MB" }.
+- Create a reusable <DownloadCatalogueButton variant="primary|ghost|link"> rendering <a href={file} download="Local-Exim-Catalogue.pdf" target="_blank" rel="noopener noreferrer"> with a Download icon, label from catalogue.download, and the sizeLabel in small muted text. (On iPhone the PDF opens in the viewer with Share / Save to Files; on Android and desktop it downloads. This is expected, do not fight it.)
+- Place it in: (a) top of /catalogue next to the title (desktop) and as a full-width button under the title (mobile); (b) Home > Featured Designs, beside "View Full Catalogue" as the secondary button; (c) footer, in the Catalogue column; (d) mobile drawer, below the main links.
+- Show the product `code` (small, gold, muted) on /catalogue and Home cards, and include it in the WhatsApp message via productMessage().
+- On /catalogue keep prices as ₹{priceInr} with the note "Bulk / export pricing on request"; never show prices on Home cards.
+- Respect catalogue.json flags: skip items with excludeUntilPhoto; for photoQuality "needs-photo" show a neutral "Photo coming soon" placeholder tile (locale key catalogue.photoComingSoon) instead of the image.
 
-4. RULES (unchanged from the original build)
-No hardcoded copy in components. Don't touch sections outside what's listed above. Keep performance budget and existing structure intact — this is an incremental update, not a redesign.
+4. LOCALE KEYS (add to src/locales/en.json AND translate into all other 14 locale files so no language falls back to English)
+- catalogue.download: "Download Catalogue (PDF)"
+- catalogue.downloadHint: "All designs with photos, codes and details"
+- hero.pause: "Pause slideshow"
+- hero.play: "Play slideshow"
+- hero.slide: "Show design {{n}}"
+The PDF itself is English only; that is fine.
 
-5. DELIVERABLE
-Confirm with a short diff summary of files touched, and a screenshot of: footer with new contact details, the open language dropdown (desktop), and the Blog empty-state page.
+5. SMALL COPY FIX
+The hero badge "100% Genuine Leather" is an unverified claim. Change it to "Handcrafted Leather" (via a locale key) unless I confirm otherwise. Do not add any other claims.
+
+6. RULES
+No hardcoded copy; keep the existing performance budget; mobile-first (verify 360 / 768 / 1280). Do not touch unrelated sections.
+
+7. DELIVERABLE + TEST NOTES
+Screenshots: hero mid-slideshow (desktop + mobile), /catalogue with the download button (desktop + mobile), footer. Confirm in writing: (a) slideshow advances every ~3 s and pauses on hover and via the toggle; (b) grep shows no remaining old WhatsApp number; (c) a product "Enquire on WhatsApp" link opens wa.me/919356447373 with the product name and code prefilled, on a desktop width and a mobile width; (d) the PDF link opens/downloads the file.

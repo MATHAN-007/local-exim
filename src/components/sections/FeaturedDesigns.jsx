@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ProductCard from '../ui/ProductCard';
+import DownloadCatalogueButton from '../ui/DownloadCatalogueButton';
 import productsData from '../../data/products.json';
 import { siteConfig } from '../../siteConfig';
 
@@ -79,7 +80,6 @@ export default function FeaturedDesigns({ selectedFilter = 'all', onFilterChange
             <ProductCard
               key={product.id}
               product={product}
-              whatsappNumber={siteConfig.whatsappNumber}
               showPrice={false}
             />
           ))}
@@ -90,18 +90,21 @@ export default function FeaturedDesigns({ selectedFilter = 'all', onFilterChange
           <p className="text-sm text-ink/60 mb-4">
             {t('featured.bulkInquiry')}
           </p>
-          <a
-            href="/catalogue"
-            onClick={(e) => {
-              if (onNavigate) {
-                e.preventDefault();
-                onNavigate('/catalogue');
-              }
-            }}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-xs sm:text-sm text-forest-900 bg-white border border-gold-500/40 hover:bg-gold-500/10 shadow-sm transition-all"
-          >
-            {t('featured.viewAll')}
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="/catalogue"
+              onClick={(e) => {
+                if (onNavigate) {
+                  e.preventDefault();
+                  onNavigate('/catalogue');
+                }
+              }}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-xs sm:text-sm text-forest-900 bg-white border border-gold-500/40 hover:bg-gold-500/10 shadow-sm transition-all"
+            >
+              {t('featured.viewAll')}
+            </a>
+            <DownloadCatalogueButton variant="ghost" />
+          </div>
         </div>
 
       </div>

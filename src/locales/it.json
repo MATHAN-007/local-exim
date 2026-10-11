@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "home": "Home",
+    "collections": "Collezioni",
+    "about": "Chi Siamo",
+    "why": "Perché Sceglierci",
+    "contact": "Contatti",
+    "quote": "Richiedi Preventivo",
+    "classic": "Chappal Kolhapuri",
+    "ladies": "Kolhapuri e Sandali da Donna",
+    "blog": "Blog",
+    "catalogue": "Catalogo",
+    "catalogueAll": "Tutti i Prodotti",
+    "menu": "Menu",
+    "close": "Chiudi"
+  },
+  "hero": {
+    "eyebrow": "Realizzati a mano a Kolhapur, India",
+    "title": "Autentici Chappal Kolhapuri, Spediti in Tutto il Mondo",
+    "subtitle": "Chappal in pelle e sandali aperti in punta, artigianato tradizionale pensato per gli acquirenti internazionali.",
+    "cta1": "Scopri la Collezione",
+    "cta2": "Scrivici su WhatsApp",
+    "browseCatalogue": "Sfoglia il catalogo completo →",
+    "chip1": "Pelle Artigianale",
+    "chip2": "Approvvigionamento Diretto dagli Artigiani",
+    "pause": "Metti in pausa lo slideshow",
+    "play": "Riproduci lo slideshow",
+    "slide": "Mostra modello {{n}}"
+  },
+  "highlights": {
+    "designs": "Modelli a catalogo",
+    "ranges": "Linee di prodotto",
+    "sizes": "Taglie (UK/IN)",
+    "whatsapp": "Assistenza WhatsApp"
+  },
+  "collections": {
+    "title": "Le Nostre Collezioni",
+    "subtitle": "Due linee distintive, realizzate secondo la tradizione.",
+    "classic": {
+      "title": "Chappal Kolhapuri",
+      "desc": "Chappal classici in pelle con anello per l'alluce, in stile Kolhapuri tradizionale."
+    },
+    "ladies": {
+      "title": "Kolhapuri e Sandali Aperti da Donna",
+      "desc": "Sandali in pelle leggeri ed eleganti, aperti in punta, per ogni occasione."
+    },
+    "explore": "Scopri di più"
+  },
+  "featured": {
+    "title": "Modelli in Evidenza",
+    "subtitle": "Una selezione dal nostro catalogo.",
+    "priceOnRequest": "Prezzo su richiesta",
+    "enquire": "Richiedi su WhatsApp",
+    "viewAll": "Vedi il Catalogo Completo",
+    "allDesigns": "Tutti i Modelli",
+    "bulkInquiry": "Hai bisogno di prezzi all'ingrosso o di assortimento personalizzato per la vendita internazionale?"
+  },
+  "about": {
+    "title": "Radicati a Kolhapur. Pensati per il Mondo.",
+    "text": "Local Exim porta le calzature tradizionali in pelle Kolhapuri agli acquirenti di tutto il mondo. Lavoriamo direttamente con artigiani locali esperti, così ogni paio mantiene il suo carattere autentico.",
+    "p1": "Pelle lavorata a mano",
+    "p2": "Design tradizionali",
+    "p3": "Approvvigionamento diretto dagli artigiani"
+  },
+  "why": {
+    "title": "Perché Scegliere Local Exim",
+    "i1t": "Artigianato Autentico",
+    "i1d": "Design Kolhapuri tradizionali realizzati da artigiani esperti.",
+    "i2t": "Vasta Gamma",
+    "i2d": "Modelli da uomo e da donna in tante varianti e taglie.",
+    "i3t": "Imballaggio Accurato",
+    "i3d": "Ogni paio è imballato con cura per una spedizione internazionale sicura.",
+    "i4t": "Comunicazione Semplice",
+    "i4d": "Risposte rapide su WhatsApp e via email, nella tua lingua."
+  },
+  "how": {
+    "title": "Come Ordinare",
+    "s1t": "Invia una Richiesta",
+    "s1d": "Indicaci i modelli e le quantità di cui hai bisogno.",
+    "s2t": "Ricevi un Preventivo",
+    "s2d": "Ti inviamo prezzi e opzioni di spedizione.",
+    "s3t": "Conferma l'Ordine",
+    "s3d": "Si concordano i dettagli e i termini di pagamento.",
+    "s4t": "Spediamo",
+    "s4d": "Il tuo ordine viene imballato e spedito."
+  },
+  "contact": {
+    "title": "Parliamone",
+    "subtitle": "Invia la tua richiesta, ti risponderemo presto.",
+    "name": "Il tuo nome",
+    "company": "Azienda (facoltativo)",
+    "country": "Paese",
+    "email": "Email",
+    "message": "Raccontaci di cosa hai bisogno",
+    "send": "Invia Richiesta",
+    "sent": "Grazie! Ti risponderemo presto.",
+    "sending": "Invio in corso...",
+    "error": "Invio del messaggio non riuscito. Ti invitiamo a contattarci direttamente via WhatsApp o email.",
+    "sendAnother": "Invia un'altra richiesta"
+  },
+  "footer": {
+    "company": "Azienda",
+    "productsHeading": "Catalogo",
+    "getInTouch": "Contattaci",
+    "email": "Email",
+    "phone": "Telefono",
+    "location": "Sede",
+    "rights": "Tutti i diritti riservati.",
+    "backToTop": "Torna su",
+    "tagline": "Commercio Globale · Radici Locali",
+    "quick": "Link Rapidi",
+    "reach": "Contatti"
+  },
+  "blog": {
+    "title": "Approfondimenti e Novità",
+    "subtitle": "Guide all'esportazione e novità da Local Exim.",
+    "empty": "Nuovi articoli in arrivo. Torna a trovarci presto, oppure seguici su WhatsApp per gli aggiornamenti.",
+    "back": "Torna alla Home",
+    "spotlightTag": "In Primo Piano",
+    "spotlightSubtitle": "Uno sguardo ad alcuni modelli del nostro catalogo. Presto articoli completi.",
+    "backHome": "Torna alla Home",
+    "readMore": "Leggi l'articolo"
+  },
+  "catalogue": {
+    "title": "Catalogo Completo",
+    "subtitle": "Sfoglia la gamma completa. Tocca un modello per richiedere informazioni su WhatsApp.",
+    "searchPlaceholder": "Cerca un modello…",
+    "filterAll": "Tutti",
+    "cat": {
+      "mensKolhapuri": "Kolhapuri Uomo",
+      "mensKapshi": "Kapshi e Mojdi Uomo",
+      "ladies": "Kolhapuri e Sandali Donna"
+    },
+    "priceNote": "Prezzi per l'export/all'ingrosso su richiesta",
+    "enquire": "Richiedi su WhatsApp",
+    "loadMore": "Carica Altri",
+    "empty": "Nessun modello corrisponde alla ricerca. Prova un altro termine o categoria.",
+    "photoComingSoon": "Foto in arrivo",
+    "download": "Scarica il Catalogo (PDF)",
+    "downloadHint": "Tutti i modelli con foto, codici e dettagli"
+  },
+  "whatsapp": {
+    "floatingAria": "Chatta con Local Exim su WhatsApp",
+    "inquiryPrefix": "Buongiorno Local Exim, vorrei richiedere informazioni su"
+  },
+  "testimonials": {
+    "title": "Cosa Dicono i Nostri Partner",
+    "subtitle": "Scelto da rivenditori, boutique e distributori di calzature in tutto il mondo."
+  }
+}
