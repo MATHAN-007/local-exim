@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^5.0.3",
     "@fontsource/cormorant-garamond": "^5.1.1",
     "@fontsource/manrope": "^5.1.1",
     "@fontsource/noto-sans-arabic": "^5.1.1",
@@ -18,7 +19,8 @@
     "lucide-react": "^0.475.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-i18next": "^15.4.1"
+    "react-i18next": "^15.4.1",
+    "react-markdown": "^10.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",

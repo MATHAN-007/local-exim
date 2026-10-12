@@ -115,11 +115,19 @@
     "title": "인사이트 & 업데이트",
     "subtitle": "Local Exim의 수출 가이드와 소식.",
     "empty": "새로운 글을 준비 중입니다. 곧 찾아뵙겠습니다. 왓츠앱으로도 소식을 받아보실 수 있습니다.",
-    "back": "홈으로 돌아가기",
+    "back": "블로그로 돌아가기",
     "spotlightTag": "제품 스포트라이트",
     "spotlightSubtitle": "카탈로그 속 몇 가지 디자인을 소개합니다. 정식 게시글은 곧 공개됩니다.",
     "backHome": "홈으로 돌아가기",
-    "readMore": "자세히 보기"
+    "readMore": "자세히 보기",
+    "readTime": "읽는 시간: {{n}}분",
+    "share": "공유하기",
+    "shareOnWhatsapp": "WhatsApp으로 공유",
+    "copyLink": "링크 복사",
+    "linkCopied": "링크가 복사되었습니다",
+    "relatedPosts": "관련 추천 글",
+    "viewCollection": "관련 컬렉션 보기",
+    "askUs": "WhatsApp으로 문의하기"
   },
   "catalogue": {
     "title": "전체 카탈로그",

@@ -130,7 +130,16 @@
     "backHome": "Volver al Inicio",
     "readMore": "Leer Artículo",
     "spotlightTag": "Producto Destacado",
-    "spotlightSubtitle": "Una mirada más cercana a diseños selectos de nuestro catálogo. Artículos completos pronto."
+    "spotlightSubtitle": "Una mirada más cercana a diseños selectos de nuestro catálogo. Artículos completos pronto.",
+    "back": "Volver al blog",
+    "readTime": "{{n}} min de lectura",
+    "share": "Compartir",
+    "shareOnWhatsapp": "Compartir en WhatsApp",
+    "copyLink": "Copiar enlace",
+    "linkCopied": "Enlace copiado",
+    "relatedPosts": "También te podría gustar",
+    "viewCollection": "Ver colección relacionada",
+    "askUs": "Pregúntanos por WhatsApp"
   },
   "catalogue": {
     "title": "Catálogo Completo",

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, Phone, MapPin, MessageCircle, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageCircle, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import { siteConfig } from '../../siteConfig';
 import { waLink } from '../../lib/whatsapp';
 
@@ -13,8 +14,13 @@ export default function ContactSection() {
     email: '',
     message: '',
   });
+  const [honeypot, setHoneypot] = useState('');
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
   const [errorMessage, setErrorMessage] = useState('');
+
+  // Anti-spam timing references
+  const formMountedAt = useRef(Date.now());
+  const lastSubmitAt = useRef(0);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,59 +30,94 @@ export default function ContactSection() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic validation
-    if (!formData.name.trim() || !formData.email.trim() || !formData.country.trim() || !formData.message.trim()) {
-      setStatus('error');
-      setErrorMessage('Please fill in all required fields.');
+    // 1. Anti-spam Check A: Honeypot field filled by bots
+    if (honeypot.trim() !== '') {
+      // Silently pretend to succeed to prevent bots from retrying
+      setStatus('success');
       return;
     }
 
+    // 2. Anti-spam Check B: Human interaction time (minimum 1.5 seconds)
+    if (Date.now() - formMountedAt.current < 1500) {
+      setStatus('error');
+      setErrorMessage('Please review your enquiry before submitting.');
+      return;
+    }
+
+    // 3. Anti-spam Check C: Rate limiting / duplicate prevention (15 second cooldown)
+    if (Date.now() - lastSubmitAt.current < 15000) {
+      setStatus('error');
+      setErrorMessage('Please wait a moment before sending another enquiry.');
+      return;
+    }
+
+    // 4. Validation: Check required fields (prevent empty or whitespace-only)
+    const trimmedName = formData.name.trim();
+    const trimmedCompany = formData.company.trim();
+    const trimmedCountry = formData.country.trim();
+    const trimmedEmail = formData.email.trim();
+    const trimmedMessage = formData.message.trim();
+
+    if (!trimmedName || !trimmedCountry || !trimmedEmail || !trimmedMessage) {
+      setStatus('error');
+      setErrorMessage('Please fill in all required fields (Name, Country, Email, and Message).');
+      return;
+    }
+
+    // 5. Validation: Email address format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
+    if (!emailRegex.test(trimmedEmail)) {
       setStatus('error');
       setErrorMessage('Please enter a valid email address.');
+      return;
+    }
+
+    // 6. Read EmailJS configuration from Vite environment variables
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus('error');
+      setErrorMessage(
+        'EmailJS service configuration is missing. Please ensure VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, and VITE_EMAILJS_PUBLIC_KEY are set.'
+      );
       return;
     }
 
     setStatus('submitting');
     setErrorMessage('');
 
-    const apiKey = import.meta.env.VITE_WEB3FORMS_KEY;
+    // Template variables matching requirements
+    const templateParams = {
+      user_name: trimmedName,
+      company: trimmedCompany || 'Not specified',
+      country: trimmedCountry,
+      user_email: trimmedEmail,
+      message: trimmedMessage,
+      reply_to: trimmedEmail,
+    };
 
     try {
-      if (apiKey && apiKey !== 'YOUR_WEB3FORMS_KEY_HERE') {
-        const response = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-          },
-          body: JSON.stringify({
-            access_key: apiKey,
-            subject: `New B2B Footwear Inquiry from ${formData.name} (${formData.country})`,
-            from_name: 'Local Exim Web Form',
-            ...formData,
-          }),
-        });
+      const response = await emailjs.send(serviceId, templateId, templateParams, {
+        publicKey: publicKey,
+      });
 
-        const result = await response.json();
-        if (result.success) {
-          setStatus('success');
-          setFormData({ name: '', company: '', country: '', email: '', message: '' });
-        } else {
-          setStatus('error');
-          setErrorMessage(result.message || t('contact.error'));
-        }
-      } else {
-        // Fallback demo simulation if key is not yet configured in .env
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+      if (response.status === 200) {
+        lastSubmitAt.current = Date.now();
         setStatus('success');
         setFormData({ name: '', company: '', country: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+        setErrorMessage(response.text || t('contact.error'));
       }
     } catch (err) {
-      console.error('Contact form submission error:', err);
+      console.error('EmailJS submission error:', err);
       setStatus('error');
-      setErrorMessage(t('contact.error'));
+      // Preserve user entered details on error
+      setErrorMessage(
+        err?.text || err?.message || t('contact.error') || 'Failed to send enquiry. Please try again or reach out on WhatsApp.'
+      );
     }
   };
 
@@ -196,7 +237,20 @@ export default function ContactSection() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5" noValidate>
-                  
+                  {/* Anti-spam honeypot - invisible to legitimate users */}
+                  <div className="hidden" aria-hidden="true" style={{ display: 'none' }}>
+                    <label htmlFor="contact-hp-address">Leave this field blank</label>
+                    <input
+                      id="contact-hp-address"
+                      type="text"
+                      name="_hp_address"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={honeypot}
+                      onChange={(e) => setHoneypot(e.target.value)}
+                    />
+                  </div>
+
                   {status === 'error' && (
                     <div className="p-4 rounded-xl bg-red-900/40 border border-red-500/50 flex items-center gap-3 text-red-200 text-sm">
                       <AlertCircle className="w-5 h-5 flex-shrink-0" />
@@ -296,10 +350,19 @@ export default function ContactSection() {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-sm sm:text-base text-forest-900 bg-gradient-to-r from-gold-300 via-gold-400 to-gold-300 hover:shadow-gold-glow hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-50"
+                    className="w-full flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-sm sm:text-base text-forest-900 bg-gradient-to-r from-gold-300 via-gold-400 to-gold-300 hover:shadow-gold-glow hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-none"
                   >
-                    <Send className="w-4 h-4 rtl:rotate-180" />
-                    <span>{status === 'submitting' ? t('contact.sending') : t('contact.send')}</span>
+                    {status === 'submitting' ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin flex-shrink-0" />
+                        <span>{t('contact.sending')}</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4 rtl:rotate-180 flex-shrink-0" />
+                        <span>{t('contact.send')}</span>
+                      </>
+                    )}
                   </button>
 
                 </form>

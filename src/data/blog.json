@@ -1,47 +1,92 @@
 {
-  "_note": "Placeholder 'Product Spotlight' cards for the Blog page until real articles exist. Swap to real posts later by adding date/body/slug fields to this same file -- no component changes needed.",
-  "spotlights": [
+  "_note": "Full SEO blog posts, replacing the earlier placeholder 'spotlights' approach. Each post's body is Markdown. No Prada product imagery is used anywhere -- the Prada post uses comparisonChart data instead, rendered as our own SVG/CSS graphic.",
+  "posts": [
     {
-      "id": "sankeshwari-kolhapuri",
-      "productId": "sankeshwari-kolhapuri",
-      "title": "Sankeshwari Kolhapuri",
-      "image": "/catalogue/sankeshwari-kolhapuri.webp",
-      "blurb": "A classic toe-ring silhouette, hand-stitched in traditional Kolhapuri style."
+      "slug": "kolhapuri-chappal-history-gi-tag",
+      "title": "The 900-Year Story Behind the Kolhapuri Chappal",
+      "metaTitle": "Kolhapuri Chappal History & GI Tag Explained | Local Exim",
+      "metaDescription": "Discover the 12th-century origins of the Kolhapuri chappal, how it earned India's GI tag in 2019, and why that protection matters when you buy.",
+      "keywords": [
+        "kolhapuri chappal history",
+        "kolhapuri chappal GI tag",
+        "authentic kolhapuri chappal origin"
+      ],
+      "heroImage": "/catalogue/sankeshwari-kolhapuri.webp",
+      "category": "men-kolhapuri",
+      "readTimeMins": 5,
+      "excerpt": "Long before it became a fashion-week talking point, the Kolhapuri chappal was a centuries-old craft, protected since 2019 by one of India's Geographical Indication tags.",
+      "body": "## A Craft That Predates Most Nations\n\nThe open-toe, hand-stitched leather sandal known today as the Kolhapuri chappal traces its roots to the 12th century, to the Kolhapur region of what is now Maharashtra, India. For much of its history it was known locally as the *paytaan*, long before \"Kolhapuri\" became its common name in the 18th century.\n\nThe craft was carried forward for generations by local artisan communities -- traditionally the Chambhar community, who stitched the chappals, and the Dhor community, who tanned the leather. Royal patronage helped the craft grow: under Chhatrapati Shahu Maharaj of Kolhapur, dozens of tanning centres were established to support local artisans, cementing Kolhapur's place as the home of this footwear.\n\n## What Actually Makes a Chappal \"Kolhapuri\"\n\nNot every open-toe leather sandal can rightfully carry the name. According to the official Geographical Indication specification, a genuine Kolhapuri chappal is made entirely from **bag-tanned leather** -- the sole, the upper straps, and the heel all come from the same vegetable-tanned hide, hand-stitched together rather than assembled from separate glued layers. This is a slow, skill-intensive process, and it's a large part of why handmade pairs feel and age so differently from mass-produced look-alikes.\n\n## The 2019 GI Tag, Explained\n\nIn 2019, after an application process that began a decade earlier, \"Kolhapuri Chappal\" was granted a Geographical Indication (GI) tag by India's Controller General of Patents, Designs & Trade Marks. A GI tag is a legal recognition that a product's qualities are genuinely tied to its place of origin -- the same kind of protection that applies to Champagne or Darjeeling Tea.\n\nPractically, this means only footwear made in eight specific districts is entitled to use the name \"Kolhapuri Chappal\": Kolhapur, Sangli, Satara, and Solapur in Maharashtra, and Dharwad, Belagavi, Bagalkot, and Bijapur in Karnataka. Anything made elsewhere, however similar it looks, isn't legally a Kolhapuri chappal.\n\n## Why This Matters When You Buy\n\nFor a buyer -- whether you're furnishing a wardrobe or sourcing for retail -- the GI tag is a useful signal, not a guarantee by itself. It tells you the *name* is protected; it doesn't verify any individual seller's claims. That's why it's worth asking where a pair was actually made, and buying from someone who can answer that directly.\n\nAt Local Exim, every pair in our catalogue is sourced from artisans working in this tradition, in Kolhapur. [Browse our collection](/catalogue) or [reach out on WhatsApp](#whatsapp) if you'd like to know more about how a specific pair was made.\n",
+      "wordCount": 418
     },
     {
-      "id": "export-kolhapuri",
-      "productId": "export-kolhapuri",
-      "title": "Export Kolhapuri",
-      "image": "/catalogue/export-kolhapuri.webp",
-      "blurb": "Built for the export range, finished for everyday comfort."
+      "slug": "prada-kolhapuri-chappal-controversy",
+      "title": "When Milan Met Kolhapur: The Prada Sandal Story, Explained",
+      "metaTitle": "Prada's ₹1.2 Lakh \"Kolhapuri\" Sandals: What Happened",
+      "metaDescription": "Prada's Spring/Summer 2026 show featured sandals strikingly similar to Kolhapuri chappals. Here's what happened, and what sets the authentic original apart.",
+      "keywords": [
+        "prada kolhapuri chappal",
+        "prada kolhapuri controversy",
+        "real kolhapuri chappal vs prada"
+      ],
+      "heroImage": "/catalogue/mla-kolhapuri.webp",
+      "category": "men-kolhapuri",
+      "readTimeMins": 4,
+      "excerpt": "In June 2025, a Milan runway show put Kolhapur's 900-year-old craft in headlines worldwide -- and reignited a conversation about who gets credited for it.",
+      "hasComparisonChart": true,
+      "comparisonChart": {
+        "title": "The Price Gap, in Perspective",
+        "items": [
+          {
+            "label": "Traditional Kolhapuri Chappal",
+            "low": 500,
+            "high": 2000,
+            "note": "Typical retail range in India, per pair"
+          },
+          {
+            "label": "Prada SS26 Runway Sandal",
+            "low": 120000,
+            "high": 120000,
+            "note": "Reported price, as shown at Milan Fashion Week"
+          }
+        ],
+        "sourceNote": "Figures as widely reported in Indian and international press, June 2025."
+      },
+      "body": "## What Happened\n\nAt Milan Fashion Week in June 2025, Prada's Spring/Summer 2026 menswear show featured models in open-toe, braided leather sandals -- worn in several looks -- that bore a striking resemblance to the traditional Kolhapuri chappal. The brand's initial show notes described them simply as \"leather sandals,\" with no mention of their apparent Indian origins.\n\nThe resemblance didn't go unnoticed. Artisan groups, trade bodies, and political figures in Maharashtra raised concerns, pointing to the contrast between Prada's reported price of roughly ₹1.2 lakh (around $1,400) per pair and the ₹500-₹2,000 that traditional, handmade Kolhapuri chappals typically sell for in India.\n\n## Why It Struck a Nerve\n\nPart of what made this more than a passing fashion story is that \"Kolhapuri Chappal\" has carried legal protection in India since 2019, under the country's Geographical Indication Act -- a formal recognition that ties the name to the artisan communities of a specific set of districts. For many, the absence of any credit on the runway felt like a missed opportunity to acknowledge that lineage.\n\n## Prada's Response\n\nFollowing the backlash, Prada's head of corporate social responsibility sent a letter acknowledging that the design was \"inspired by traditional Indian footwear,\" and said the brand was open to a dialogue with Indian artisans. Prada also noted the design was still at an early stage and not yet confirmed for commercial release.\n\n## The Real Thing, Direct From Kolhapur\n\nWhatever comes of that dialogue, the episode did one thing clearly: it put a 900-year-old craft in front of a global audience. The chappals artisans in Kolhapur have been making for generations are not reproductions of a runway trend -- they're the original.\n\nIf the story made you curious about the real thing, [explore our catalogue](/catalogue) of handcrafted Kolhapuri chappals and open-toe sandals, sourced directly from Kolhapur, or [message us on WhatsApp](#whatsapp) with any questions.\n",
+      "wordCount": 311
     },
     {
-      "id": "amdar-kapshi",
-      "productId": "amdar-kapshi",
-      "title": "Amdar Kapshi",
-      "image": "/catalogue/amdar-kapshi.webp",
-      "blurb": "An open-toe kapshi design with a relaxed, woven strap."
+      "slug": "how-to-identify-genuine-kolhapuri-chappals",
+      "title": "How to Spot a Genuine Handcrafted Kolhapuri Chappal",
+      "metaTitle": "How to Identify Authentic Kolhapuri Chappals | Buying Guide",
+      "metaDescription": "Machine-made imitations are everywhere. Here are five things to check -- leather, stitching, smell and more -- before you buy Kolhapuri chappals.",
+      "keywords": [
+        "genuine kolhapuri chappal",
+        "authentic leather chappal",
+        "how to identify real kolhapuri"
+      ],
+      "heroImage": "/catalogue/export-kolhapuri.webp",
+      "category": null,
+      "readTimeMins": 5,
+      "excerpt": "Not every chappal sold under this name is handmade, or even leather. Here's what to actually check before you buy.",
+      "body": "Because \"Kolhapuri\" has become a popular style name, a lot of what's sold under it today is machine-made, synthetic, or produced far from Kolhapur. None of that is always obvious from a product photo. Here's what to look for.\n\n## 1. Check the Leather\n\nGenuine bag-tanned leather has natural variation -- slight differences in tone and grain from one pair to the next, because it's a natural material, not a printed pattern. It also feels noticeably firmer when new and softens with wear. Synthetic leather tends to look uniformly smooth and glossy straight out of the box.\n\n## 2. Look at the Stitching\n\nHand-stitching isn't perfectly uniform, and that's actually the point -- small, honest irregularities are a sign of handwork, not a flaw. Machine-stitched imitations, by contrast, often look suspiciously perfect, with identical, evenly spaced stitches all the way around.\n\n## 3. The Smell Test\n\nThis sounds unusual, but it works: genuine leather has an earthy, natural smell. Synthetic (PU) leather usually has a faint chemical or plasticky smell, especially when new.\n\n## 4. One-Piece Sole Construction\n\nIn traditional Kolhapuri construction, the sole, the upper straps, and the heel all come from the same piece of bag-tanned leather, rather than being separate parts glued together. If you gently flex a pair and the sole feels like a distinctly different, thinner material from the straps, that's worth a second look.\n\n## 5. Ask Where It Was Made\n\nSince 2019, \"Kolhapuri Chappal\" has been a legally protected name in India, limited to production in eight districts across Maharashtra and Karnataka. It's a completely fair question to ask any seller: where, specifically, was this pair made? A seller sourcing directly from Kolhapur should be able to answer without hesitation.\n\n## When in Doubt, Ask Before You Buy\n\nNone of these checks require special expertise -- just a closer look than a product thumbnail usually gives you. If you're buying for yourself or for resale and want to be sure what you're getting, [browse our catalogue](/catalogue) or [ask us directly on WhatsApp](#whatsapp); we're happy to answer questions about any specific design before you order.\n",
+      "wordCount": 351
     },
     {
-      "id": "kapshi-ladies-kolhapuri",
-      "productId": "kapshi-ladies-kolhapuri",
-      "title": "Kapshi Ladies Kolhapuri",
-      "image": "/catalogue/kapshi-ladies-kolhapuri.webp",
-      "blurb": "A lighter, open-toe take on the Kolhapuri for everyday wear."
-    },
-    {
-      "id": "gatto-kolhapuri-ladies",
-      "productId": "gatto-kolhapuri-ladies",
-      "title": "Gatto Kolhapuri Ladies",
-      "image": "/catalogue/gatto-kolhapuri-ladies.webp",
-      "blurb": "Detailed strap-work for a dressier Kolhapuri look."
-    },
-    {
-      "id": "ladies-antique-kolhapuri",
-      "productId": "ladies-antique-kolhapuri",
-      "title": "Ladies Antique Kolhapuri",
-      "image": "/catalogue/ladies-antique-kolhapuri.webp",
-      "blurb": "An antique-finish leather pair with a softer, worn-in tone."
+      "slug": "how-to-care-for-leather-kolhapuri-chappals",
+      "title": "Caring for Your Kolhapuri Chappals: A Simple Maintenance Guide",
+      "metaTitle": "How to Care for Leather Kolhapuri Chappals (Easy Guide)",
+      "metaDescription": "Practical, simple steps to keep handcrafted leather Kolhapuri chappals looking good and lasting for years -- cleaning, conditioning and storage tips.",
+      "keywords": [
+        "kolhapuri chappal care",
+        "leather sandal maintenance",
+        "how to clean leather chappals"
+      ],
+      "heroImage": "/catalogue/kapshi-ladies-kolhapuri.webp",
+      "category": "ladies",
+      "readTimeMins": 4,
+      "excerpt": "Genuine leather rewards a little care. These simple habits will keep a handmade pair looking good for years, not just one season.",
+      "body": "Handmade leather footwear isn't high-maintenance, but it does respond better to a few simple habits than to being ignored in the back of a shoe rack.\n\n## Breaking Them In\n\nNew, vegetable-tanned leather is a little firm at first -- that's normal, not a defect. Wear a new pair around the house for short stretches before a long day out, and the leather will gradually shape itself to your foot.\n\n## Everyday Cleaning\n\nFor dust and light dirt, a dry, soft cloth is usually enough. For marks or deeper dirt, wipe gently with a barely damp cloth and let the chappals air-dry naturally afterward, away from direct heat. Avoid soaking them or running them under a tap -- vegetable-tanned leather isn't designed to handle prolonged water exposure.\n\n## Conditioning\n\nLeather can dry out and crack over time, especially in hot or very dry climates. An occasional light application of a natural leather conditioner or oil helps keep it supple. There's no need to overdo this -- once every few months is typically enough for a pair in regular use.\n\n## Storage\n\nWhen you're not wearing them, keep your chappals somewhere dry and out of direct sunlight, which can fade and dry out leather over time. If you're storing a pair for an extended period, loosely stuffing the toe area with paper helps them hold their shape.\n\n## Rain and Monsoon Care\n\nLeather and standing water don't mix well. If your chappals do get wet, let them dry naturally at room temperature -- never with a hairdryer or near a heater, which can cause the leather to crack or stiffen unevenly.\n\n## A Little Care Goes a Long Way\n\nTreated well, a genuine handmade pair will often outlast several pairs of synthetic footwear. If you have questions about caring for a specific design from our catalogue, [message us on WhatsApp](#whatsapp) -- we're glad to help.\n",
+      "wordCount": 314
     }
   ]
 }

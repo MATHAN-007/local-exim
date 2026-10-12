@@ -126,7 +126,16 @@
     "backHome": "Back to Home",
     "readMore": "Read Article",
     "spotlightTag": "Product Spotlight",
-    "spotlightSubtitle": "A closer look at a few designs from our catalogue. Full articles coming soon."
+    "spotlightSubtitle": "A closer look at a few designs from our catalogue. Full articles coming soon.",
+    "back": "Back to Blog",
+    "readTime": "{{n}} min read",
+    "share": "Share",
+    "shareOnWhatsapp": "Share on WhatsApp",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied",
+    "relatedPosts": "You might also like",
+    "viewCollection": "View Related Collection",
+    "askUs": "Ask us on WhatsApp"
   },
   "catalogue": {
     "title": "Full Catalogue",

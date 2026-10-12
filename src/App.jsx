@@ -12,6 +12,7 @@ import HowToOrder from './components/sections/HowToOrder';
 import Testimonials from './components/sections/Testimonials';
 import ContactSection from './components/sections/ContactSection';
 import BlogIndex from './components/pages/BlogIndex';
+import BlogPost from './components/pages/BlogPost';
 import CataloguePage from './components/pages/CataloguePage';
 import Footer from './components/layout/Footer';
 import FloatingWhatsApp from './components/ui/FloatingWhatsApp';
@@ -47,7 +48,11 @@ export default function App() {
     setSelectedCollectionFilter(collectionId);
   };
 
-  const isBlogRoute = currentRoute === '/blog' || currentRoute.startsWith('/blog');
+  const urlPath = currentRoute.split('?')[0];
+  const blogMatch = urlPath.match(/^\/blog\/(.+)$/);
+  const blogSlug = blogMatch ? blogMatch[1] : null;
+  const isBlogPostRoute = !!blogSlug;
+  const isBlogIndexRoute = urlPath === '/blog' || (currentRoute.startsWith('/blog') && !blogSlug);
   const isCatalogueRoute = currentRoute === '/catalogue' || currentRoute.startsWith('/catalogue');
 
   return (
@@ -65,8 +70,10 @@ export default function App() {
 
       {/* Main Content Area */}
       <main id="main-content" className="flex-grow">
-        {isBlogRoute ? (
-          <BlogIndex onNavigateHome={() => navigate('/')} />
+        {isBlogPostRoute ? (
+          <BlogPost slug={blogSlug} onNavigate={navigate} />
+        ) : isBlogIndexRoute ? (
+          <BlogIndex onNavigate={navigate} />
         ) : isCatalogueRoute ? (
           <CataloguePage onNavigate={navigate} />
         ) : (

@@ -115,11 +115,19 @@
     "title": "インサイト＆アップデート",
     "subtitle": "Local Eximからの輸出ガイドと最新情報。",
     "empty": "新しい記事を準備中です。近日公開予定、またはWhatsAppでも最新情報をお届けしています。",
-    "back": "ホームに戻る",
+    "back": "ブログ一覧に戻る",
     "spotlightTag": "商品スポットライト",
     "spotlightSubtitle": "カタログの中からいくつかのデザインをご紹介します。本格的な記事は近日公開予定です。",
     "backHome": "ホームに戻る",
-    "readMore": "記事を読む"
+    "readMore": "記事を読む",
+    "readTime": "読了時間：約{{n}}分",
+    "share": "シェア",
+    "shareOnWhatsapp": "WhatsAppで共有",
+    "copyLink": "リンクをコピー",
+    "linkCopied": "リンクをコピーしました",
+    "relatedPosts": "おすすめの関連記事",
+    "viewCollection": "関連コレクションを見る",
+    "askUs": "WhatsAppでお問い合わせ"
   },
   "catalogue": {
     "title": "全カタログ",

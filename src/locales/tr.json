@@ -115,11 +115,19 @@
     "title": "Haberler ve Güncellemeler",
     "subtitle": "Local Exim'den ihracat rehberleri ve haberler.",
     "empty": "Yeni yazılar yakında. Daha sonra tekrar uğrayın veya güncellemeler için bizi WhatsApp'tan takip edin.",
-    "back": "Ana Sayfaya Dön",
+    "back": "Bloga Geri Dön",
     "spotlightTag": "Ürün Vitrini",
     "spotlightSubtitle": "Katalogumuzdan birkaç tasarıma yakından bakış. Tam yazılar yakında.",
     "backHome": "Ana Sayfaya Dön",
-    "readMore": "Makaleyi Oku"
+    "readMore": "Makaleyi Oku",
+    "readTime": "{{n}} dk okuma süresi",
+    "share": "Paylaş",
+    "shareOnWhatsapp": "WhatsApp'ta Paylaş",
+    "copyLink": "Bağlantıyı kopyala",
+    "linkCopied": "Bağlantı kopyalandı",
+    "relatedPosts": "Bunlar da ilginizi çekebilir",
+    "viewCollection": "İlgili Koleksiyonu Görüntüle",
+    "askUs": "WhatsApp'tan Bize Sorun"
   },
   "catalogue": {
     "title": "Tüm Katalog",

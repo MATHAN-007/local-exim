@@ -115,11 +115,19 @@
     "title": "Approfondimenti e Novità",
     "subtitle": "Guide all'esportazione e novità da Local Exim.",
     "empty": "Nuovi articoli in arrivo. Torna a trovarci presto, oppure seguici su WhatsApp per gli aggiornamenti.",
-    "back": "Torna alla Home",
+    "back": "Torna al blog",
     "spotlightTag": "In Primo Piano",
     "spotlightSubtitle": "Uno sguardo ad alcuni modelli del nostro catalogo. Presto articoli completi.",
     "backHome": "Torna alla Home",
-    "readMore": "Leggi l'articolo"
+    "readMore": "Leggi l'articolo",
+    "readTime": "{{n}} min di lettura",
+    "share": "Condividi",
+    "shareOnWhatsapp": "Condividi su WhatsApp",
+    "copyLink": "Copia link",
+    "linkCopied": "Link copiato",
+    "relatedPosts": "Potrebbe piacerti anche",
+    "viewCollection": "Vedi collezione correlata",
+    "askUs": "Chiedici su WhatsApp"
   },
   "catalogue": {
     "title": "Catalogo Completo",

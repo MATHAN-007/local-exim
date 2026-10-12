@@ -130,7 +130,16 @@
     "backHome": "返回首页",
     "readMore": "阅读全文",
     "spotlightTag": "精选款式",
-    "spotlightSubtitle": "精选目录中特色款式的详细介绍。完整深度文章即将推出。"
+    "spotlightSubtitle": "精选目录中特色款式的详细介绍。完整深度文章即将推出。",
+    "back": "返回博客",
+    "readTime": "{{n}} 分钟阅读",
+    "share": "分享",
+    "shareOnWhatsapp": "在WhatsApp上分享",
+    "copyLink": "复制链接",
+    "linkCopied": "链接已复制",
+    "relatedPosts": "猜你喜欢",
+    "viewCollection": "查看相关系列",
+    "askUs": "在WhatsApp上咨询我们"
   },
   "catalogue": {
     "title": "完整产品目录",

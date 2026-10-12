@@ -12,7 +12,7 @@ export const siteConfig = {
   },
   catalogueDownload: {
     file: "/downloads/Local-Exim-Catalogue.pdf",
-    sizeLabel: "PDF · 1.8 MB"
+    sizeLabel: "PDF · 2.2 MB"
   },
   waMessages: {
     general: "Hello Local Exim, I would like to enquire about your Kolhapuri footwear.",

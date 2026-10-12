@@ -29,10 +29,19 @@ FOREST, GREEN, GOLD, CREAM = HexColor("#0B2415"), HexColor("#14532D"), HexColor(
 INK, MUTED, LINE = HexColor("#1A1A1A"), HexColor("#6B6B6B"), HexColor("#E6DFC8")
 
 def find_font(names):
-    for base in ("/usr/share/fonts/truetype/dejavu/", "C:/Windows/Fonts/", "/Library/Fonts/", "/System/Library/Fonts/Supplemental/"):
+    bases = [
+        "/usr/share/fonts/truetype/dejavu/",
+        "C:/Windows/Fonts/",
+        "/Library/Fonts/",
+        "/System/Library/Fonts/Supplemental/",
+        P("tools", "fonts") + "/",
+        os.path.join(os.path.dirname(__file__), "fonts") + "/",
+    ]
+    for base in bases:
         for n in names:
-            if os.path.exists(base + n):
-                return base + n
+            p = os.path.join(base, n) if not base.endswith(("/", "\\")) else base + n
+            if os.path.exists(p):
+                return p
     return None
 sans, sans_b = find_font(["DejaVuSans.ttf"]), find_font(["DejaVuSans-Bold.ttf"])
 serif_b = find_font(["DejaVuSerif-Bold.ttf"])

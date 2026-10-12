@@ -72,9 +72,8 @@
       "image": "/catalogue/premium-kolhapuri-shoe.webp",
       "needsReview": false,
       "reviewNote": null,
-      "photoQuality": "needs-photo",
-      "code": "MK-05",
-      "photoNote": "Product only appears in a small inset; replace with a clean product photo"
+      "photoQuality": "ok",
+      "code": "MK-05"
     },
     {
       "id": "premium-bantu-kolhapuri",
@@ -109,9 +108,8 @@
       "image": "/catalogue/3-tali-avajwali.webp",
       "needsReview": false,
       "reviewNote": null,
-      "photoQuality": "needs-photo",
-      "code": "MK-08",
-      "photoNote": "Source is a phone screenshot of a foot, not a clean product photo"
+      "photoQuality": "ok",
+      "code": "MK-08"
     },
     {
       "id": "ladies-kolhapuri",
@@ -158,9 +156,8 @@
       "image": "/catalogue/aavaj-wali-kolhapuri-2tali.webp",
       "needsReview": false,
       "reviewNote": null,
-      "photoQuality": "needs-photo",
-      "code": "MK-09",
-      "photoNote": "Source is a phone screenshot with chat UI visible"
+      "photoQuality": "ok",
+      "code": "MK-09"
     },
     {
       "id": "amdar-kapshi",
@@ -212,28 +209,15 @@
     },
     {
       "id": "6veni-kolhapuri",
-      "name": "6veni Kolhapuri",
+      "name": "6 Veni Kolhapuri",
       "catalogueName": "6veni kolhapuri",
       "category": "men-kolhapuri",
       "priceInr": 1750,
       "image": "/catalogue/6veni-kolhapuri.webp",
-      "needsReview": true,
-      "reviewNote": "Possible duplicate of '6 Veni Kolhapuri' (different price listed)",
+      "needsReview": false,
+      "reviewNote": null,
       "photoQuality": "ok",
       "code": "MK-12"
-    },
-    {
-      "id": "6-veni-kolhapuri",
-      "name": "6 Veni Kolhapuri",
-      "catalogueName": "6 veni kolhapuri",
-      "category": "men-kolhapuri",
-      "priceInr": 2100,
-      "image": "/catalogue/6-veni-kolhapuri.webp",
-      "needsReview": true,
-      "reviewNote": "Possible duplicate of '6Veni Kolhapuri' (different price listed)",
-      "photoQuality": "needs-photo",
-      "code": "MK-13",
-      "photoNote": "Photo has a phone-number watermark printed on it; replace with a clean photo"
     },
     {
       "id": "special-sankeshwari",
@@ -340,9 +324,8 @@
       "image": "/catalogue/shau.webp",
       "needsReview": true,
       "reviewNote": "Name unclear — confirm with client",
-      "photoQuality": "needs-photo",
-      "code": "MS-04",
-      "photoNote": "Low-quality phone screenshot, and the product name is unclear"
+      "photoQuality": "ok",
+      "code": "MS-04"
     },
     {
       "id": "kapshi-ladies-kolhapuri",
@@ -413,9 +396,8 @@
       "image": "/catalogue/chatai-majdi.webp",
       "needsReview": false,
       "reviewNote": null,
-      "photoQuality": "needs-photo",
-      "code": "MS-06",
-      "photoNote": "Source is a dark phone screenshot"
+      "photoQuality": "ok",
+      "code": "MS-06"
     },
     {
       "id": "kurundwadi-paytan",
@@ -426,9 +408,8 @@
       "image": "/catalogue/kurundwadi-paytan.webp",
       "needsReview": true,
       "reviewNote": "Possible duplicate of 'Kurundwadi' / 'Kurundwadi Natural'",
-      "photoQuality": "needs-photo",
-      "code": "MK-19",
-      "photoNote": "Narrow phone-screenshot crop; replace with a clean photo"
+      "photoQuality": "ok",
+      "code": "MK-19"
     },
     {
       "id": "katkan-kolhapuri",
@@ -537,9 +518,8 @@
       "image": "/catalogue/ladies-kolhapuri-spl.webp",
       "needsReview": false,
       "reviewNote": null,
-      "photoQuality": "needs-photo",
-      "code": "LD-10",
-      "photoNote": "Source is a phone screenshot with a large black area"
+      "photoQuality": "ok",
+      "code": "LD-10"
     },
     {
       "id": "khas-aamdar-kapshi",

@@ -115,11 +115,19 @@
     "title": "Wawasan & Pembaruan",
     "subtitle": "Panduan ekspor dan berita dari Local Exim.",
     "empty": "Artikel baru akan segera hadir. Kunjungi lagi nanti, atau ikuti kami di WhatsApp untuk pembaruan.",
-    "back": "Kembali ke Beranda",
+    "back": "Kembali ke Blog",
     "spotlightTag": "Sorotan Produk",
     "spotlightSubtitle": "Sekilas tentang beberapa desain dari katalog kami. Artikel lengkap segera hadir.",
     "backHome": "Kembali ke Beranda",
-    "readMore": "Baca Artikel"
+    "readMore": "Baca Artikel",
+    "readTime": "{{n}} mnt baca",
+    "share": "Bagikan",
+    "shareOnWhatsapp": "Bagikan di WhatsApp",
+    "copyLink": "Salin tautan",
+    "linkCopied": "Tautan disalin",
+    "relatedPosts": "Anda mungkin juga menyukai",
+    "viewCollection": "Lihat Koleksi Terkait",
+    "askUs": "Tanya kami di WhatsApp"
   },
   "catalogue": {
     "title": "Katalog Lengkap",
