@@ -49,3 +49,5 @@ Thumbs.db
 screenshots/
 .local-exim-leather-products-pack/
 local-exim-leather-products-pack/
+*.log
+
