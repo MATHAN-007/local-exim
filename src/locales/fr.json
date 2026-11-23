@@ -13,13 +13,14 @@
     "close": "Fermer",
     "catalogue": "Catalogue",
     "catalogueAll": "Tous les produits",
-    "moreLanguages": "Plus de langues (traduction automatique)"
+    "moreLanguages": "Plus de langues (traduction automatique)",
+    "products": "Produits"
   },
   "hero": {
-    "eyebrow": "Fabriqué à la main à Kolhapur, Inde",
-    "title": "Authentiques Sandales Kolhapuri, Exportées dans le Monde",
-    "subtitle": "Sandales artisanales en cuir véritable, savoir-faire séculaire au service des professionnels et acheteurs internationaux.",
-    "cta1": "Découvrir la Collection",
+    "eyebrow": "Cuir Artisanal, Fabriqué en Inde",
+    "title": "Chappals Kolhapuri et Essentiels en Cuir, Conçus pour le Monde",
+    "subtitle": "Sandales, vestes, sacs et accessoires en cuir fabriqués à la main — un savoir-faire traditionnel pour les acheteurs du monde entier.",
+    "cta1": "Découvrir les Produits",
     "cta2": "Discuter sur WhatsApp",
     "chip1": "Cuir Fait Main",
     "chip2": "Cousu Main Traditionnel",
@@ -158,5 +159,40 @@
     "photoComingSoon": "Mise à jour photo en cours",
     "download": "Télécharger le Catalogue (PDF)",
     "downloadHint": "Tous les modèles avec photos, codes et détails"
+  },
+  "productsLanding": {
+    "title": "Nos Produits",
+    "subtitle": "Deux collections, du cuir artisanal partout.",
+    "chappalsTitle": "Chappals et Sandales Kolhapuri",
+    "chappalsDesc": "Chaussures traditionnelles fabriquées à la main à Kolhapur.",
+    "leatherTitle": "Produits en Cuir",
+    "leatherDesc": "Vestes, sacs, portefeuilles et accessoires en cuir véritable.",
+    "explore": "Découvrir"
+  },
+  "leather": {
+    "title": "Produits en Cuir",
+    "subtitle": "Parcourez par catégorie. Touchez un article pour demander sur WhatsApp.",
+    "searchPlaceholder": "Rechercher un produit…",
+    "filterAll": "Tous",
+    "enquire": "Demander sur WhatsApp",
+    "loadMore": "Voir Plus",
+    "empty": "Aucun produit ne correspond à votre recherche. Essayez un autre terme ou une autre catégorie.",
+    "comingSoon": "Nouveaux modèles bientôt disponibles dans cette catégorie.",
+    "photoComingSoon": "Photo à venir",
+    "cat": {
+      "jackets": "Vestes en Cuir",
+      "belts": "Ceintures",
+      "wallets": "Portefeuilles",
+      "ladiesPurse": "Pochette Femme",
+      "ladiesHandbags": "Sacs à Main Femme",
+      "shoes": "Chaussures",
+      "folders": "Porte-documents en Cuir",
+      "bags": "Sacs",
+      "laptopBags": "Sacs pour Ordinateur Portable",
+      "duffelBags": "Sacs de Voyage en Cuir",
+      "hats": "Chapeaux"
+    },
+    "download": "Télécharger le Catalogue (PDF)",
+    "downloadHint": "Tous les produits en cuir avec codes et détails"
   }
 }

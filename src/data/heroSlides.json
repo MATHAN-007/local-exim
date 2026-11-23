@@ -1,30 +1,35 @@
 {
-  "_note": "Hero slideshow, in display order. Add/remove entries to change the slides.",
+  "_note": "Replaces the previous 5-slide set (was all chappals). Now mixes both product lines. Same component, same dot count -- no structural change needed, just new content.",
   "slides": [
     {
       "id": "sankeshwari-kolhapuri",
       "name": "Sankeshwari Kolhapuri",
-      "image": "/hero/sankeshwari-kolhapuri-cutout.webp"
+      "image": "/hero/sankeshwari-kolhapuri-cutout.webp",
+      "section": "chappals"
     },
     {
-      "id": "aavaj-wali-kolhapuri",
-      "name": "Aavaj Wali Kolhapuri",
-      "image": "/hero/aavaj-wali-kolhapuri-cutout.webp"
-    },
-    {
-      "id": "bhuiwadi-paytan",
-      "name": "Bhuiwadi Paytan",
-      "image": "/hero/bhuiwadi-paytan-cutout.webp"
-    },
-    {
-      "id": "khas-aamdar-kapshi",
-      "name": "Khas Aamdar Kapshi",
-      "image": "/hero/khas-kapshi-cutout.webp"
+      "id": "biker-leather-jacket",
+      "name": "Black Biker Leather Jacket",
+      "image": "/hero/biker-leather-jacket-cutout.webp",
+      "section": "leather"
     },
     {
       "id": "ladies-bingri-kolhapuri",
       "name": "Ladies Bingri Kolhapuri",
-      "image": "/hero/ladies-bingri-kolhapuri-cutout.webp"
+      "image": "/hero/ladies-bingri-kolhapuri-cutout.webp",
+      "section": "chappals"
+    },
+    {
+      "id": "croc-texture-leather-briefcase",
+      "name": "Croc-Texture Leather Briefcase",
+      "image": "/hero/croc-texture-leather-briefcase-cutout.webp",
+      "section": "leather"
+    },
+    {
+      "id": "leather-baseball-cap",
+      "name": "Leather Baseball Cap",
+      "image": "/hero/leather-baseball-cap-cutout.webp",
+      "section": "leather"
     }
   ]
 }

@@ -12,13 +12,14 @@
     "catalogue": "카탈로그",
     "catalogueAll": "전체 상품",
     "menu": "메뉴",
-    "close": "닫기"
+    "close": "닫기",
+    "products": "제품"
   },
   "hero": {
-    "eyebrow": "인도 콜하푸르에서 수작업으로 제작",
-    "title": "정통 콜하푸리 차팔, 전 세계로 배송",
-    "subtitle": "전통 장인 정신으로 만든 가죽 차팔과 오픈토 샌들을 전 세계 바이어에게.",
-    "cta1": "컬렉션 보기",
+    "eyebrow": "수제 가죽, 인도산",
+    "title": "콜하푸리 차팔과 가죽 제품, 세계를 위해 만들다",
+    "subtitle": "수제 가죽 샌들, 재킷, 가방 및 액세서리 — 전 세계 바이어를 위한 전통 공예.",
+    "cta1": "제품 보기",
     "cta2": "왓츠앱으로 문의",
     "browseCatalogue": "전체 카탈로그 보기 →",
     "chip1": "핸드크래프트 가죽",
@@ -154,5 +155,40 @@
   "testimonials": {
     "title": "파트너들의 평가",
     "subtitle": "글로벌 소매업체, 부티크 및 신발 유통업체의 신뢰를 받고 있습니다."
+  },
+  "productsLanding": {
+    "title": "제품",
+    "subtitle": "두 가지 컬렉션, 모두 수제 가죽.",
+    "chappalsTitle": "콜하푸리 차팔 & 샌들",
+    "chappalsDesc": "콜하푸르의 전통 수제 신발.",
+    "leatherTitle": "가죽 제품",
+    "leatherDesc": "천연 가죽 재킷, 가방, 지갑 및 액세서리.",
+    "explore": "보기"
+  },
+  "leather": {
+    "title": "가죽 제품",
+    "subtitle": "카테고리별로 둘러보세요. 상품을 탭하면 왓츠앱으로 문의할 수 있습니다.",
+    "searchPlaceholder": "제품 검색…",
+    "filterAll": "전체",
+    "enquire": "왓츠앱으로 문의",
+    "loadMore": "더 보기",
+    "empty": "검색 결과와 일치하는 제품이 없습니다. 다른 검색어나 카테고리를 시도해 보세요.",
+    "comingSoon": "이 카테고리의 신제품이 곧 추가됩니다.",
+    "photoComingSoon": "사진 준비 중",
+    "cat": {
+      "jackets": "가죽 재킷",
+      "belts": "벨트",
+      "wallets": "지갑",
+      "ladiesPurse": "여성용 파스",
+      "ladiesHandbags": "여성 핸드백",
+      "shoes": "신발",
+      "folders": "가죽 폴더",
+      "bags": "가방",
+      "laptopBags": "노트북 가방",
+      "duffelBags": "가죽 더플백",
+      "hats": "모자"
+    },
+    "download": "카탈로그 다운로드 (PDF)",
+    "downloadHint": "코드와 상세정보가 포함된 모든 가죽 제품"
   }
 }

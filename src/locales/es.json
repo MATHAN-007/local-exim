@@ -13,13 +13,14 @@
     "close": "Cerrar",
     "catalogue": "Catálogo",
     "catalogueAll": "Todos los productos",
-    "moreLanguages": "Más idiomas (traducción automática)"
+    "moreLanguages": "Más idiomas (traducción automática)",
+    "products": "Productos"
   },
   "hero": {
-    "eyebrow": "Elaboradas a mano en Kolhapur, India",
-    "title": "Auténticas Sandalias Kolhapuri, Exportadas al Mundo",
-    "subtitle": "Sandalias artesanales de cuero genuino elaboradas con maestría tradicional para compradores y distribuidores globales.",
-    "cta1": "Ver Colección",
+    "eyebrow": "Cuero Artesanal, Hecho en India",
+    "title": "Chappals Kolhapuri y Esenciales de Cuero, Creados para el Mundo",
+    "subtitle": "Sandalias, chaquetas, bolsos y accesorios de cuero hechos a mano — artesanía tradicional para compradores globales.",
+    "cta1": "Explorar Productos",
     "cta2": "Chatear por WhatsApp",
     "chip1": "Cuero Hecho a Mano",
     "chip2": "Artesanía Cosida a Mano",
@@ -158,5 +159,40 @@
     "photoComingSoon": "Actualización de foto en curso",
     "download": "Descargar Catálogo (PDF)",
     "downloadHint": "Todos los diseños con fotos, códigos y detalles"
+  },
+  "productsLanding": {
+    "title": "Nuestros Productos",
+    "subtitle": "Dos colecciones, cuero artesanal en ambas.",
+    "chappalsTitle": "Chappals y Sandalias Kolhapuri",
+    "chappalsDesc": "Calzado tradicional hecho a mano en Kolhapur.",
+    "leatherTitle": "Productos de Cuero",
+    "leatherDesc": "Chaquetas, bolsos, billeteras y accesorios en cuero genuino.",
+    "explore": "Explorar"
+  },
+  "leather": {
+    "title": "Productos de Cuero",
+    "subtitle": "Explora por categoría. Toca un producto para consultar por WhatsApp.",
+    "searchPlaceholder": "Buscar productos…",
+    "filterAll": "Todos",
+    "enquire": "Consultar por WhatsApp",
+    "loadMore": "Cargar Más",
+    "empty": "Ningún producto coincide con tu búsqueda. Prueba otro término o categoría.",
+    "comingSoon": "Nuevos diseños próximamente en esta categoría.",
+    "photoComingSoon": "Foto próximamente",
+    "cat": {
+      "jackets": "Chaquetas de Cuero",
+      "belts": "Cinturones",
+      "wallets": "Billeteras",
+      "ladiesPurse": "Bolso de Mano",
+      "ladiesHandbags": "Bolsos de Mujer",
+      "shoes": "Zapatos",
+      "folders": "Carpetas de Cuero",
+      "bags": "Bolsos",
+      "laptopBags": "Bolsos para Portátil",
+      "duffelBags": "Bolsas de Viaje de Cuero",
+      "hats": "Sombreros"
+    },
+    "download": "Descargar Catálogo (PDF)",
+    "downloadHint": "Todos los productos de cuero con códigos y detalles"
   }
 }

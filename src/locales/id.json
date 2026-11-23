@@ -12,13 +12,14 @@
     "catalogue": "Katalog",
     "catalogueAll": "Semua Produk",
     "menu": "Menu",
-    "close": "Tutup"
+    "close": "Tutup",
+    "products": "Produk"
   },
   "hero": {
-    "eyebrow": "Dibuat Tangan di Kolhapur, India",
-    "title": "Chappal Kolhapuri Asli, Dikirim ke Seluruh Dunia",
-    "subtitle": "Chappal kulit dan sandal ujung terbuka buatan tangan, kerajinan tradisional untuk pembeli global.",
-    "cta1": "Lihat Koleksi",
+    "eyebrow": "Kulit Buatan Tangan, Dibuat di India",
+    "title": "Chappal Kolhapuri & Produk Kulit, Dibuat untuk Dunia",
+    "subtitle": "Sandal, jaket, tas, dan aksesori kulit buatan tangan — kerajinan tradisional untuk pembeli global.",
+    "cta1": "Jelajahi Produk",
     "cta2": "Chat via WhatsApp",
     "browseCatalogue": "Jelajahi katalog lengkap →",
     "chip1": "Kulit Buatan Tangan",
@@ -154,5 +155,40 @@
   "testimonials": {
     "title": "Apa Kata Mitra Kami",
     "subtitle": "Dipercaya oleh peritel global, butik, dan distributor alas kaki."
+  },
+  "productsLanding": {
+    "title": "Produk Kami",
+    "subtitle": "Dua koleksi, kulit buatan tangan di keduanya.",
+    "chappalsTitle": "Chappal & Sandal Kolhapuri",
+    "chappalsDesc": "Alas kaki tradisional buatan tangan dari Kolhapur.",
+    "leatherTitle": "Produk Kulit",
+    "leatherDesc": "Jaket, tas, dompet, dan aksesori dari kulit asli.",
+    "explore": "Jelajahi"
+  },
+  "leather": {
+    "title": "Produk Kulit",
+    "subtitle": "Jelajahi berdasarkan kategori. Ketuk produk untuk bertanya via WhatsApp.",
+    "searchPlaceholder": "Cari produk…",
+    "filterAll": "Semua",
+    "enquire": "Tanya via WhatsApp",
+    "loadMore": "Muat Lebih Banyak",
+    "empty": "Tidak ada produk yang cocok dengan pencarian Anda. Coba kata kunci atau kategori lain.",
+    "comingSoon": "Desain baru akan segera hadir di kategori ini.",
+    "photoComingSoon": "Foto segera hadir",
+    "cat": {
+      "jackets": "Jaket Kulit",
+      "belts": "Ikat Pinggang",
+      "wallets": "Dompet",
+      "ladiesPurse": "Dompet Wanita",
+      "ladiesHandbags": "Tas Tangan Wanita",
+      "shoes": "Sepatu",
+      "folders": "Map Kulit",
+      "bags": "Tas",
+      "laptopBags": "Tas Laptop",
+      "duffelBags": "Tas Duffel Kulit",
+      "hats": "Topi"
+    },
+    "download": "Unduh Katalog (PDF)",
+    "downloadHint": "Semua produk kulit dengan kode dan detail"
   }
 }

@@ -13,13 +13,14 @@
     "close": "关闭",
     "catalogue": "产品目录",
     "catalogueAll": "全部产品",
-    "moreLanguages": "更多语言（自动翻译）"
+    "moreLanguages": "更多语言（自动翻译）",
+    "products": "产品"
   },
   "hero": {
-    "eyebrow": "印度戈尔哈布尔纯手工精制",
-    "title": "正宗印度戈尔哈布尔手工皮革凉鞋，全球直达",
-    "subtitle": "世代传承的手工皮革凉鞋与露趾鞋履，以传统精湛工艺服务全球采购商与品牌商。",
-    "cta1": "浏览系列",
+    "eyebrow": "手工皮革，印度制造",
+    "title": "科尔哈普尔凉鞋与皮革精品，为世界而制",
+    "subtitle": "手工皮革凉鞋、夹克、包袋及配饰 —— 为全球买家呈现的传统工艺。",
+    "cta1": "浏览产品",
     "cta2": "WhatsApp 咨询",
     "chip1": "手工精制皮革",
     "chip2": "传统手工缝制",
@@ -158,5 +159,40 @@
     "photoComingSoon": "图片更新中",
     "download": "下载产品目录 (PDF)",
     "downloadHint": "所有款式均配有照片、编号和详情"
+  },
+  "productsLanding": {
+    "title": "我们的产品",
+    "subtitle": "两大系列，全程手工皮具。",
+    "chappalsTitle": "科尔哈普尔凉鞋与拖鞋",
+    "chappalsDesc": "来自科尔哈普尔的传统手工鞋履。",
+    "leatherTitle": "皮革产品",
+    "leatherDesc": "真皮夹克、包袋、钱包及配饰。",
+    "explore": "探索"
+  },
+  "leather": {
+    "title": "皮革产品",
+    "subtitle": "按类别浏览，点击商品即可通过WhatsApp咨询。",
+    "searchPlaceholder": "搜索产品…",
+    "filterAll": "全部",
+    "enquire": "通过WhatsApp咨询",
+    "loadMore": "加载更多",
+    "empty": "没有符合搜索条件的产品，请尝试其他关键词或类别。",
+    "comingSoon": "该类别新款即将上线。",
+    "photoComingSoon": "图片即将上传",
+    "cat": {
+      "jackets": "皮夹克",
+      "belts": "皮带",
+      "wallets": "钱包",
+      "ladiesPurse": "女士手包",
+      "ladiesHandbags": "女士手提包",
+      "shoes": "皮鞋",
+      "folders": "皮革文件夹",
+      "bags": "包袋",
+      "laptopBags": "电脑包",
+      "duffelBags": "皮革旅行包",
+      "hats": "帽子"
+    },
+    "download": "下载目录 (PDF)",
+    "downloadHint": "所有皮革产品及编码与详情"
   }
 }

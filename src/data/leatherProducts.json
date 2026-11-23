@@ -1,0 +1,187 @@
+{
+  "_note": "Leather Products catalogue -- 17 products across all categories from public/leather/*.webp",
+  "categories": [
+    {
+      "id": "leather-jackets",
+      "nameKey": "leather.cat.jackets"
+    },
+    {
+      "id": "belts",
+      "nameKey": "leather.cat.belts"
+    },
+    {
+      "id": "wallets",
+      "nameKey": "leather.cat.wallets"
+    },
+    {
+      "id": "ladies-purse",
+      "nameKey": "leather.cat.ladiesPurse"
+    },
+    {
+      "id": "ladies-handbags",
+      "nameKey": "leather.cat.ladiesHandbags"
+    },
+    {
+      "id": "shoes",
+      "nameKey": "leather.cat.shoes"
+    },
+    {
+      "id": "leather-folders",
+      "nameKey": "leather.cat.folders"
+    },
+    {
+      "id": "bags",
+      "nameKey": "leather.cat.bags"
+    },
+    {
+      "id": "laptop-bags",
+      "nameKey": "leather.cat.laptopBags"
+    },
+    {
+      "id": "leather-duffel-bags",
+      "nameKey": "leather.cat.duffelBags"
+    },
+    {
+      "id": "hats",
+      "nameKey": "leather.cat.hats"
+    }
+  ],
+  "products": [
+    {
+      "id": "leather-baseball-cap",
+      "code": "HT-01",
+      "name": "Leather Baseball Cap",
+      "category": "hats",
+      "image": "/leather/leather-baseball-cap.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "felt-outback-hat",
+      "code": "HT-02",
+      "name": "Felt Outback Hat",
+      "category": "hats",
+      "image": "/leather/felt-outback-hat.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "croc-texture-leather-briefcase",
+      "code": "LB-01",
+      "name": "Croc-Texture Leather Briefcase",
+      "category": "laptop-bags",
+      "image": "/leather/croc-texture-leather-briefcase.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "monogram-snap-purse",
+      "code": "LP-01",
+      "name": "Monogram Snap Purse",
+      "category": "ladies-purse",
+      "image": "/leather/monogram-snap-purse.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "zip-leather-jacket",
+      "code": "LJ-01",
+      "name": "Burgundy Zip Leather Jacket",
+      "category": "leather-jackets",
+      "image": "/leather/zip-leather-jacket.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "tan-hobo-bag",
+      "code": "LH-01",
+      "name": "Tan Leather Hobo Bag",
+      "category": "ladies-handbags",
+      "image": "/leather/tan-hobo-bag.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "structured-tan-handbag",
+      "code": "LH-02",
+      "name": "Structured Tan Handbag",
+      "category": "ladies-handbags",
+      "image": "/leather/structured-tan-handbag.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "multipocket-leather-backpack",
+      "code": "LB-02",
+      "name": "Multi-Pocket Leather Backpack",
+      "category": "laptop-bags",
+      "image": "/leather/multipocket-leather-backpack.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "buckle-loafer",
+      "code": "SH-01",
+      "name": "Leather Buckle Loafer",
+      "category": "shoes",
+      "image": "/leather/buckle-loafer.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "reversible-leather-belt",
+      "code": "BL-01",
+      "name": "Reversible Leather Belt",
+      "category": "belts",
+      "image": "/leather/reversible-leather-belt.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "twotone-bifold-wallet",
+      "code": "WL-01",
+      "name": "Two-Tone Bifold Wallet",
+      "category": "wallets",
+      "image": "/leather/twotone-bifold-wallet.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "classic-bifold-wallet",
+      "code": "WL-02",
+      "name": "Classic Bifold Wallet",
+      "category": "wallets",
+      "image": "/leather/classic-bifold-wallet.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "messenger-briefcase-bag",
+      "code": "LB-03",
+      "name": "Leather Messenger Briefcase",
+      "category": "laptop-bags",
+      "image": "/leather/messenger-briefcase-bag.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "leather-messenger-shoulder-bag",
+      "code": "LB-04",
+      "name": "Leather Messenger Shoulder Bag",
+      "category": "laptop-bags",
+      "image": "/leather/messenger-briefcase-bag-alt.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "leather-conference-folder",
+      "code": "LF-01",
+      "name": "Leather Conference Folder",
+      "category": "leather-folders",
+      "image": "/leather/leather-conference-folder.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "dalery-crossbody-bag",
+      "code": "LH-03",
+      "name": "Leather Crossbody Bag",
+      "category": "ladies-handbags",
+      "image": "/leather/dalery-crossbody-bag.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "biker-leather-jacket",
+      "code": "LJ-02",
+      "name": "Black Biker Leather Jacket",
+      "category": "leather-jackets",
+      "image": "/leather/biker-leather-jacket.webp",
+      "photoQuality": "ok"
+    }
+  ]
+}

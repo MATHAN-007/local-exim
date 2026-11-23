@@ -12,13 +12,14 @@
     "catalogue": "Catalogo",
     "catalogueAll": "Tutti i Prodotti",
     "menu": "Menu",
-    "close": "Chiudi"
+    "close": "Chiudi",
+    "products": "Prodotti"
   },
   "hero": {
-    "eyebrow": "Realizzati a mano a Kolhapur, India",
-    "title": "Autentici Chappal Kolhapuri, Spediti in Tutto il Mondo",
-    "subtitle": "Chappal in pelle e sandali aperti in punta, artigianato tradizionale pensato per gli acquirenti internazionali.",
-    "cta1": "Scopri la Collezione",
+    "eyebrow": "Pelle Artigianale, Made in India",
+    "title": "Chappal Kolhapuri ed Essenziali in Pelle, Creati per il Mondo",
+    "subtitle": "Sandali, giacche, borse e accessori in pelle fatti a mano — artigianato tradizionale per acquirenti di tutto il mondo.",
+    "cta1": "Scopri i Prodotti",
     "cta2": "Scrivici su WhatsApp",
     "browseCatalogue": "Sfoglia il catalogo completo →",
     "chip1": "Pelle Artigianale",
@@ -154,5 +155,40 @@
   "testimonials": {
     "title": "Cosa Dicono i Nostri Partner",
     "subtitle": "Scelto da rivenditori, boutique e distributori di calzature in tutto il mondo."
+  },
+  "productsLanding": {
+    "title": "I Nostri Prodotti",
+    "subtitle": "Due collezioni, pelle lavorata a mano in entrambe.",
+    "chappalsTitle": "Chappal e Sandali Kolhapuri",
+    "chappalsDesc": "Calzature tradizionali realizzate a mano a Kolhapur.",
+    "leatherTitle": "Prodotti in Pelle",
+    "leatherDesc": "Giacche, borse, portafogli e accessori in vera pelle.",
+    "explore": "Scopri"
+  },
+  "leather": {
+    "title": "Prodotti in Pelle",
+    "subtitle": "Sfoglia per categoria. Tocca un articolo per richiedere informazioni su WhatsApp.",
+    "searchPlaceholder": "Cerca prodotti…",
+    "filterAll": "Tutti",
+    "enquire": "Richiedi su WhatsApp",
+    "loadMore": "Carica Altri",
+    "empty": "Nessun prodotto corrisponde alla ricerca. Prova un altro termine o categoria.",
+    "comingSoon": "Nuovi modelli in arrivo in questa categoria.",
+    "photoComingSoon": "Foto in arrivo",
+    "cat": {
+      "jackets": "Giacche in Pelle",
+      "belts": "Cinture",
+      "wallets": "Portafogli",
+      "ladiesPurse": "Borsellino Donna",
+      "ladiesHandbags": "Borse Donna",
+      "shoes": "Scarpe",
+      "folders": "Cartelle in Pelle",
+      "bags": "Borse",
+      "laptopBags": "Borse per Laptop",
+      "duffelBags": "Borsoni da Viaggio in Pelle",
+      "hats": "Cappelli"
+    },
+    "download": "Scarica il Catalogo (PDF)",
+    "downloadHint": "Tutti i prodotti in pelle con codici e dettagli"
   }
 }

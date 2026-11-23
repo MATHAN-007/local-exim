@@ -12,13 +12,14 @@
     "catalogue": "カタログ",
     "catalogueAll": "すべての商品",
     "menu": "メニュー",
-    "close": "閉じる"
+    "close": "閉じる",
+    "products": "製品"
   },
   "hero": {
-    "eyebrow": "インド・コルハプール発、職人の手仕事",
-    "title": "本場コルハプリ・チャッパルを世界へお届け",
-    "subtitle": "伝統の技で仕上げた本革チャッパルとオープントゥサンダル。世界のバイヤーのために作られた逸品です。",
-    "cta1": "コレクションを見る",
+    "eyebrow": "手作りレザー、インド製",
+    "title": "コルハプリ・チャッパルとレザー製品、世界へ届ける",
+    "subtitle": "手作りの革サンダル、ジャケット、バッグ、アクセサリー — 世界のバイヤーのための伝統の技。",
+    "cta1": "商品を見る",
     "cta2": "WhatsAppでチャット",
     "browseCatalogue": "全カタログを見る →",
     "chip1": "ハンドクラフト本革",
@@ -154,5 +155,40 @@
   "testimonials": {
     "title": "パートナーの声",
     "subtitle": "世界中の小売業者、ブティック、履物卸売業者から信頼されています。"
+  },
+  "productsLanding": {
+    "title": "商品一覧",
+    "subtitle": "2つのコレクション、すべて手作りの本革。",
+    "chappalsTitle": "コルハプリ・チャッパル＆サンダル",
+    "chappalsDesc": "コルハプール発、伝統的な手作りの履物。",
+    "leatherTitle": "レザー製品",
+    "leatherDesc": "本革のジャケット、バッグ、財布、小物類。",
+    "explore": "見る"
+  },
+  "leather": {
+    "title": "レザー製品",
+    "subtitle": "カテゴリー別に閲覧できます。商品をタップしてWhatsAppで問い合わせ。",
+    "searchPlaceholder": "商品を検索…",
+    "filterAll": "すべて",
+    "enquire": "WhatsAppで問い合わせる",
+    "loadMore": "もっと見る",
+    "empty": "検索条件に一致する商品が見つかりません。別のキーワードやカテゴリーをお試しください。",
+    "comingSoon": "このカテゴリーの新デザインは近日公開予定です。",
+    "photoComingSoon": "写真準備中",
+    "cat": {
+      "jackets": "レザージャケット",
+      "belts": "ベルト",
+      "wallets": "財布",
+      "ladiesPurse": "レディースパース",
+      "ladiesHandbags": "レディースハンドバッグ",
+      "shoes": "シューズ",
+      "folders": "レザーフォルダー",
+      "bags": "バッグ",
+      "laptopBags": "ラップトップバッグ",
+      "duffelBags": "レザーダッフルバッグ",
+      "hats": "帽子"
+    },
+    "download": "カタログをダウンロード (PDF)",
+    "downloadHint": "コードと詳細付きの全レザー製品"
   }
 }

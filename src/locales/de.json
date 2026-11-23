@@ -13,13 +13,14 @@
     "close": "Schließen",
     "catalogue": "Katalog",
     "catalogueAll": "Alle Produkte",
-    "moreLanguages": "Weitere Sprachen (automatisch übersetzt)"
+    "moreLanguages": "Weitere Sprachen (automatisch übersetzt)",
+    "products": "Produkte"
   },
   "hero": {
-    "eyebrow": "Handgefertigt in Kolhapur, Indien",
-    "title": "Authentische Kolhapuri Sandalen, Weltweit Geliefert",
-    "subtitle": "Handgefertigte Ledersandalen und Zehenstegschuhe in traditionsreicher Handwerkskunst für gewerbliche Einkäufer weltweit.",
-    "cta1": "Kollektion ansehen",
+    "eyebrow": "Handgefertigtes Leder, Made in India",
+    "title": "Kolhapuri Chappals & Lederprodukte, Gefertigt für die Welt",
+    "subtitle": "Handgefertigte Ledersandalen, Jacken, Taschen und Accessoires — traditionelles Handwerk für Käufer weltweit.",
+    "cta1": "Produkte Entdecken",
     "cta2": "Auf WhatsApp chatten",
     "chip1": "Handgefertigtes Leder",
     "chip2": "Handgenähte Qualität",
@@ -158,5 +159,40 @@
     "photoComingSoon": "Fotoaktualisierung läuft",
     "download": "Katalog herunterladen (PDF)",
     "downloadHint": "Alle Designs mit Fotos, Codes und Details"
+  },
+  "productsLanding": {
+    "title": "Unsere Produkte",
+    "subtitle": "Zwei Kollektionen, durchweg handgefertigtes Leder.",
+    "chappalsTitle": "Kolhapuri Chappals & Sandalen",
+    "chappalsDesc": "Traditionelles handgefertigtes Schuhwerk aus Kolhapur.",
+    "leatherTitle": "Lederprodukte",
+    "leatherDesc": "Jacken, Taschen, Geldbörsen und Accessoires aus echtem Leder.",
+    "explore": "Entdecken"
+  },
+  "leather": {
+    "title": "Lederprodukte",
+    "subtitle": "Nach Kategorie durchsuchen. Für eine Anfrage auf WhatsApp tippen.",
+    "searchPlaceholder": "Produkte suchen…",
+    "filterAll": "Alle",
+    "enquire": "Per WhatsApp anfragen",
+    "loadMore": "Mehr Laden",
+    "empty": "Keine Produkte gefunden. Versuchen Sie einen anderen Begriff oder eine andere Kategorie.",
+    "comingSoon": "Neue Designs in dieser Kategorie folgen bald.",
+    "photoComingSoon": "Foto folgt in Kürze",
+    "cat": {
+      "jackets": "Lederjacken",
+      "belts": "Gürtel",
+      "wallets": "Geldbörsen",
+      "ladiesPurse": "Damenbörse",
+      "ladiesHandbags": "Damenhandtaschen",
+      "shoes": "Schuhe",
+      "folders": "Ledermappen",
+      "bags": "Taschen",
+      "laptopBags": "Laptoptaschen",
+      "duffelBags": "Leder-Reisetaschen",
+      "hats": "Hüte"
+    },
+    "download": "Katalog herunterladen (PDF)",
+    "downloadHint": "Alle Lederprodukte mit Codes und Details"
   }
 }

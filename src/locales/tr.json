@@ -12,13 +12,14 @@
     "catalogue": "Katalog",
     "catalogueAll": "Tüm Ürünler",
     "menu": "Menü",
-    "close": "Kapat"
+    "close": "Kapat",
+    "products": "Ürünler"
   },
   "hero": {
-    "eyebrow": "Hindistan, Kolhapur'da El Yapımı",
-    "title": "Otantik Kolhapuri Çarıklar, Dünyaya Gönderiliyor",
-    "subtitle": "Global alıcılar için üretilmiş, geleneksel el sanatıyla yapılmış deri çarıklar ve açık uçlu sandaletler.",
-    "cta1": "Koleksiyonu İncele",
+    "eyebrow": "El Yapımı Deri, Hindistan'da Üretildi",
+    "title": "Kolhapuri Çarıklar ve Deri Ürünler, Dünya için Üretildi",
+    "subtitle": "El yapımı deri sandaletler, ceketler, çantalar ve aksesuarlar — global alıcılar için geleneksel el sanatı.",
+    "cta1": "Ürünleri Keşfet",
     "cta2": "WhatsApp'tan Yazın",
     "browseCatalogue": "Kataloğun tamamına göz atın →",
     "chip1": "El Yapımı Deri",
@@ -154,5 +155,40 @@
   "testimonials": {
     "title": "İş Ortaklarımız Ne Diyor",
     "subtitle": "Dünya çapındaki perakendeciler, butikler ve ayakkabı distribütörleri tarafından güvenilmektedir."
+  },
+  "productsLanding": {
+    "title": "Ürünlerimiz",
+    "subtitle": "İki koleksiyon, her ikisinde de el yapımı deri.",
+    "chappalsTitle": "Kolhapuri Çarıklar ve Sandaletler",
+    "chappalsDesc": "Kolhapur'dan geleneksel el yapımı ayakkabılar.",
+    "leatherTitle": "Deri Ürünler",
+    "leatherDesc": "Hakiki deriden ceketler, çantalar, cüzdanlar ve aksesuarlar.",
+    "explore": "Keşfet"
+  },
+  "leather": {
+    "title": "Deri Ürünler",
+    "subtitle": "Kategoriye göre göz atın. Sormak için bir ürüne dokunup WhatsApp'tan sorun.",
+    "searchPlaceholder": "Ürün ara…",
+    "filterAll": "Tümü",
+    "enquire": "WhatsApp'tan Sor",
+    "loadMore": "Daha Fazla Yükle",
+    "empty": "Aramanızla eşleşen ürün bulunamadı. Farklı bir terim veya kategori deneyin.",
+    "comingSoon": "Bu kategoride yeni tasarımlar yakında.",
+    "photoComingSoon": "Fotoğraf yakında",
+    "cat": {
+      "jackets": "Deri Ceketler",
+      "belts": "Kemerler",
+      "wallets": "Cüzdanlar",
+      "ladiesPurse": "Kadın Cüzdanı",
+      "ladiesHandbags": "Kadın El Çantaları",
+      "shoes": "Ayakkabılar",
+      "folders": "Deri Dosyalar",
+      "bags": "Çantalar",
+      "laptopBags": "Laptop Çantaları",
+      "duffelBags": "Deri Spor Çantaları",
+      "hats": "Şapkalar"
+    },
+    "download": "Kataloğu İndir (PDF)",
+    "downloadHint": "Kodları ve detaylarıyla tüm deri ürünler"
   }
 }

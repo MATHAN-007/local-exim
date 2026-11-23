@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/catalogue",
+      "destination": "/products/chappals",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { Instagram, Facebook, Linkedin, Youtube } from 'lucide-react';
 import { siteConfig } from '../../siteConfig';
 import DownloadCatalogueButton from '../ui/DownloadCatalogueButton';
-import catalogueData from '../../data/catalogue.json';
 
 export default function Footer({ onNavigate }) {
   const { t } = useTranslation();
@@ -21,18 +20,12 @@ export default function Footer({ onNavigate }) {
   const companyLinks = [
     { label: t('nav.home'), href: '/' },
     { label: t('nav.about'), href: '/#about' },
-    { label: t('nav.catalogue'), href: '/catalogue', isRoute: true },
+    { label: t('nav.products'), href: '/products', isRoute: true },
     { label: t('nav.blog'), href: '/blog', isRoute: true },
     { label: t('nav.why'), href: '/#why-us' },
     { label: t('nav.contact'), href: '/#contact' },
   ];
 
-  // Column B: Catalogue category links from catalogue.json
-  const catalogueCategories = catalogueData.categories.map((cat) => ({
-    label: t(cat.nameKey),
-    href: `/catalogue?cat=${cat.id}`,
-    isRoute: true,
-  }));
 
   const handleLinkClick = (e, link) => {
     if (onNavigate) {
@@ -131,26 +124,106 @@ export default function Footer({ onNavigate }) {
             </ul>
           </div>
 
-          {/* Column B: Catalogue */}
+          {/* Column B: Products (Chappals + Leather Products Groups) */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-gold-400 mb-5">
-              {t('footer.productsHeading')}
+              {t('nav.products')}
             </h4>
-            <ul className="space-y-3 text-sm">
-              {catalogueCategories.map((cat, idx) => (
-                <li key={idx}>
+            
+            {/* Group 1: Chappals */}
+            <div className="mb-5">
+              <span className="block text-[11px] font-semibold uppercase tracking-wider text-gold-400/80 mb-2">
+                {t('productsLanding.chappalsTitle')}
+              </span>
+              <ul className="space-y-2 text-sm ps-2 border-s border-gold-500/20">
+                <li>
                   <a
-                    href={cat.href}
-                    onClick={(e) => handleLinkClick(e, cat)}
-                    className="hover:text-gold-300 transition-colors text-cream/80 inline-block"
+                    href="/products/chappals"
+                    onClick={(e) => handleLinkClick(e, { href: '/products/chappals', isRoute: true })}
+                    className="hover:text-gold-300 transition-colors text-cream/90 font-medium inline-block"
                   >
-                    {cat.label}
+                    {t('productsLanding.chappalsTitle')}
                   </a>
                 </li>
-              ))}
-            </ul>
-            <div className="mt-5 pt-3 border-t border-white/10">
-              <DownloadCatalogueButton variant="link" />
+                <li>
+                  <a
+                    href="/products/chappals?cat=men-kolhapuri"
+                    onClick={(e) => handleLinkClick(e, { href: '/products/chappals?cat=men-kolhapuri', isRoute: true })}
+                    className="hover:text-gold-300 transition-colors text-cream/70 inline-block text-xs sm:text-sm"
+                  >
+                    {t('catalogue.categories.menKolhapuri')}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/products/chappals?cat=ladies"
+                    onClick={(e) => handleLinkClick(e, { href: '/products/chappals?cat=ladies', isRoute: true })}
+                    className="hover:text-gold-300 transition-colors text-cream/70 inline-block text-xs sm:text-sm"
+                  >
+                    {t('catalogue.categories.ladies')}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Group 2: Leather Products */}
+            <div className="mb-5">
+              <span className="block text-[11px] font-semibold uppercase tracking-wider text-gold-400/80 mb-2">
+                {t('productsLanding.leatherTitle')}
+              </span>
+              <ul className="space-y-2 text-sm ps-2 border-s border-gold-500/20">
+                <li>
+                  <a
+                    href="/products/leather"
+                    onClick={(e) => handleLinkClick(e, { href: '/products/leather', isRoute: true })}
+                    className="hover:text-gold-300 transition-colors text-cream/90 font-medium inline-block"
+                  >
+                    {t('productsLanding.leatherTitle')}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/products/leather?cat=leather-jackets"
+                    onClick={(e) => handleLinkClick(e, { href: '/products/leather?cat=leather-jackets', isRoute: true })}
+                    className="hover:text-gold-300 transition-colors text-cream/70 inline-block text-xs sm:text-sm"
+                  >
+                    {t('leather.cat.jackets')}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/products/leather?cat=laptop-bags"
+                    onClick={(e) => handleLinkClick(e, { href: '/products/leather?cat=laptop-bags', isRoute: true })}
+                    className="hover:text-gold-300 transition-colors text-cream/70 inline-block text-xs sm:text-sm"
+                  >
+                    {t('leather.cat.bags', { defaultValue: 'Bags' })}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/products/leather?cat=wallets"
+                    onClick={(e) => handleLinkClick(e, { href: '/products/leather?cat=wallets', isRoute: true })}
+                    className="hover:text-gold-300 transition-colors text-cream/70 inline-block text-xs sm:text-sm"
+                  >
+                    {t('leather.cat.wallets')}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mt-4 pt-3 border-t border-white/10 flex flex-col gap-2">
+              <DownloadCatalogueButton
+                variant="link"
+                file="/downloads/Local-Exim-Catalogue.pdf"
+                sizeLabel="PDF · 1.8 MB"
+                labelKey="catalogue.download"
+              />
+              <DownloadCatalogueButton
+                variant="link"
+                file="/downloads/Local-Exim-Leather-Catalogue.pdf"
+                sizeLabel="PDF · 0.7 MB"
+                labelKey="leather.download"
+              />
             </div>
           </div>
 

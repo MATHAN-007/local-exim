@@ -4,13 +4,12 @@ import { Globe, ChevronDown, Menu, X, MessageCircle, Check } from 'lucide-react'
 import { siteConfig } from '../../siteConfig';
 import { loadLanguageAsync } from '../../i18n';
 import { waLink } from '../../lib/whatsapp';
+import { scrollToElement } from '../../hooks/useLenis';
 import DownloadCatalogueButton from '../ui/DownloadCatalogueButton';
 
 export default function Navbar({ currentRoute = '/', onNavigate }) {
   const { t, i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isCatalogueOpen, setIsCatalogueOpen] = useState(false);
@@ -23,36 +22,16 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
 
   const currentLang = i18n.language ? i18n.language.split('-')[0] : 'en';
 
-  // Scroll handler for shrink and hide/show on scroll
+  // Smooth shrink on scroll (stays fixed and visible at all times)
   useEffect(() => {
-    let ticking = false;
-
     const handleScroll = () => {
-      const currentY = window.scrollY;
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setIsScrolled(currentY > 40);
-
-          if (currentY > 180) {
-            if (currentY > lastScrollY && currentY - lastScrollY > 10) {
-              setIsVisible(false); // scrolling down
-            } else if (lastScrollY - currentY > 10) {
-              setIsVisible(true); // scrolling up
-            }
-          } else {
-            setIsVisible(true);
-          }
-
-          setLastScrollY(currentY);
-          ticking = false;
-        });
-        ticking = true;
-      }
+      setIsScrolled(window.scrollY > 30);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   // Scrollspy with IntersectionObserver for home page sections
   useEffect(() => {
@@ -126,48 +105,44 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
   };
 
   const handleLinkClick = (e, item) => {
+    setIsMobileOpen(false);
+    setIsCatalogueOpen(false);
+
     if (item.isRoute) {
       e.preventDefault();
-      setIsMobileOpen(false);
-      setIsCatalogueOpen(false);
       if (onNavigate) {
         onNavigate(item.href);
       } else {
         window.location.href = item.href;
       }
-    } else if (currentRoute !== '/') {
+    } else if (currentRoute === '/') {
       e.preventDefault();
-      setIsMobileOpen(false);
-      setIsCatalogueOpen(false);
+      scrollToElement(item.href);
+    } else {
+      e.preventDefault();
       if (onNavigate) {
         onNavigate('/');
         setTimeout(() => {
-          const el = document.querySelector(item.href);
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+          scrollToElement(item.href);
+        }, 120);
       } else {
         window.location.href = '/' + item.href;
       }
-    } else {
-      setIsMobileOpen(false);
-      setIsCatalogueOpen(false);
     }
   };
 
-  // Main Nav Items: Home, Catalogue (with dropdown), About, Why Us, Blog (conditional), Contact
+  // Main Nav Items: Home, Products (with dropdown), About, Why Us, Blog (conditional), Contact
   const navItems = [
-    { id: 'hero', label: t('nav.home'), href: '/' },
+    { id: 'hero', label: t('nav.home'), href: '/', isRoute: true },
     {
       id: 'catalogue',
-      label: t('nav.catalogue'),
-      href: '/catalogue',
+      label: t('nav.products'),
+      href: '/products',
       isRoute: true,
       hasDropdown: true,
       subItems: [
-        { label: t('nav.catalogueAll'), href: '/catalogue', isRoute: true },
-        { label: t('catalogue.cat.mensKolhapuri'), href: '/catalogue?cat=men-kolhapuri', isRoute: true },
-        { label: t('catalogue.cat.mensKapshi'), href: '/catalogue?cat=men-kapshi', isRoute: true },
-        { label: t('catalogue.cat.ladies'), href: '/catalogue?cat=ladies', isRoute: true },
+        { label: t('productsLanding.chappalsTitle'), href: '/products/chappals', isRoute: true },
+        { label: t('productsLanding.leatherTitle'), href: '/products/leather', isRoute: true },
       ],
     },
     { id: 'about', label: t('nav.about'), href: '#about' },
@@ -191,9 +166,7 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
     <>
       <header
         ref={navRef}
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-[1200px] transition-all duration-300 ${
-          isVisible ? 'translate-y-0 opacity-100' : '-translate-y-24 opacity-0 pointer-events-none'
-        }`}
+        className="fixed top-3 sm:top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-[1200px] transition-all duration-300 pointer-events-auto"
       >
         <nav
           className={`flex items-center justify-between mx-auto rounded-full glass-pill transition-all duration-300 ${
@@ -228,7 +201,7 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
           {/* CENTER: Desktop Navigation Links */}
           <div className="hidden lg:flex items-center gap-1 xl:gap-2">
             {navItems.map((item) => {
-              const isCatalogueActive = currentRoute.startsWith('/catalogue') && item.id === 'catalogue';
+              const isCatalogueActive = (currentRoute.startsWith('/products') || currentRoute.startsWith('/catalogue')) && item.id === 'catalogue';
               const isBlogActive = currentRoute.startsWith('/blog') && item.id === 'blog';
               const isHomeActive = currentRoute === '/' && item.id === 'hero';
               const isSectionActive = currentRoute === '/' && activeSection === item.id;
@@ -376,15 +349,14 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
             <a
               href="#contact"
               onClick={(e) => {
-                if (currentRoute !== '/') {
-                  e.preventDefault();
-                  if (onNavigate) {
-                    onNavigate('/');
-                    setTimeout(() => {
-                      const el = document.querySelector('#contact');
-                      if (el) el.scrollIntoView({ behavior: 'smooth' });
-                    }, 100);
-                  }
+                e.preventDefault();
+                if (currentRoute === '/') {
+                  scrollToElement('#contact');
+                } else if (onNavigate) {
+                  onNavigate('/');
+                  setTimeout(() => {
+                    scrollToElement('#contact');
+                  }, 120);
                 }
               }}
               className="hidden sm:inline-flex items-center justify-center px-4 sm:px-5 py-2 rounded-full font-medium text-xs sm:text-sm text-forest-900 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 border border-gold-400/50 shadow-sm hover:shadow-gold-glow hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
@@ -449,7 +421,7 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
               {/* Nav Links */}
               <div className="py-5 space-y-1">
                 {navItems.map((item) => {
-                  const isCatalogueActive = currentRoute.startsWith('/catalogue') && item.id === 'catalogue';
+                  const isCatalogueActive = (currentRoute.startsWith('/products') || currentRoute.startsWith('/catalogue')) && item.id === 'catalogue';
                   const isBlogActive = currentRoute.startsWith('/blog') && item.id === 'blog';
                   const isHomeActive = currentRoute === '/' && item.id === 'hero';
                   const isSectionActive = currentRoute === '/' && activeSection === item.id;
@@ -531,17 +503,15 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
               <a
                 href="#contact"
                 onClick={(e) => {
-                  if (currentRoute !== '/') {
-                    e.preventDefault();
-                    if (onNavigate) {
-                      onNavigate('/');
-                      setTimeout(() => {
-                        const el = document.querySelector('#contact');
-                        if (el) el.scrollIntoView({ behavior: 'smooth' });
-                      }, 100);
-                    }
-                  } else {
-                    setIsMobileOpen(false);
+                  setIsMobileOpen(false);
+                  e.preventDefault();
+                  if (currentRoute === '/') {
+                    scrollToElement('#contact');
+                  } else if (onNavigate) {
+                    onNavigate('/');
+                    setTimeout(() => {
+                      scrollToElement('#contact');
+                    }, 120);
                   }
                 }}
                 className="w-full flex items-center justify-center px-5 py-3 rounded-xl font-medium text-sm text-forest-900 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 shadow-sm"

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useSyncExternalStore } from 'react';
 import { subscribeI18n, getI18nSnapshot } from './i18n';
-import { useLenis } from './hooks/useLenis';
+import { useLenis, scrollToTop } from './hooks/useLenis';
+import { siteConfig } from './siteConfig';
 import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
 import HighlightsStrip from './components/sections/HighlightsStrip';
@@ -14,9 +15,20 @@ import ContactSection from './components/sections/ContactSection';
 import BlogIndex from './components/pages/BlogIndex';
 import BlogPost from './components/pages/BlogPost';
 import CataloguePage from './components/pages/CataloguePage';
+import ProductsLanding from './components/pages/ProductsLanding';
+import LeatherProductsPage from './components/pages/LeatherProductsPage';
 import Footer from './components/layout/Footer';
 import FloatingWhatsApp from './components/ui/FloatingWhatsApp';
 import BackToTop from './components/ui/BackToTop';
+
+function CatalogueRedirect({ search, onNavigate }) {
+  useEffect(() => {
+    const target = `/products/chappals${search || ''}`;
+    onNavigate(target, true);
+  }, [search, onNavigate]);
+
+  return <CataloguePage onNavigate={onNavigate} />;
+}
 
 export default function App() {
   // Synchronize React with i18n on-demand lazy bundle additions
@@ -33,15 +45,27 @@ export default function App() {
   useEffect(() => {
     const handlePopState = () => {
       setCurrentRoute(window.location.pathname + window.location.search);
+      scrollToTop(true);
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  const navigate = (path) => {
-    window.history.pushState({}, '', path);
+  useEffect(() => {
+    if (currentRoute === '/' || currentRoute === '') {
+      document.title = `${siteConfig.name} – ${siteConfig.tagline}`;
+    }
+    scrollToTop(true);
+  }, [currentRoute]);
+
+  const navigate = (path, replace = false) => {
+    if (replace) {
+      window.history.replaceState({}, '', path);
+    } else {
+      window.history.pushState({}, '', path);
+    }
     setCurrentRoute(path);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollToTop(true);
   };
 
   const handleSelectCollection = (collectionId) => {
@@ -49,11 +73,15 @@ export default function App() {
   };
 
   const urlPath = currentRoute.split('?')[0];
+  const urlSearch = currentRoute.includes('?') ? currentRoute.substring(currentRoute.indexOf('?')) : '';
   const blogMatch = urlPath.match(/^\/blog\/(.+)$/);
   const blogSlug = blogMatch ? blogMatch[1] : null;
   const isBlogPostRoute = !!blogSlug;
-  const isBlogIndexRoute = urlPath === '/blog' || (currentRoute.startsWith('/blog') && !blogSlug);
-  const isCatalogueRoute = currentRoute === '/catalogue' || currentRoute.startsWith('/catalogue');
+  const isBlogIndexRoute = urlPath === '/blog' || (urlPath.startsWith('/blog') && !blogSlug);
+  const isProductsLandingRoute = urlPath === '/products';
+  const isChappalsRoute = urlPath === '/products/chappals';
+  const isLeatherRoute = urlPath === '/products/leather';
+  const isCatalogueRedirectRoute = urlPath === '/catalogue' || urlPath.startsWith('/catalogue');
 
   return (
     <div className="min-h-screen flex flex-col bg-cream text-ink selection:bg-gold-500 selection:text-white">
@@ -74,8 +102,14 @@ export default function App() {
           <BlogPost slug={blogSlug} onNavigate={navigate} />
         ) : isBlogIndexRoute ? (
           <BlogIndex onNavigate={navigate} />
-        ) : isCatalogueRoute ? (
+        ) : isProductsLandingRoute ? (
+          <ProductsLanding onNavigate={navigate} />
+        ) : isChappalsRoute ? (
           <CataloguePage onNavigate={navigate} />
+        ) : isLeatherRoute ? (
+          <LeatherProductsPage onNavigate={navigate} />
+        ) : isCatalogueRedirectRoute ? (
+          <CatalogueRedirect search={urlSearch} onNavigate={navigate} />
         ) : (
           <>
             {/* 1. Hero */}

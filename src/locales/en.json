@@ -12,13 +12,14 @@
     "catalogue": "Catalogue",
     "catalogueAll": "All Products",
     "menu": "Menu",
-    "close": "Close"
+    "close": "Close",
+    "products": "Products"
   },
   "hero": {
-    "eyebrow": "Handcrafted in Kolhapur, India",
-    "title": "Authentic Kolhapuri Chappals, Delivered Worldwide",
-    "subtitle": "Handcrafted leather chappals and open-toe sandals, traditional craftsmanship made for global buyers.",
-    "cta1": "View Collection",
+    "eyebrow": "Handcrafted Leather, Made in India",
+    "title": "Kolhapuri Chappals & Leather Essentials, Crafted for the World",
+    "subtitle": "Handcrafted leather sandals, jackets, bags and accessories — traditional craftsmanship made for global buyers.",
+    "cta1": "Explore Products",
     "cta2": "Chat on WhatsApp",
     "browseCatalogue": "Browse full catalogue →",
     "chip1": "Handcrafted Leather",
@@ -154,5 +155,40 @@
     "photoComingSoon": "Photo coming soon",
     "download": "Download Catalogue (PDF)",
     "downloadHint": "All designs with photos, codes and details"
+  },
+  "productsLanding": {
+    "title": "Our Products",
+    "subtitle": "Two collections, handcrafted leather throughout.",
+    "chappalsTitle": "Kolhapuri Chappals & Sandals",
+    "chappalsDesc": "Traditional handcrafted footwear from Kolhapur.",
+    "leatherTitle": "Leather Products",
+    "leatherDesc": "Jackets, bags, wallets and accessories in genuine leather.",
+    "explore": "Explore"
+  },
+  "leather": {
+    "title": "Leather Products",
+    "subtitle": "Browse by category. Tap any item to enquire on WhatsApp.",
+    "searchPlaceholder": "Search products…",
+    "filterAll": "All",
+    "enquire": "Enquire on WhatsApp",
+    "loadMore": "Load More",
+    "empty": "No products match your search. Try a different term or category.",
+    "comingSoon": "New designs coming soon in this category.",
+    "photoComingSoon": "Photo coming soon",
+    "cat": {
+      "jackets": "Leather Jackets",
+      "belts": "Belts",
+      "wallets": "Wallets",
+      "ladiesPurse": "Ladies Purse",
+      "ladiesHandbags": "Ladies Handbags",
+      "shoes": "Shoes",
+      "folders": "Leather Folders",
+      "bags": "Bags",
+      "laptopBags": "Laptop Bags",
+      "duffelBags": "Leather Duffel Bags",
+      "hats": "Hats"
+    },
+    "download": "Download Catalogue (PDF)",
+    "downloadHint": "All leather products with codes and details"
   }
 }

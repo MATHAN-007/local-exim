@@ -14,6 +14,28 @@ export const siteConfig = {
     file: "/downloads/Local-Exim-Catalogue.pdf",
     sizeLabel: "PDF · 2.2 MB"
   },
+  productSections: [
+    {
+      id: "chappals",
+      nameKey: "productsLanding.chappalsTitle",
+      descKey: "productsLanding.chappalsDesc",
+      route: "/products/chappals",
+      dataFile: "catalogue",
+      image: "/catalogue/sankeshwari-kolhapuri.webp",
+      pdfFile: "/downloads/Local-Exim-Catalogue.pdf",
+      pdfSizeLabel: "PDF · 1.8 MB"
+    },
+    {
+      id: "leather",
+      nameKey: "productsLanding.leatherTitle",
+      descKey: "productsLanding.leatherDesc",
+      route: "/products/leather",
+      dataFile: "leatherProducts",
+      image: "/leather/structured-tan-handbag.webp",
+      pdfFile: "/downloads/Local-Exim-Leather-Catalogue.pdf",
+      pdfSizeLabel: "PDF · 0.7 MB"
+    }
+  ],
   waMessages: {
     general: "Hello Local Exim, I would like to enquire about your Kolhapuri footwear.",
     product: "Hello Local Exim, I am interested in {name} (Code: {code}). Please share details."

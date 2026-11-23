@@ -13,13 +13,14 @@
     "close": "Fechar",
     "catalogue": "Catálogo",
     "catalogueAll": "Todos os produtos",
-    "moreLanguages": "Mais idiomas (tradução automática)"
+    "moreLanguages": "Mais idiomas (tradução automática)",
+    "products": "Produtos"
   },
   "hero": {
-    "eyebrow": "Artesanato genuíno em Kolhapur, Índia",
-    "title": "Autênticas Sandálias Kolhapuri, Exportadas para o Mundo",
-    "subtitle": "Sandálias artesanais em couro legítimo, tradição secular adaptada para compradores e distribuidores globais.",
-    "cta1": "Ver Coleção",
+    "eyebrow": "Couro Artesanal, Feito na Índia",
+    "title": "Chappals Kolhapuri e Essenciais de Couro, Feitos para o Mundo",
+    "subtitle": "Sandálias, jaquetas, bolsas e acessórios de couro feitos à mão — artesanato tradicional para compradores globais.",
+    "cta1": "Explorar Produtos",
     "cta2": "Conversar no WhatsApp",
     "chip1": "Couro Artesanal",
     "chip2": "Costura Manual Tradicional",
@@ -158,5 +159,40 @@
     "photoComingSoon": "Atualização de foto em andamento",
     "download": "Baixar Catálogo (PDF)",
     "downloadHint": "Todos os modelos com fotos, códigos e detalhes"
+  },
+  "productsLanding": {
+    "title": "Nossos Produtos",
+    "subtitle": "Duas coleções, couro artesanal em ambas.",
+    "chappalsTitle": "Chappals e Sandálias Kolhapuri",
+    "chappalsDesc": "Calçados tradicionais feitos à mão em Kolhapur.",
+    "leatherTitle": "Produtos de Couro",
+    "leatherDesc": "Jaquetas, bolsas, carteiras e acessórios em couro genuíno.",
+    "explore": "Explorar"
+  },
+  "leather": {
+    "title": "Produtos de Couro",
+    "subtitle": "Navegue por categoria. Toque em um item para consultar pelo WhatsApp.",
+    "searchPlaceholder": "Buscar produtos…",
+    "filterAll": "Todos",
+    "enquire": "Consultar pelo WhatsApp",
+    "loadMore": "Carregar Mais",
+    "empty": "Nenhum produto corresponde à sua busca. Tente outro termo ou categoria.",
+    "comingSoon": "Novos modelos em breve nesta categoria.",
+    "photoComingSoon": "Foto em breve",
+    "cat": {
+      "jackets": "Jaquetas de Couro",
+      "belts": "Cintos",
+      "wallets": "Carteiras",
+      "ladiesPurse": "Bolsa de Mão",
+      "ladiesHandbags": "Bolsas Femininas",
+      "shoes": "Sapatos",
+      "folders": "Pastas de Couro",
+      "bags": "Bolsas",
+      "laptopBags": "Bolsas para Notebook",
+      "duffelBags": "Bolsas de Viagem de Couro",
+      "hats": "Chapéus"
+    },
+    "download": "Baixar Catálogo (PDF)",
+    "downloadHint": "Todos os produtos de couro com códigos e detalhes"
   }
 }
