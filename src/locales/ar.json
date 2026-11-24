@@ -27,13 +27,19 @@
     "browseCatalogue": "تصفح الكتالوج الكامل ←",
     "pause": "إيقاف عرض الشرائح مؤقتاً",
     "play": "تشغيل عرض الشرائح",
-    "slide": "عرض التصميم {{n}}"
+    "slide": "عرض التصميم {{n}}",
+    "requestQuote": "Request Export Quote",
+    "exploreProducts": "Explore Our Products",
+    "chatWhatsApp": "Chat on WhatsApp"
   },
   "highlights": {
     "designs": "تصميماً في الكتالوج",
     "ranges": "تشكيلات متنوعة",
     "sizes": "مقاسات (بريطانية / هندية)",
-    "whatsapp": "دعم واتساب مباشر"
+    "whatsapp": "دعم واتساب مباشر",
+    "categories": "Product Categories",
+    "craft": "Handcrafted Leather",
+    "sourcing": "Direct Artisan Sourcing"
   },
   "collections": {
     "title": "مجموعاتنا المتميزة",
@@ -46,7 +52,8 @@
       "title": "صنادل كولهابوري نسائية مفتوحة الأصابع",
       "desc": "صنادل جلدية خفيفة وأنيقة مفتوحة ومناسبة للاستخدام اليومي والمناسبات."
     },
-    "explore": "استكشف"
+    "explore": "استكشف",
+    "intro": "Every piece in our range is sourced, packed, and shipped with export-grade care."
   },
   "featured": {
     "title": "تصاميم مميزة",
@@ -55,14 +62,18 @@
     "priceOnRequest": "السعر عند الطلب",
     "enquire": "استفسر عبر واتساب",
     "viewAll": "عرض الكتالوج الكامل",
-    "bulkInquiry": "هل تبحث عن تصاميم مخصصة، علامة تجارية خاصة، أو كميات تجارية كبرى؟"
+    "bulkInquiry": "هل تبحث عن تصاميم مخصصة، علامة تجارية خاصة، أو كميات تجارية كبرى؟",
+    "eyebrow": "EXPORT CATALOGUE"
   },
   "about": {
     "title": "جذور كولهابورية أصيلة. جودة تصديرية للعالم.",
     "text": "تنقل لوكال إكسم (Local Exim) التراث الهندي العريق في صناعة الأحذية الجلدية اليدوية إلى المشترين العالميين. نتعامل مباشرة مع حرفيين مهرة لنضمن احتفاظ كل زوج بأصالته وجودته الفائقة.",
     "p1": "جلد طبيعي يدوي الصنع",
     "p2": "تصاميم تراثية متوارثة",
-    "p3": "توريد مباشر من الحرفيين"
+    "p3": "توريد مباشر من الحرفيين",
+    "eyebrow": "ABOUT LOCAL EXIM",
+    "heading": "Bringing Indian Leather Goods to Global Markets.",
+    "description": "LocalExim connects buyers with a curated range of leather products and accessories from India. We focus on understanding buyer requirements, coordinating product enquiries, and providing a clear path from product selection to order fulfilment."
   },
   "why": {
     "title": "لماذا تختار لوكال إكسم",
@@ -73,7 +84,13 @@
     "i3t": "تغليف تصديري آمن",
     "i3d": "تغليف دقيق ومحكم لكل زوج لضمان وصول الشحنة بسلامة وأمان دولياً.",
     "i4t": "تواصل سلس وسريع",
-    "i4d": "استجابة سريعة ومباشرة عبر واتساب والبريد الإلكتروني بلغتك المفضلة."
+    "i4d": "استجابة سريعة ومباشرة عبر واتساب والبريد الإلكتروني بلغتك المفضلة.",
+    "i5t": "Rigorous Quality Inspection",
+    "i5d": "Every single unit is hand-inspected for leather finish, seam strength, and hardware function before export dispatch.",
+    "i6t": "Export Process Coordination",
+    "i6d": "Guidance through international commercial invoices, packing lists, and transport coordination for smooth customs entry.",
+    "eyebrow": "EXPORTER ADVANTAGE",
+    "subtitle": "Building business relationships through product variety, transparent communication, and a buyer-focused approach."
   },
   "how": {
     "title": "خطوات الطلب",
@@ -84,7 +101,9 @@
     "s3t": "تأكيد الطلب",
     "s3d": "الاتفاق على شروط الدفع وجدول الإنتاج والتجهيز.",
     "s4t": "الشحن الدولي",
-    "s4d": "يتم فحص وتغليف طلبك وشحنه فوراً لوجهتك المحددة."
+    "s4d": "يتم فحص وتغليف طلبك وشحنه فوراً لوجهتك المحددة.",
+    "eyebrow": "SIMPLE 5-STEP EXPORT PROCESS",
+    "subtitle": "We keep the enquiry and order process clear, structured, and buyer-focused."
   },
   "contact": {
     "title": "تواصل معنا",
@@ -169,7 +188,9 @@
     "leatherDesc": "جاكيتات وحقائب ومحافظ وإكسسوارات من الجلد الطبيعي.",
     "explore": "استكشف",
     "kolhapuriDesc": "شباشب ولوفرز تقليدية مصنوعة يدويًا من كولهابور.",
-    "jacketsDesc": "جاكيتات جلدية طبيعية للارتداء اليومي والرسمي."
+    "jacketsDesc": "جاكيتات جلدية طبيعية للارتداء اليومي والرسمي.",
+    "laptopBagsDesc": "Premium leather messenger briefcases and laptop bags designed for mobile professionals.",
+    "walletsDesc": "Bifold and classic genuine leather wallets with durable stitching and functional layout."
   },
   "leather": {
     "title": "المنتجات الجلدية",
@@ -198,5 +219,44 @@
     },
     "download": "تحميل الكتالوج (PDF)",
     "downloadHint": "جميع المنتجات الجلدية مع الرموز والتفاصيل"
+  },
+  "authenticity": {
+    "badge": "Geographical Indication (GI) Protected",
+    "title": "Authentic Heritage, Legally Protected Origin",
+    "desc": "Rooted in a 900-year leathercraft tradition, authentic Kolhapuri footwear was granted India's Geographical Indication (GI) tag in 2019, legally certifying its origin across eight designated districts in Maharashtra and Karnataka. Every authentic pair in our catalogue is sourced directly from skilled artisan families in Kolhapur, preserving traditional hand-stitched bag-tanned leather methods rather than mass-produced imitations.",
+    "cta": "Explore Kolhapuri Heritage Range",
+    "blogLink": "Read Product Insights on Blog"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Practical answers to common queries from international buyers, boutiques, and retailers.",
+    "q1": "What products do you export?",
+    "a1": "We export handcrafted genuine leather goods and footwear across our catalogue, including Leather Jackets, Laptop Bags, Wallets, Belts, Loafers, Hats, and authentic Kolhapuri Chappals.",
+    "q2": "What payment methods do you accept?",
+    "a2": "We discuss payment terms directly based on order size, freight mode, and destination country. Please message us on WhatsApp or email to confirm suitable options for your jurisdiction.",
+    "q3": "Do you handle export documentation and customs clearance?",
+    "a3": "We provide standard commercial export documentation—including commercial invoices, packing lists, and certificate of origin assistance where applicable—and guide international buyers through standard shipping clearance.",
+    "q4": "What countries do you ship to?",
+    "a4": "We ship worldwide through reputable international courier and air cargo partners. Reach out with your delivery city and postal code to confirm transit feasibility, timelines, and shipping rates.",
+    "q5": "Do you offer private labeling or custom branding?",
+    "a5": "Custom branding, debossing, and tailored packaging options are available on request for qualifying order sizes. Let us discuss your specific assortment, volume, and branding requirements.",
+    "q6": "Is there a minimum order quantity (MOQ)?",
+    "a6": "There is no minimum order quantity for sample requests or retail evaluations. Bulk wholesale volumes, customized batches, and container-scale shipments are discussed and planned per order.",
+    "eyebrow": "QUESTIONS & ANSWERS"
+  },
+  "capabilities": {
+    "eyebrow": "EXPORT CAPABILITIES",
+    "title": "Export Support Built Around Your Requirements",
+    "subtitle": "We aim to make product sourcing and export enquiries straightforward through clear communication, product coordination, and buyer-oriented support."
+  },
+  "trade": {
+    "eyebrow": "GLOBAL TRADE PERSPECTIVE",
+    "title": "Rooted in India. Connected to Global Opportunities.",
+    "subtitle": "Explore our leather product range and connect with LocalExim for export enquiries and international sourcing discussions."
+  },
+  "trust": {
+    "eyebrow": "BUYER CONFIDENCE",
+    "title": "Committed to Reliability, Transparency & Quality",
+    "subtitle": "We operate with a commitment to integrity, clear buyer agreements, and dependable export assistance for every international transaction."
   }
 }

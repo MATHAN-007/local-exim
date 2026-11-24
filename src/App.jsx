@@ -4,13 +4,13 @@ import { useLenis, scrollToTop } from './hooks/useLenis';
 import { siteConfig } from './siteConfig';
 import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
-import HighlightsStrip from './components/sections/HighlightsStrip';
-import Collections from './components/sections/Collections';
+import ExportValueProposition from './components/sections/ExportValueProposition';
 import FeaturedDesigns from './components/sections/FeaturedDesigns';
-import AboutTeaser from './components/sections/AboutTeaser';
-import WhyChooseUs from './components/sections/WhyChooseUs';
 import HowToOrder from './components/sections/HowToOrder';
-import Testimonials from './components/sections/Testimonials';
+import WhyChooseUs from './components/sections/WhyChooseUs';
+import GlobalTradeVisual from './components/sections/GlobalTradeVisual';
+import BusinessTrustAdvantages from './components/sections/BusinessTrustAdvantages';
+import ExportFaq from './components/sections/ExportFaq';
 import ContactSection from './components/sections/ContactSection';
 import BlogIndex from './components/pages/BlogIndex';
 import BlogPost from './components/pages/BlogPost';
@@ -88,6 +88,24 @@ export default function App() {
     }
   }, [isRetiredBlogRoute]);
 
+  // Sync homepage SEO metadata when on home route
+  useEffect(() => {
+    if (currentRoute === '/' || currentRoute === '') {
+      document.title = 'Leather Goods Exporter from India | LocalExim';
+      const descMeta = document.querySelector('meta[name="description"]');
+      if (descMeta) {
+        descMeta.setAttribute(
+          'content',
+          'Explore premium leather jackets, loafers, briefcases, bags and accessories from LocalExim, India. Connect with us for product enquiries and international export quotations.'
+        );
+      }
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {
+        canonical.setAttribute('href', 'https://localexim.com/');
+      }
+    }
+  }, [currentRoute]);
+
   const isBlogPostRoute = !!blogSlug && !isRetiredBlogRoute;
   const isBlogIndexRoute = urlPath === '/blog' || (urlPath.startsWith('/blog') && !blogSlug) || isRetiredBlogRoute;
   const isLeatherRoute = urlPath === '/products/leather';
@@ -123,38 +141,31 @@ export default function App() {
           <LegacyCatalogueRedirect onNavigate={navigate} />
         ) : (
           <>
-            {/* 1. Hero */}
+            {/* SECTION 01 – Export-Focused Hero */}
             <Hero onNavigate={navigate} />
 
-            {/* 2. Highlights Strip */}
-            <HighlightsStrip />
+            {/* SECTION 02 – Export Value Proposition */}
+            <ExportValueProposition />
 
-            {/* 3. Collections */}
-            <Collections
-              onSelectCollection={handleSelectCollection}
-              onNavigate={navigate}
-            />
+            {/* SECTION 03 – Featured Export Catalogue */}
+            <FeaturedDesigns onNavigate={navigate} />
 
-            {/* 4. Featured Designs */}
-            <FeaturedDesigns
-              selectedFilter={selectedCollectionFilter}
-              onFilterChange={setSelectedCollectionFilter}
-              onNavigate={navigate}
-            />
-
-            {/* 5. About Teaser */}
-            <AboutTeaser />
-
-            {/* 6. Why Choose Us */}
-            <WhyChooseUs />
-
-            {/* 7. How To Order */}
+            {/* SECTION 04 – How Export Ordering Works */}
             <HowToOrder />
 
-            {/* Optional Testimonials Component (rendered only if siteConfig.showTestimonials = true) */}
-            <Testimonials />
+            {/* SECTION 06 – Why Choose Local Exim */}
+            <WhyChooseUs />
 
-            {/* 8. Contact & Web3Forms */}
+            {/* SECTION 07 – India to the World / Global Trade Visual */}
+            <GlobalTradeVisual onNavigate={navigate} />
+
+            {/* SECTION 08 – Business Trust & Advantages */}
+            <BusinessTrustAdvantages />
+
+            {/* SECTION 09 – Export FAQ */}
+            <ExportFaq />
+
+            {/* SECTION 10 – Final Export Enquiry CTA & Contact */}
             <ContactSection />
           </>
         )}
