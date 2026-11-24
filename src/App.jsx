@@ -72,8 +72,24 @@ export default function App() {
   const urlPath = currentRoute.split('?')[0];
   const blogMatch = urlPath.match(/^\/blog\/(.+)$/);
   const blogSlug = blogMatch ? blogMatch[1] : null;
-  const isBlogPostRoute = !!blogSlug;
-  const isBlogIndexRoute = urlPath === '/blog' || (urlPath.startsWith('/blog') && !blogSlug);
+
+  // Retired legacy blog slugs that permanently redirect to /blog
+  const retiredBlogSlugs = [
+    'prada-kolhapuri-chappal-controversy',
+    'kolhapuri-chappal-history-gi-tag',
+    'how-to-identify-genuine-kolhapuri-chappals',
+    'how-to-care-for-leather-kolhapuri-chappals',
+  ];
+  const isRetiredBlogRoute = !!blogSlug && retiredBlogSlugs.includes(blogSlug);
+
+  useEffect(() => {
+    if (isRetiredBlogRoute) {
+      navigate('/blog', true);
+    }
+  }, [isRetiredBlogRoute]);
+
+  const isBlogPostRoute = !!blogSlug && !isRetiredBlogRoute;
+  const isBlogIndexRoute = urlPath === '/blog' || (urlPath.startsWith('/blog') && !blogSlug) || isRetiredBlogRoute;
   const isLeatherRoute = urlPath === '/products/leather';
   const isLegacyRedirectRoute =
     urlPath === '/catalogue' ||

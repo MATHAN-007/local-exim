@@ -14,6 +14,26 @@
       "source": "/products",
       "destination": "/products/leather",
       "permanent": true
+    },
+    {
+      "source": "/blog/prada-kolhapuri-chappal-controversy",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kolhapuri-chappal-history-gi-tag",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-identify-genuine-kolhapuri-chappals",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-care-for-leather-kolhapuri-chappals",
+      "destination": "/blog",
+      "permanent": true
     }
   ],
   "rewrites": [

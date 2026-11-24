@@ -8,15 +8,109 @@ export default function BlogIndex({ onNavigate }) {
   const { t } = useTranslation();
   const posts = blogData.posts || [];
 
-  // Sync document title
-  useEffect(() => {
-    document.title = `${t('blog.title')} | ${siteConfig.name}`;
-  }, [t]);
-
-  // Featured post: Prada post
-  const featuredPost = posts.find((p) => p.slug === 'prada-kolhapuri-chappal-controversy') || posts[0];
-  // Remaining posts
+  // Featured post: Article 01 (Buckle Loafer Guide)
+  const featuredPost = posts.find((p) => p.isFeatured || p.slug === 'leather-buckle-loafers-style-fit-care-guide') || posts[0];
+  // Remaining posts: Articles 02, 03, 04 in order
   const remainingPosts = posts.filter((p) => p.slug !== featuredPost?.slug);
+
+  // SEO & Structured Data Management
+  useEffect(() => {
+    const pageTitle = `Leather Goods Guides & Product Insights | ${siteConfig.name}`;
+    const pageDesc = 'Explore leather jackets, messenger briefcases, buckle loafers and accessories with practical styling guides, product insights and care tips from Local Exim.';
+    const canonicalUrl = 'https://localexim.com/blog';
+
+    document.title = pageTitle;
+
+    // Helper to set or create meta tags
+    const setMeta = (name, content, isProperty = false) => {
+      const attr = isProperty ? 'property' : 'name';
+      let el = document.querySelector(`meta[${attr}="${name}"]`);
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute(attr, name);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('content', content);
+      return el;
+    };
+
+    setMeta('description', pageDesc);
+    setMeta('keywords', 'leather buckle loafers, leather jacket styling guide, leather messenger briefcase, felt outback hat, leather product care, leather accessories, leather footwear');
+    setMeta('og:title', pageTitle, true);
+    setMeta('og:description', pageDesc, true);
+    setMeta('og:url', canonicalUrl, true);
+    setMeta('og:type', 'website', true);
+    setMeta('og:image', 'https://localexim.com/leather/buckle-loafer.webp', true);
+    setMeta('twitter:card', 'summary_large_image');
+    setMeta('twitter:title', pageTitle);
+    setMeta('twitter:description', pageDesc);
+    setMeta('twitter:image', 'https://localexim.com/leather/buckle-loafer.webp');
+
+    // Canonical link
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    const prevCanonical = canonicalLink ? canonicalLink.getAttribute('href') : 'https://localexim.com/';
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', canonicalUrl);
+
+    // JSON-LD Structured Data: ItemList + BreadcrumbList
+    let scriptEl = document.getElementById('blog-index-jsonld');
+    if (!scriptEl) {
+      scriptEl = document.createElement('script');
+      scriptEl.id = 'blog-index-jsonld';
+      scriptEl.type = 'application/ld+json';
+      document.head.appendChild(scriptEl);
+    }
+
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://localexim.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://localexim.com/blog"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "name": "Local Exim Editorial Articles & Guides",
+          "description": pageDesc,
+          "numberOfItems": posts.length,
+          "itemListElement": posts.map((p, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "url": `https://localexim.com/blog/${p.slug}`,
+            "name": p.title,
+            "image": `https://localexim.com${p.heroImage}`
+          }))
+        }
+      ]
+    };
+    scriptEl.textContent = JSON.stringify(structuredData);
+
+    return () => {
+      if (canonicalLink && prevCanonical) {
+        canonicalLink.setAttribute('href', prevCanonical);
+      }
+      if (scriptEl && scriptEl.parentNode) {
+        scriptEl.parentNode.removeChild(scriptEl);
+      }
+    };
+  }, [posts]);
 
   // Scroll-reveal IntersectionObserver
   const [revealedIds, setRevealedIds] = useState(new Set());
@@ -59,7 +153,6 @@ export default function BlogIndex({ onNavigate }) {
 
     cards.forEach((card) => observer.observe(card));
 
-    // Fallback timer ensuring cards animate in even if observer threshold wasn't triggered immediately
     const fallbackTimer = setTimeout(() => {
       setRevealedIds(new Set(posts.map((p) => p.slug)));
     }, 500);
@@ -71,11 +164,7 @@ export default function BlogIndex({ onNavigate }) {
   }, [posts]);
 
   const getCategoryLabel = (cat) => {
-    if (!cat) return null;
-    if (cat === 'men-kolhapuri') return t('catalogue.cat.mensKolhapuri');
-    if (cat === 'men-kapshi') return t('catalogue.cat.mensKapshi');
-    if (cat === 'ladies') return t('catalogue.cat.ladies');
-    return cat;
+    return cat || null;
   };
 
   return (
@@ -99,15 +188,15 @@ export default function BlogIndex({ onNavigate }) {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-forest-900 tracking-tight mb-4">
-            {t('blog.title')}
+            {t('blog.title', { defaultValue: 'Insights & Updates' })}
           </h1>
 
           <p className="text-base sm:text-lg text-ink/70 leading-relaxed max-w-2xl mx-auto">
-            {t('blog.subtitle')}
+            {t('blog.subtitle', { defaultValue: 'Explore guides, styling ideas, product insights, and useful tips from the world of leather goods and accessories.' })}
           </p>
         </div>
 
-        {/* 1. Large Featured Card (Prada Post) with Ken-Burns style slow zoom */}
+        {/* 1. Large Featured Card (Article 01: Buckle Loafer Guide) */}
         {featuredPost && (
           <div className="mb-14">
             <a

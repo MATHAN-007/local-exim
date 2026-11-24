@@ -1,11 +1,10 @@
-import React, { useEffect, useState, useMemo, useRef } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import {
   ArrowLeft,
   Clock,
   Calendar,
-  Share2,
   Copy,
   Check,
   MessageCircle,
@@ -16,12 +15,19 @@ import {
 import blogData from '../../data/blog.json';
 import { siteConfig } from '../../siteConfig';
 import { waLink } from '../../lib/whatsapp';
-import ComparisonChart from '../blog/ComparisonChart';
 
 export default function BlogPost({ slug, onNavigate }) {
   const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+
+  // Retired legacy slugs that must permanently redirect to /blog
+  const retiredSlugs = [
+    'prada-kolhapuri-chappal-controversy',
+    'kolhapuri-chappal-history-gi-tag',
+    'how-to-identify-genuine-kolhapuri-chappals',
+    'how-to-care-for-leather-kolhapuri-chappals',
+  ];
 
   // Find post by slug
   const post = useMemo(() => {
@@ -29,31 +35,130 @@ export default function BlogPost({ slug, onNavigate }) {
     return list.find((p) => p.slug === slug);
   }, [slug]);
 
-  // If not found, redirect to /blog
+  // Handle retired slugs or unknown slugs -> redirect safely to /blog
   useEffect(() => {
-    if (!post && onNavigate) {
-      onNavigate('/blog');
+    if ((!post || retiredSlugs.includes(slug)) && onNavigate) {
+      onNavigate('/blog', true);
     }
-  }, [post, onNavigate]);
+  }, [post, slug, onNavigate]);
 
-  // Sync document title and meta description
+  // Sync document title, meta tags, and structured data
   useEffect(() => {
     if (!post) return;
-    const title = post.metaTitle || `${post.title} | ${siteConfig.name}`;
-    document.title = title;
+    const pageTitle = post.metaTitle || `${post.title} | ${siteConfig.name}`;
+    const pageDesc = post.metaDescription || post.excerpt;
+    const pageUrl = `https://localexim.com/blog/${post.slug}`;
+    const pageImage = `https://localexim.com${post.heroImage}`;
 
-    let descMeta = document.querySelector('meta[name="description"]');
-    if (descMeta) {
-      descMeta.setAttribute('content', post.metaDescription || post.excerpt);
+    document.title = pageTitle;
+
+    const setMeta = (name, content, isProperty = false) => {
+      const attr = isProperty ? 'property' : 'name';
+      let el = document.querySelector(`meta[${attr}="${name}"]`);
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute(attr, name);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('content', content);
+      return el;
+    };
+
+    setMeta('description', pageDesc);
+    if (post.keywords && post.keywords.length) {
+      setMeta('keywords', post.keywords.join(', '));
+    }
+    setMeta('og:title', pageTitle, true);
+    setMeta('og:description', pageDesc, true);
+    setMeta('og:url', pageUrl, true);
+    setMeta('og:type', 'article', true);
+    setMeta('og:image', pageImage, true);
+    setMeta('twitter:card', 'summary_large_image');
+    setMeta('twitter:title', pageTitle);
+    setMeta('twitter:description', pageDesc);
+    setMeta('twitter:image', pageImage);
+
+    // Canonical link
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    const prevCanonical = canonicalLink ? canonicalLink.getAttribute('href') : 'https://localexim.com/';
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', pageUrl);
+
+    // JSON-LD Structured Data: BlogPosting + BreadcrumbList
+    let scriptEl = document.getElementById('blog-post-jsonld');
+    if (!scriptEl) {
+      scriptEl = document.createElement('script');
+      scriptEl.id = 'blog-post-jsonld';
+      scriptEl.type = 'application/ld+json';
+      document.head.appendChild(scriptEl);
     }
 
-    let kwMeta = document.querySelector('meta[name="keywords"]');
-    if (kwMeta && post.keywords) {
-      kwMeta.setAttribute('content', post.keywords.join(', '));
-    }
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://localexim.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://localexim.com/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": post.title,
+              "item": pageUrl
+            }
+          ]
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "description": pageDesc,
+          "image": pageImage,
+          "url": pageUrl,
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": pageUrl
+          },
+          "author": {
+            "@type": "Organization",
+            "name": siteConfig.name
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": siteConfig.name,
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://localexim.com/logo/logo-full.png"
+            }
+          },
+          "keywords": post.keywords ? post.keywords.join(', ') : undefined
+        }
+      ]
+    };
+    scriptEl.textContent = JSON.stringify(structuredData);
 
     return () => {
-      document.title = `${t('blog.title')} | ${siteConfig.name}`;
+      document.title = `${t('blog.title', { defaultValue: 'Insights & Updates' })} | ${siteConfig.name}`;
+      if (canonicalLink && prevCanonical) {
+        canonicalLink.setAttribute('href', prevCanonical);
+      }
+      if (scriptEl && scriptEl.parentNode) {
+        scriptEl.parentNode.removeChild(scriptEl);
+      }
     };
   }, [post, t]);
 
@@ -108,16 +213,7 @@ export default function BlogPost({ slug, onNavigate }) {
   const waEnquiryMsg = `Hello Local Exim, I read your article "${post.title}" and would like to ask a question.`;
   const postWaUrl = waLink(waEnquiryMsg);
 
-  // Format category label
-  const getCategoryLabel = (cat) => {
-    if (!cat) return null;
-    if (cat === 'men-kolhapuri') return t('catalogue.cat.mensKolhapuri');
-    if (cat === 'men-kapshi') return t('catalogue.cat.mensKapshi');
-    if (cat === 'ladies') return t('catalogue.cat.ladies');
-    return cat;
-  };
-
-  const categoryLabel = getCategoryLabel(post.category);
+  const categoryLabel = post.category || null;
 
   return (
     <div className="min-h-screen bg-cream pt-24 pb-24 md:pt-32 md:pb-32 relative text-ink selection:bg-gold-500 selection:text-white">
@@ -184,7 +280,7 @@ export default function BlogPost({ slug, onNavigate }) {
             {post.title}
           </h1>
 
-          {/* Meta Row: Read time, keywords/date, share row */}
+          {/* Meta Row: Read time, words count, share row */}
           <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-gold-500/20 text-xs sm:text-sm text-ink/65">
             <div className="flex items-center gap-4">
               <span className="inline-flex items-center gap-1.5">
@@ -193,7 +289,7 @@ export default function BlogPost({ slug, onNavigate }) {
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <Calendar className="w-4 h-4 text-gold-600" />
-                <span>{post.readTimeMins ? `${post.wordCount} words` : 'Export Insights'}</span>
+                <span>{post.wordCount ? `${post.wordCount} words` : 'Product Insights'}</span>
               </span>
             </div>
 
@@ -230,109 +326,46 @@ export default function BlogPost({ slug, onNavigate }) {
 
         {/* Article Body Column (~680px max width for optimal reading rhythm) */}
         <article className="max-w-[680px] mx-auto prose-custom">
-          {post.hasComparisonChart ? (
-            /* For the Prada post, render comparison chart right between the backstory and analysis */
-            <>
-              <ReactMarkdown
-                components={{
-                  h2: ({ node, ...props }) => (
-                    <h2 className="text-2xl sm:text-3xl font-serif font-bold text-forest-900 mt-10 mb-4 pt-4 border-t border-gold-500/15" {...props} />
-                  ),
-                  p: ({ node, ...props }) => (
-                    <p className="text-base sm:text-lg text-ink/80 leading-relaxed mb-6 font-sans" {...props} />
-                  ),
-                  strong: ({ node, ...props }) => (
-                    <strong className="font-semibold text-forest-900" {...props} />
-                  ),
-                  a: ({ node, href, ...props }) => (
-                    <a
-                      href={href}
-                      onClick={(e) => {
-                        if (href?.startsWith('/') && onNavigate) {
-                          e.preventDefault();
-                          onNavigate(href);
-                        }
-                      }}
-                      className="text-gold-700 hover:text-gold-900 font-medium underline underline-offset-4 decoration-gold-400/50 hover:decoration-gold-700 transition-colors"
-                      {...props}
-                    />
-                  ),
-                }}
-              >
-                {post.body.split('## Why It Struck a Nerve')[0]}
-              </ReactMarkdown>
-
-              {/* Pure SVG/div Comparison Chart */}
-              <ComparisonChart chart={post.comparisonChart} />
-
-              <ReactMarkdown
-                components={{
-                  h2: ({ node, ...props }) => (
-                    <h2 className="text-2xl sm:text-3xl font-serif font-bold text-forest-900 mt-10 mb-4 pt-4 border-t border-gold-500/15" {...props} />
-                  ),
-                  p: ({ node, ...props }) => (
-                    <p className="text-base sm:text-lg text-ink/80 leading-relaxed mb-6 font-sans" {...props} />
-                  ),
-                  strong: ({ node, ...props }) => (
-                    <strong className="font-semibold text-forest-900" {...props} />
-                  ),
-                  a: ({ node, href, ...props }) => (
-                    <a
-                      href={href}
-                      onClick={(e) => {
-                        if (href?.startsWith('/') && onNavigate) {
-                          e.preventDefault();
-                          onNavigate(href);
-                        }
-                      }}
-                      className="text-gold-700 hover:text-gold-900 font-medium underline underline-offset-4 decoration-gold-400/50 hover:decoration-gold-700 transition-colors"
-                      {...props}
-                    />
-                  ),
-                }}
-              >
-                {`## Why It Struck a Nerve${post.body.split('## Why It Struck a Nerve')[1] || ''}`}
-              </ReactMarkdown>
-            </>
-          ) : (
-            <ReactMarkdown
-              components={{
-                h2: ({ node, ...props }) => (
-                  <h2 className="text-2xl sm:text-3xl font-serif font-bold text-forest-900 mt-10 mb-4 pt-4 border-t border-gold-500/15" {...props} />
-                ),
-                p: ({ node, ...props }) => (
-                  <p className="text-base sm:text-lg text-ink/80 leading-relaxed mb-6 font-sans" {...props} />
-                ),
-                strong: ({ node, ...props }) => (
-                  <strong className="font-semibold text-forest-900" {...props} />
-                ),
-                ol: ({ node, ...props }) => (
-                  <ol className="list-decimal list-outside ps-6 mb-6 space-y-2 text-base sm:text-lg text-ink/80" {...props} />
-                ),
-                ul: ({ node, ...props }) => (
-                  <ul className="list-disc list-outside ps-6 mb-6 space-y-2 text-base sm:text-lg text-ink/80" {...props} />
-                ),
-                li: ({ node, ...props }) => (
-                  <li className="leading-relaxed" {...props} />
-                ),
-                a: ({ node, href, ...props }) => (
-                  <a
-                    href={href}
-                    onClick={(e) => {
-                      if (href?.startsWith('/') && onNavigate) {
-                        e.preventDefault();
-                        onNavigate(href);
-                      }
-                    }}
-                    className="text-gold-700 hover:text-gold-900 font-medium underline underline-offset-4 decoration-gold-400/50 hover:decoration-gold-700 transition-colors"
-                    {...props}
-                  />
-                ),
-              }}
-            >
-              {post.body}
-            </ReactMarkdown>
-          )}
+          <ReactMarkdown
+            components={{
+              h2: ({ node, ...props }) => (
+                <h2 className="text-2xl sm:text-3xl font-serif font-bold text-forest-900 mt-10 mb-4 pt-4 border-t border-gold-500/15" {...props} />
+              ),
+              h3: ({ node, ...props }) => (
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-forest-900 mt-8 mb-3" {...props} />
+              ),
+              p: ({ node, ...props }) => (
+                <p className="text-base sm:text-lg text-ink/80 leading-relaxed mb-6 font-sans" {...props} />
+              ),
+              strong: ({ node, ...props }) => (
+                <strong className="font-semibold text-forest-900" {...props} />
+              ),
+              ol: ({ node, ...props }) => (
+                <ol className="list-decimal list-outside ps-6 mb-6 space-y-2 text-base sm:text-lg text-ink/80" {...props} />
+              ),
+              ul: ({ node, ...props }) => (
+                <ul className="list-disc list-outside ps-6 mb-6 space-y-2 text-base sm:text-lg text-ink/80" {...props} />
+              ),
+              li: ({ node, ...props }) => (
+                <li className="leading-relaxed" {...props} />
+              ),
+              a: ({ node, href, ...props }) => (
+                <a
+                  href={href}
+                  onClick={(e) => {
+                    if (href?.startsWith('/') && onNavigate) {
+                      e.preventDefault();
+                      onNavigate(href);
+                    }
+                  }}
+                  className="text-gold-700 hover:text-gold-900 font-medium underline underline-offset-4 decoration-gold-400/50 hover:decoration-gold-700 transition-colors"
+                  {...props}
+                />
+              ),
+            }}
+          >
+            {post.body}
+          </ReactMarkdown>
         </article>
 
         {/* Bottom CTA Block: WhatsApp Inquiry & Related Collection */}
@@ -347,7 +380,7 @@ export default function BlogPost({ slug, onNavigate }) {
                 Have questions about this article?
               </h3>
               <p className="text-xs sm:text-sm text-cream/70">
-                Our export team is available directly on WhatsApp to answer craft and sourcing queries.
+                Our export team is available directly on WhatsApp to answer product and sourcing queries.
               </p>
             </div>
 
@@ -362,13 +395,13 @@ export default function BlogPost({ slug, onNavigate }) {
                 <span>{t('blog.askUs', { defaultValue: 'Ask us on WhatsApp' })}</span>
               </a>
 
-              {post.category && (
+              {post.catalogueHref && (
                 <a
-                  href={`/catalogue?cat=${post.category}`}
+                  href={post.catalogueHref}
                   onClick={(e) => {
                     if (onNavigate) {
                       e.preventDefault();
-                      onNavigate(`/catalogue?cat=${post.category}`);
+                      onNavigate(post.catalogueHref);
                     }
                   }}
                   className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full font-semibold text-xs sm:text-sm text-cream bg-white/10 hover:bg-white/20 border border-white/20 transition-all"
@@ -381,7 +414,7 @@ export default function BlogPost({ slug, onNavigate }) {
           </div>
         </div>
 
-        {/* "You might also like": up to 2 other posts */}
+        {/* "You might also like": other posts */}
         {relatedPosts.length > 0 && (
           <div className="max-w-[680px] mx-auto mt-16 pt-10 border-t border-gold-500/20">
             <h3 className="text-xl sm:text-2xl font-serif font-bold text-forest-900 mb-6">
