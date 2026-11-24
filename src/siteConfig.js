@@ -11,29 +11,23 @@ export const siteConfig = {
     intervalMs: 3000
   },
   catalogueDownload: {
-    file: "/downloads/Local-Exim-Catalogue.pdf",
-    sizeLabel: "PDF · 2.2 MB"
+    file: "/downloads/Local-Exim-Leather-Catalogue.pdf",
+    sizeLabel: "PDF · 0.8 MB"
   },
-  productSections: [
+  homeCollections: [
     {
-      id: "chappals",
-      nameKey: "productsLanding.chappalsTitle",
-      descKey: "productsLanding.chappalsDesc",
-      route: "/products/chappals",
-      dataFile: "catalogue",
-      image: "/catalogue/sankeshwari-kolhapuri.webp",
-      pdfFile: "/downloads/Local-Exim-Catalogue.pdf",
-      pdfSizeLabel: "PDF · 1.8 MB"
+      id: "kolhapuri-chappals-loafers",
+      nameKey: "leather.cat.kolhapuriChappals",
+      descKey: "productsLanding.kolhapuriDesc",
+      image: "/leather/sankeshwari-kolhapuri-chappal.webp",
+      route: "/products/leather?cat=kolhapuri-chappals-loafers"
     },
     {
-      id: "leather",
-      nameKey: "productsLanding.leatherTitle",
-      descKey: "productsLanding.leatherDesc",
-      route: "/products/leather",
-      dataFile: "leatherProducts",
-      image: "/leather/structured-tan-handbag.webp",
-      pdfFile: "/downloads/Local-Exim-Leather-Catalogue.pdf",
-      pdfSizeLabel: "PDF · 0.7 MB"
+      id: "leather-jackets",
+      nameKey: "leather.cat.jackets",
+      descKey: "productsLanding.jacketsDesc",
+      image: "/leather/biker-leather-jacket.webp",
+      route: "/products/leather?cat=leather-jackets"
     }
   ],
   waMessages: {

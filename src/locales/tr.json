@@ -163,7 +163,9 @@
     "chappalsDesc": "Kolhapur'dan geleneksel el yapımı ayakkabılar.",
     "leatherTitle": "Deri Ürünler",
     "leatherDesc": "Hakiki deriden ceketler, çantalar, cüzdanlar ve aksesuarlar.",
-    "explore": "Keşfet"
+    "explore": "Keşfet",
+    "kolhapuriDesc": "Kolhapur'dan geleneksel el yapımı çarıklar ve loaferlar.",
+    "jacketsDesc": "Günlük ve resmi kullanım için hakiki deri ceketler."
   },
   "leather": {
     "title": "Deri Ürünler",
@@ -186,7 +188,8 @@
       "bags": "Çantalar",
       "laptopBags": "Laptop Çantaları",
       "duffelBags": "Deri Spor Çantaları",
-      "hats": "Şapkalar"
+      "hats": "Şapkalar",
+      "kolhapuriChappals": "Kolhapuri Çarıklar ve Loaferlar"
     },
     "download": "Kataloğu İndir (PDF)",
     "downloadHint": "Kodları ve detaylarıyla tüm deri ürünler"

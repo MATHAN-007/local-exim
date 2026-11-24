@@ -26,9 +26,9 @@ export default function Collections({ onSelectCollection, onNavigate }) {
           </p>
         </div>
 
-        {/* 2 Large Cards Grid Driven by siteConfig.productSections */}
+        {/* 2 Large Cards Grid Driven by siteConfig.homeCollections */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-          {siteConfig.productSections.map((section) => {
+          {(siteConfig.homeCollections || []).map((section) => {
             const targetUrl = section.route;
             const title = t(section.nameKey);
             const desc = t(section.descKey);

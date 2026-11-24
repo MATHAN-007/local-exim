@@ -163,7 +163,9 @@
     "chappalsDesc": "Alas kaki tradisional buatan tangan dari Kolhapur.",
     "leatherTitle": "Produk Kulit",
     "leatherDesc": "Jaket, tas, dompet, dan aksesori dari kulit asli.",
-    "explore": "Jelajahi"
+    "explore": "Jelajahi",
+    "kolhapuriDesc": "Chappal dan loafer tradisional buatan tangan dari Kolhapur.",
+    "jacketsDesc": "Jaket kulit asli untuk sehari-hari dan acara formal."
   },
   "leather": {
     "title": "Produk Kulit",
@@ -186,7 +188,8 @@
       "bags": "Tas",
       "laptopBags": "Tas Laptop",
       "duffelBags": "Tas Duffel Kulit",
-      "hats": "Topi"
+      "hats": "Topi",
+      "kolhapuriChappals": "Chappal & Loafer Kolhapuri"
     },
     "download": "Unduh Katalog (PDF)",
     "downloadHint": "Semua produk kulit dengan kode dan detail"

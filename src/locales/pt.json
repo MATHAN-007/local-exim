@@ -167,7 +167,9 @@
     "chappalsDesc": "Calçados tradicionais feitos à mão em Kolhapur.",
     "leatherTitle": "Produtos de Couro",
     "leatherDesc": "Jaquetas, bolsas, carteiras e acessórios em couro genuíno.",
-    "explore": "Explorar"
+    "explore": "Explorar",
+    "kolhapuriDesc": "Chappals e mocassins tradicionais feitos à mão em Kolhapur.",
+    "jacketsDesc": "Jaquetas de couro genuíno para uso diário e formal."
   },
   "leather": {
     "title": "Produtos de Couro",
@@ -190,7 +192,8 @@
       "bags": "Bolsas",
       "laptopBags": "Bolsas para Notebook",
       "duffelBags": "Bolsas de Viagem de Couro",
-      "hats": "Chapéus"
+      "hats": "Chapéus",
+      "kolhapuriChappals": "Chappals e Mocassins Kolhapuri"
     },
     "download": "Baixar Catálogo (PDF)",
     "downloadHint": "Todos os produtos de couro com códigos e detalhes"

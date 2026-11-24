@@ -163,7 +163,9 @@
     "chappalsDesc": "コルハプール発、伝統的な手作りの履物。",
     "leatherTitle": "レザー製品",
     "leatherDesc": "本革のジャケット、バッグ、財布、小物類。",
-    "explore": "見る"
+    "explore": "見る",
+    "kolhapuriDesc": "コルハプール発、伝統的な手作りのチャッパルとローファー。",
+    "jacketsDesc": "日常使いからフォーマルまで、本革ジャケット。"
   },
   "leather": {
     "title": "レザー製品",
@@ -186,7 +188,8 @@
       "bags": "バッグ",
       "laptopBags": "ラップトップバッグ",
       "duffelBags": "レザーダッフルバッグ",
-      "hats": "帽子"
+      "hats": "帽子",
+      "kolhapuriChappals": "コルハプリ・チャッパル＆ローファー"
     },
     "download": "カタログをダウンロード (PDF)",
     "downloadHint": "コードと詳細付きの全レザー製品"

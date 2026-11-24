@@ -131,19 +131,32 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
     }
   };
 
-  // Main Nav Items: Home, Products (with dropdown), About, Why Us, Blog (conditional), Contact
+  // Main Nav Items: Home, Products (flat subcategories dropdown), About, Why Us, Blog (conditional), Contact
+  const productSubCategories = [
+    { label: t('leather.filterAll', { defaultValue: 'All' }), href: '/products/leather', isRoute: true },
+    { label: t('leather.cat.jackets'), href: '/products/leather?cat=leather-jackets', isRoute: true },
+    { label: t('leather.cat.belts'), href: '/products/leather?cat=belts', isRoute: true },
+    { label: t('leather.cat.wallets'), href: '/products/leather?cat=wallets', isRoute: true },
+    { label: t('leather.cat.ladiesPurse'), href: '/products/leather?cat=ladies-purse', isRoute: true },
+    { label: t('leather.cat.ladiesHandbags'), href: '/products/leather?cat=ladies-handbags', isRoute: true },
+    { label: t('leather.cat.shoes'), href: '/products/leather?cat=shoes', isRoute: true },
+    { label: t('leather.cat.folders'), href: '/products/leather?cat=leather-folders', isRoute: true },
+    { label: t('leather.cat.bags'), href: '/products/leather?cat=bags', isRoute: true },
+    { label: t('leather.cat.laptopBags'), href: '/products/leather?cat=laptop-bags', isRoute: true },
+    { label: t('leather.cat.duffelBags'), href: '/products/leather?cat=leather-duffel-bags', isRoute: true },
+    { label: t('leather.cat.hats'), href: '/products/leather?cat=hats', isRoute: true },
+    { label: t('leather.cat.kolhapuriChappals'), href: '/products/leather?cat=kolhapuri-chappals-loafers', isRoute: true },
+  ];
+
   const navItems = [
     { id: 'hero', label: t('nav.home'), href: '/', isRoute: true },
     {
       id: 'catalogue',
       label: t('nav.products'),
-      href: '/products',
+      href: '/products/leather',
       isRoute: true,
       hasDropdown: true,
-      subItems: [
-        { label: t('productsLanding.chappalsTitle'), href: '/products/chappals', isRoute: true },
-        { label: t('productsLanding.leatherTitle'), href: '/products/leather', isRoute: true },
-      ],
+      subItems: productSubCategories,
     },
     { id: 'about', label: t('nav.about'), href: '#about' },
     { id: 'why-us', label: t('nav.why'), href: '#why-us' },
@@ -249,7 +262,7 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
                       </button>
                     </div>
 
-                    {/* Catalogue Dropdown Panel */}
+                    {/* Catalogue Dropdown Panel - Two-Column Aligned Layout */}
                     <div
                       className={`absolute top-full start-0 pt-2 transition-all duration-200 ${
                         isCatalogueOpen
@@ -257,20 +270,22 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
                           : 'opacity-0 -translate-y-2 pointer-events-none'
                       }`}
                     >
-                      <div className="w-56 py-2 bg-cream/95 backdrop-blur-xl border border-gold-500/40 rounded-2xl shadow-xl overflow-hidden">
-                        {item.subItems.map((sub, idx) => (
-                          <a
-                            key={idx}
-                            href={sub.href}
-                            onClick={(e) => {
-                              setIsCatalogueOpen(false);
-                              handleLinkClick(e, sub);
-                            }}
-                            className="block px-4 py-2.5 text-xs sm:text-sm text-ink/90 hover:bg-gold-500/15 hover:text-forest-900 transition-colors"
-                          >
-                            {sub.label}
-                          </a>
-                        ))}
+                      <div className="w-[440px] p-2 bg-cream/95 backdrop-blur-xl border border-gold-500/40 rounded-2xl shadow-xl overflow-hidden">
+                        <div className="grid grid-cols-2 gap-1">
+                          {item.subItems.map((sub, idx) => (
+                            <a
+                              key={idx}
+                              href={sub.href}
+                              onClick={(e) => {
+                                setIsCatalogueOpen(false);
+                                handleLinkClick(e, sub);
+                              }}
+                              className="block px-3 py-2 text-xs sm:text-sm text-ink/90 hover:bg-gold-500/15 hover:text-forest-900 rounded-xl transition-colors"
+                            >
+                              {sub.label}
+                            </a>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -441,7 +456,7 @@ export default function Navbar({ currentRoute = '/', onNavigate }) {
                         {item.label}
                       </a>
                       {item.subItems && (
-                        <div className="ps-6 pe-2 py-1 space-y-1">
+                        <div className="ps-6 pe-2 py-1 space-y-1 max-h-56 overflow-y-auto">
                           {item.subItems.map((sub, idx) => (
                             <a
                               key={idx}

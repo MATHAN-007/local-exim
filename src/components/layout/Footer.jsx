@@ -124,104 +124,65 @@ export default function Footer({ onNavigate }) {
             </ul>
           </div>
 
-          {/* Column B: Products (Chappals + Leather Products Groups) */}
+          {/* Column B: Products (Lean list of top subcategories + View All) */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-gold-400 mb-5">
               {t('nav.products')}
             </h4>
             
-            {/* Group 1: Chappals */}
-            <div className="mb-5">
-              <span className="block text-[11px] font-semibold uppercase tracking-wider text-gold-400/80 mb-2">
-                {t('productsLanding.chappalsTitle')}
-              </span>
-              <ul className="space-y-2 text-sm ps-2 border-s border-gold-500/20">
-                <li>
-                  <a
-                    href="/products/chappals"
-                    onClick={(e) => handleLinkClick(e, { href: '/products/chappals', isRoute: true })}
-                    className="hover:text-gold-300 transition-colors text-cream/90 font-medium inline-block"
-                  >
-                    {t('productsLanding.chappalsTitle')}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/products/chappals?cat=men-kolhapuri"
-                    onClick={(e) => handleLinkClick(e, { href: '/products/chappals?cat=men-kolhapuri', isRoute: true })}
-                    className="hover:text-gold-300 transition-colors text-cream/70 inline-block text-xs sm:text-sm"
-                  >
-                    {t('catalogue.categories.menKolhapuri')}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/products/chappals?cat=ladies"
-                    onClick={(e) => handleLinkClick(e, { href: '/products/chappals?cat=ladies', isRoute: true })}
-                    className="hover:text-gold-300 transition-colors text-cream/70 inline-block text-xs sm:text-sm"
-                  >
-                    {t('catalogue.categories.ladies')}
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href="/products/leather?cat=kolhapuri-chappals-loafers"
+                  onClick={(e) => handleLinkClick(e, { href: '/products/leather?cat=kolhapuri-chappals-loafers', isRoute: true })}
+                  className="hover:text-gold-300 transition-colors text-cream/80 inline-block"
+                >
+                  {t('leather.cat.kolhapuriChappals')}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/products/leather?cat=leather-jackets"
+                  onClick={(e) => handleLinkClick(e, { href: '/products/leather?cat=leather-jackets', isRoute: true })}
+                  className="hover:text-gold-300 transition-colors text-cream/80 inline-block"
+                >
+                  {t('leather.cat.jackets')}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/products/leather?cat=laptop-bags"
+                  onClick={(e) => handleLinkClick(e, { href: '/products/leather?cat=laptop-bags', isRoute: true })}
+                  className="hover:text-gold-300 transition-colors text-cream/80 inline-block"
+                >
+                  {t('leather.cat.bags', { defaultValue: 'Bags' })}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/products/leather?cat=wallets"
+                  onClick={(e) => handleLinkClick(e, { href: '/products/leather?cat=wallets', isRoute: true })}
+                  className="hover:text-gold-300 transition-colors text-cream/80 inline-block"
+                >
+                  {t('leather.cat.wallets')}
+                </a>
+              </li>
+              <li className="pt-1">
+                <a
+                  href="/products/leather"
+                  onClick={(e) => handleLinkClick(e, { href: '/products/leather', isRoute: true })}
+                  className="hover:text-gold-300 font-semibold text-gold-400 transition-colors inline-block text-xs uppercase tracking-wider"
+                >
+                  {t('featured.viewAll', { defaultValue: 'View All Products' })} →
+                </a>
+              </li>
+            </ul>
 
-            {/* Group 2: Leather Products */}
-            <div className="mb-5">
-              <span className="block text-[11px] font-semibold uppercase tracking-wider text-gold-400/80 mb-2">
-                {t('productsLanding.leatherTitle')}
-              </span>
-              <ul className="space-y-2 text-sm ps-2 border-s border-gold-500/20">
-                <li>
-                  <a
-                    href="/products/leather"
-                    onClick={(e) => handleLinkClick(e, { href: '/products/leather', isRoute: true })}
-                    className="hover:text-gold-300 transition-colors text-cream/90 font-medium inline-block"
-                  >
-                    {t('productsLanding.leatherTitle')}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/products/leather?cat=leather-jackets"
-                    onClick={(e) => handleLinkClick(e, { href: '/products/leather?cat=leather-jackets', isRoute: true })}
-                    className="hover:text-gold-300 transition-colors text-cream/70 inline-block text-xs sm:text-sm"
-                  >
-                    {t('leather.cat.jackets')}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/products/leather?cat=laptop-bags"
-                    onClick={(e) => handleLinkClick(e, { href: '/products/leather?cat=laptop-bags', isRoute: true })}
-                    className="hover:text-gold-300 transition-colors text-cream/70 inline-block text-xs sm:text-sm"
-                  >
-                    {t('leather.cat.bags', { defaultValue: 'Bags' })}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/products/leather?cat=wallets"
-                    onClick={(e) => handleLinkClick(e, { href: '/products/leather?cat=wallets', isRoute: true })}
-                    className="hover:text-gold-300 transition-colors text-cream/70 inline-block text-xs sm:text-sm"
-                  >
-                    {t('leather.cat.wallets')}
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="mt-4 pt-3 border-t border-white/10 flex flex-col gap-2">
+            <div className="mt-5 pt-3 border-t border-white/10">
               <DownloadCatalogueButton
                 variant="link"
-                file="/downloads/Local-Exim-Catalogue.pdf"
-                sizeLabel="PDF · 1.8 MB"
-                labelKey="catalogue.download"
-              />
-              <DownloadCatalogueButton
-                variant="link"
-                file="/downloads/Local-Exim-Leather-Catalogue.pdf"
-                sizeLabel="PDF · 0.7 MB"
+                file={siteConfig.catalogueDownload?.file || '/downloads/Local-Exim-Leather-Catalogue.pdf'}
+                sizeLabel={siteConfig.catalogueDownload?.sizeLabel || 'PDF · 0.8 MB'}
                 labelKey="leather.download"
               />
             </div>

@@ -1,94 +1,100 @@
-LOCAL EXIM: HOME PAGE UPDATE -- DUAL PRODUCT LINE (CHAPPALS + LEATHER PRODUCTS)
+LOCAL EXIM: RETIRE CHAPPALS CATALOGUE -- UNIFY INTO LEATHER PRODUCTS
 
 CONTEXT
-The site already has /products, /products/chappals, /products/leather built in a prior
-session, with siteConfig.productSections as the shared config for both sections. This task
-updates the HOME PAGE ONLY to reflect both product lines. Do not touch forms, do not change
-any other page's structure.
+Per client decision, the standalone Chappals catalogue is being retired. 4 specific chappal
+products survive, merged into Leather Products under a new "Kolhapuri Chappals & Loafers"
+subcategory. Leather Products becomes the SINGLE product catalogue on the site.
 
-0. SETUP -- MERGE, NOT REPLACE
-- Copy public/hero/*.webp (3 new files) into the existing public/hero/ folder (adds to the 5
-  already there -- 2 of the existing 5 are being reused, 3 of the existing 5 are being retired
-  from the hero but should NOT be deleted from disk, they're still used elsewhere).
-- Copy public/downloads/Local-Exim-Leather-Catalogue.pdf into public/downloads/.
-- Copy tools/build_leather_catalogue_pdf.py into tools/.
-- REPLACE src/data/heroSlides.json entirely with the one in this pack (intentional full
-  replace -- this file only ever holds hero slide content, nothing else depends on its old data).
-- Open src/siteConfig.js and MERGE IN the productSections structure from siteConfig.patch.js --
-  if productSections already exists from the earlier /products session, UPDATE each entry to
-  add the new image / pdfFile / pdfSizeLabel fields shown in the patch rather than duplicating
-  the array. Do not touch any other key in siteConfig.js.
-- For each of the 15 files in locale-patches/, MERGE the hero.eyebrow / hero.title /
-  hero.subtitle / hero.cta1 UPDATED VALUES and the new leather.download / leather.downloadHint
-  keys into the REAL existing src/locales/<code>.json files. These are small, targeted key
-  updates/additions -- do NOT overwrite any locale file wholesale, that would delete all other
-  existing content (nav, collections, featured, about, why, how, contact, footer, catalogue,
-  blog, productsLanding, leather.cat.*, etc. all built in earlier sessions). Confirm each
-  file's total key count only grew or stayed the same, never shrank.
+0. SETUP -- MERGE RULES VARY BY FILE, READ CAREFULLY
+- Copy public/leather/*.webp (4 new files) and public/hero/*.webp (2 new files) into the
+  existing folders -- additive, no conflicts.
+- Copy public/downloads/Local-Exim-Leather-Catalogue.pdf into public/downloads/, OVERWRITING
+  the existing file of the same name.
+- REPLACE src/data/leatherProducts.json entirely with this pack's version (full replacement
+  of this ONE file only -- it now has 20 products / 12 subcategories, see its _note field).
+- REPLACE src/data/heroSlides.json entirely (full replacement, same as before -- this file
+  only ever holds hero content).
+- Copy tools/build_leather_catalogue_pdf.py into tools/, overwriting the existing one (adds
+  the new subcategory's title mapping).
+- Open src/siteConfig.js: REMOVE the `productSections` array entirely (the old Chappals/Leather
+  2-tile split is retired). ADD `catalogueDownload` and `homeCollections` from
+  siteConfig.patch2.js. Leave every other key in siteConfig.js untouched.
+- For each of the 15 locale-patches/*.json files, MERGE IN exactly 3 new keys into the REAL
+  existing src/locales/<code>.json: leather.cat.kolhapuriChappals, productsLanding.kolhapuriDesc,
+  productsLanding.jacketsDesc. Do not overwrite the files -- these are small additions on top
+  of everything already built.
 
-1. HERO SECTION
-- Text: use the updated hero.eyebrow / hero.title / hero.subtitle / hero.cta1 from the locale
-  files (English: eyebrow "Handcrafted Leather, Made in India", title "Kolhapuri Chappals &
-  Leather Essentials, Crafted for the World", subtitle mentions both categories, cta1 now
-  "Explore Products"). No other hero layout changes.
-- Slideshow: now reads heroSlides.json's 5 entries (2 chappals, 3 leather) instead of the old
-  5-chappal set. Same component, same autoplay/pause/dot behavior as already built -- just
-  swap the data source, no structural changes. Each slide's `section` field (chappals/leather)
-  is informational only for now; no per-slide visual treatment change required.
-- The "Browse full catalogue" link under the CTAs now points to /products (the landing page
-  showing both sections) instead of directly to /catalogue or /products/chappals, since it's
-  no longer chappals-only. Update its href only, keep its existing style/position.
+1. REMOVE THE CHAPPALS CATALOGUE
+- Delete the /products/chappals route and its page component.
+- Delete the /products landing page (the old 2-tile chooser) -- no longer needed with a single
+  catalogue.
+- src/data/catalogue.json: stop importing/using it anywhere. Do not delete the file from disk
+  (harmless to leave it unreferenced), but remove every component reference to it.
+- Retire the Chappals-only PDF button/reference and the old Local-Exim-Catalogue.pdf file
+  reference in code (the physical file can stay on disk unused, or be deleted -- your call).
 
-2. "OUR COLLECTIONS" SECTION -- NOW DRIVEN BY siteConfig.productSections
-Replace its current data source (the old 2 chappal-subcategory cards) with a map over
-siteConfig.productSections (2 entries: chappals, leather). Each card: image (section.image),
-title (t(section.nameKey)), description (t(section.descKey)), "Explore" button
-(productsLanding.explore label) linking to section.route. Keep the exact existing card style
-(gold border, hover lift, rounded-2xl) -- this is a data-source swap, not a redesign. Section
-heading/subtitle can keep using the existing collections.title/subtitle keys, unchanged.
+2. REDIRECTS -- DO NOT BREAK EXISTING LINKS
+The blog posts, sitemap, and old bookmarks point at /catalogue, /catalogue?cat=X, and
+/products/chappals*. All of these must now redirect to /products/leather (dropping any old
+chappal-specific ?cat= value, since those subcategories -- men-kolhapuri, men-kapshi, ladies --
+no longer exist in the unified structure; redirecting to the unfiltered /products/leather is
+correct, don't try to remap old cat values to new ones). Update sitemap.xml accordingly:
+remove /products/chappals and /products entries, ensure /products/leather is listed.
 
-3. "FEATURED DESIGNS" SECTION -- ADD A TWO-WAY TOGGLE
-- Add a tab/toggle control above the grid with two options, labeled from
-  productsLanding.chappalsTitle and productsLanding.leatherTitle (reuse these keys, don't add
-  new ones) -- default selected: Chappals.
-- Chappals tab: unchanged behavior -- first 8 products from catalogue.json, existing
-  ProductCard with price-note behavior exactly as already built.
-- Leather tab: first 8 visible products from leatherProducts.json (skip excludeUntilReview
-  automatically, same filter already used on /products/leather), using the SAME ProductCard
-  component with showPrice={false} and the leather.enquire WhatsApp button pattern already
-  built for /products/leather. Do not build a second card component.
-- Below the grid, two buttons that change target based on the active tab, sourced from the
-  active productSections entry: "View Full Catalogue" -> section.route, and
-  "Download Catalogue (PDF)" -> section.pdfFile, showing section.pdfSizeLabel as the small
-  muted size label (reuse the existing download-button component built for the Chappals PDF --
-  it already takes a file + sizeLabel prop, just pass the active section's values instead of
-  hardcoding the Chappals ones).
-- Switching tabs should not cause layout jank -- keep the grid container's min-height stable
-  if feasible, or accept a brief reflow if not; don't over-engineer this.
+3. NAVBAR -- "PRODUCTS" BECOMES A FLAT SUBCATEGORY DROPDOWN
+- Clicking the "Products" label itself now goes directly to /products/leather (showing "All").
+- Replace the old 2-item (Chappals/Leather Products) dropdown with a flat list of all 12
+  subcategories plus "All", in a two-column aligned layout, using the SAME hover style already
+  used elsewhere in the nav (don't invent a new dropdown visual style). Order: All, Leather
+  Jackets, Belts, Wallets, Ladies Purse, Ladies Handbags, Shoes, Leather Folders, Bags, Laptop
+  Bags, Leather Duffel Bags, Hats, Kolhapuri Chappals & Loafers. Each item links to
+  /products/leather?cat={id} (All links to /products/leather with no query param). Labels
+  from leather.cat.* locale keys (all already exist, including the new kolhapuriChappals key).
+- Mirror this flat list in the mobile drawer the same way the old 2-item version was mirrored.
+- Footer's product-links column: replace the old "Chappals group / Leather Products group"
+  structure (built in the immediately prior session) with a single flat list of a few top
+  subcategories plus a "View All" link to /products/leather -- keep it lean, 4-5 links max
+  (suggest: Kolhapuri Chappals & Loafers, Leather Jackets, Bags, Wallets, then "View All
+  Products" linking to /products/leather with no filter).
 
-4. FOOTER UPDATE
-In the footer's product-links column (previously labeled for Chappals/Collections only):
-- Add a small sub-heading or visual grouping so it's clearly two lists now, not one:
-  "Chappals" group: links to /products/chappals, plus 2 shortcuts -- Men's Kolhapuri
-  (/products/chappals?cat=men-kolhapuri) and Ladies' (/products/chappals?cat=ladies).
-  "Leather Products" group: link to /products/leather, plus 3 shortcuts -- Leather Jackets
-  (/products/leather?cat=leather-jackets), Bags (/products/leather?cat=laptop-bags), Wallets
-  (/products/leather?cat=wallets). (Only 3 of the 11 leather subcategories shown here by
-  design, to keep the footer lean -- not an exhaustive list.)
-Keep the footer's other columns (Company, Get in Touch) and the back-to-top button exactly
-as already built -- this section's internal structure only.
+4. /products/leather PAGE -- NO STRUCTURAL CHANGES
+This page already supports subcategory filtering, search, "Load More", excludeUntilReview
+filtering, and the empty/coming-soon state for subcategories with zero products. It now simply
+has 3 empty subcategories instead of 2 (shoes, bags, leather-duffel-bags all show the empty
+state) and one new populated one (Kolhapuri Chappals & Loafers, 5 products). No code changes
+needed here beyond consuming the updated data file.
 
-5. RULES
-Do not modify: the Home page's About section, Why Us section, How-to-order section, Contact
-form, or any non-Home page. Do not add prices anywhere on the Leather side. Do not invent
-subcategory shortcuts beyond what's specified above. Mobile-first, verify 360/768/1280. Keep
-the existing performance budget -- hero images follow the same eager-first/lazy-rest pattern
-already built.
+5. HOME PAGE -- HERO
+- Hero slideshow reads the new heroSlides.json (2 chappal + 3 leather slides, same dot/autoplay
+  component as before -- data swap only).
+- The "Browse full catalogue" link under the hero CTAs now points to /products/leather (not
+  /products, which no longer exists).
 
-6. DELIVERABLE
-Screenshots: hero mid-slideshow showing a leather product slide (desktop + mobile), "Our
-Collections" section showing both cards, "Featured Designs" with the Leather tab active
-showing its own View/Download buttons, and the updated footer. Confirm: (a) all 15 locale
-files grew rather than shrank after merging, (b) the regenerated understanding that
-Local-Exim-Leather-Catalogue.pdf opens correctly and shows no prices, (c) the Home page's
-About/Why Us/How-to-order/Contact sections are pixel-identical to before this change.
+6. HOME PAGE -- "OUR COLLECTIONS" SECTION
+Replace its data source with siteConfig.homeCollections (2 entries: Kolhapuri Chappals &
+Loafers, Leather Jackets). Same exact card visual style as already built (image, title from
+nameKey, description from descKey, "Explore" button to route) -- this is a data-source swap,
+not a redesign.
+
+7. HOME PAGE -- "FEATURED DESIGNS" SECTION
+Remove the Chappals/Leather Products tab toggle added in the prior session (no longer
+applicable -- single catalogue now). Revert to a single grid: first 8 visible products from
+leatherProducts.json (respecting excludeUntilReview), same ProductCard, showPrice={false},
+single "View Full Catalogue" button (-> /products/leather) and single "Download Catalogue
+(PDF)" button (-> siteConfig.catalogueDownload.file, showing .sizeLabel) beneath the grid --
+matching the original single-section layout pattern, not the two-button-per-tab pattern from
+the prior session.
+
+8. RULES
+No prices anywhere. No hardcoded copy -- everything through locale keys and
+leatherProducts.json. Don't touch Home's About/Why Us/How-to-order/Contact sections or any
+form. Mobile-first, verify 360/768/1280.
+
+9. DELIVERABLE
+Screenshots: navbar's new flat two-column subcategory dropdown (desktop), hero showing a
+chappal slide, "Our Collections" with the 2 new cards, "Featured Designs" single-grid layout
+with its one Download button, and /products/leather filtered to "Kolhapuri Chappals &
+Loafers" showing all 5 items. Confirm: (a) an old /catalogue?cat=ladies link redirects
+correctly to /products/leather, (b) /products and /products/chappals no longer exist (404 or
+redirect, not a broken page), (c) the regenerated PDF opens and shows all 16 visible products
+including the 4 chappals with no prices.

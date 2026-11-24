@@ -163,7 +163,9 @@
     "chappalsDesc": "Traditional handcrafted footwear from Kolhapur.",
     "leatherTitle": "Leather Products",
     "leatherDesc": "Jackets, bags, wallets and accessories in genuine leather.",
-    "explore": "Explore"
+    "explore": "Explore",
+    "kolhapuriDesc": "Traditional handcrafted chappals and loafers from Kolhapur.",
+    "jacketsDesc": "Genuine leather jackets for everyday and formal wear."
   },
   "leather": {
     "title": "Leather Products",
@@ -186,7 +188,8 @@
       "bags": "Bags",
       "laptopBags": "Laptop Bags",
       "duffelBags": "Leather Duffel Bags",
-      "hats": "Hats"
+      "hats": "Hats",
+      "kolhapuriChappals": "Kolhapuri Chappals & Loafers"
     },
     "download": "Download Catalogue (PDF)",
     "downloadHint": "All leather products with codes and details"

@@ -62,20 +62,8 @@ async function run() {
   await saveScreenshot(page, 'fixed_home_scrolled.png');
 
   // 3. Test Navbar "Products" link
-  console.log('\n3. Clicking "Products" in navbar to go to /products...');
-  await page.click('nav a[href="/products"]');
-  await new Promise(r => setTimeout(r, 800));
-
-  console.log('   Current URL:', page.url());
-  let scrollAfterProducts = await page.evaluate(() => window.scrollY);
-  console.log('   ScrollY on /products (must be 0):', scrollAfterProducts);
-  if (scrollAfterProducts !== 0) throw new Error('Scroll position was not reset to 0 on /products!');
-
-  await saveScreenshot(page, 'fixed_products_landing.png');
-
-  // 4. Click "Explore" on Leather products card
-  console.log('\n4. Clicking Explore on Leather card...');
-  await page.click('main a[href="/products/leather"]');
+  console.log('\n3. Clicking "Products" in navbar to go to /products/leather...');
+  await page.click('nav a[href="/products/leather"]');
   await new Promise(r => setTimeout(r, 800));
 
   console.log('   Current URL:', page.url());
@@ -88,12 +76,12 @@ async function run() {
 
   // Count product cards rendered
   const productCardsCount = await page.$$eval('main .grid > div', els => els.length);
-  console.log(`   Product cards rendered on page: ${productCardsCount} (must be 17)`);
-  if (productCardsCount !== 17) {
-    throw new Error(`Expected exactly 17 product cards, found ${productCardsCount}`);
+  console.log(`   Product cards rendered on page: ${productCardsCount} (must be 16)`);
+  if (productCardsCount !== 16) {
+    throw new Error(`Expected exactly 16 product cards, found ${productCardsCount}`);
   }
 
-  await saveScreenshot(page, 'fixed_leather_all_17.png');
+  await saveScreenshot(page, 'fixed_leather_all_16.png');
 
   // 5. Scroll down 1200px on leather page
   console.log('\n5. Scrolling down 1200px on leather page...');

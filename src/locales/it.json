@@ -163,7 +163,9 @@
     "chappalsDesc": "Calzature tradizionali realizzate a mano a Kolhapur.",
     "leatherTitle": "Prodotti in Pelle",
     "leatherDesc": "Giacche, borse, portafogli e accessori in vera pelle.",
-    "explore": "Scopri"
+    "explore": "Scopri",
+    "kolhapuriDesc": "Chappal e mocassini tradizionali fatti a mano a Kolhapur.",
+    "jacketsDesc": "Giacche in vera pelle per uso quotidiano e formale."
   },
   "leather": {
     "title": "Prodotti in Pelle",
@@ -186,7 +188,8 @@
       "bags": "Borse",
       "laptopBags": "Borse per Laptop",
       "duffelBags": "Borsoni da Viaggio in Pelle",
-      "hats": "Cappelli"
+      "hats": "Cappelli",
+      "kolhapuriChappals": "Chappal e Mocassini Kolhapuri"
     },
     "download": "Scarica il Catalogo (PDF)",
     "downloadHint": "Tutti i prodotti in pelle con codici e dettagli"

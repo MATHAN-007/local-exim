@@ -2,7 +2,17 @@
   "redirects": [
     {
       "source": "/catalogue",
-      "destination": "/products/chappals",
+      "destination": "/products/leather",
+      "permanent": true
+    },
+    {
+      "source": "/products/chappals",
+      "destination": "/products/leather",
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products/leather",
       "permanent": true
     }
   ],

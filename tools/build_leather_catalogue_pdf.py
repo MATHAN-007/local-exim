@@ -54,7 +54,7 @@ CAT_TITLES = {
     "leather-jackets": "Leather Jackets", "belts": "Belts", "wallets": "Wallets",
     "ladies-purse": "Ladies Purse", "ladies-handbags": "Ladies Handbags", "shoes": "Shoes",
     "leather-folders": "Leather Folders", "bags": "Bags", "laptop-bags": "Laptop Bags",
-    "leather-duffel-bags": "Leather Duffel Bags", "hats": "Hats",
+    "leather-duffel-bags": "Leather Duffel Bags", "hats": "Hats", "kolhapuri-chappals-loafers": "Kolhapuri Chappals & Loafers",
 }
 products = [p for p in data["products"] if not p.get("excludeUntilReview")]
 print(f"Including {len(products)} of {len(data['products'])} products ({len(data['products'])-len(products)} excluded pending client review)")

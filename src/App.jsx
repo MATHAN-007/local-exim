@@ -14,20 +14,17 @@ import Testimonials from './components/sections/Testimonials';
 import ContactSection from './components/sections/ContactSection';
 import BlogIndex from './components/pages/BlogIndex';
 import BlogPost from './components/pages/BlogPost';
-import CataloguePage from './components/pages/CataloguePage';
-import ProductsLanding from './components/pages/ProductsLanding';
 import LeatherProductsPage from './components/pages/LeatherProductsPage';
 import Footer from './components/layout/Footer';
 import FloatingWhatsApp from './components/ui/FloatingWhatsApp';
 import BackToTop from './components/ui/BackToTop';
 
-function CatalogueRedirect({ search, onNavigate }) {
+function LegacyCatalogueRedirect({ onNavigate }) {
   useEffect(() => {
-    const target = `/products/chappals${search || ''}`;
-    onNavigate(target, true);
-  }, [search, onNavigate]);
+    onNavigate('/products/leather', true);
+  }, [onNavigate]);
 
-  return <CataloguePage onNavigate={onNavigate} />;
+  return <LeatherProductsPage onNavigate={onNavigate} />;
 }
 
 export default function App() {
@@ -73,15 +70,17 @@ export default function App() {
   };
 
   const urlPath = currentRoute.split('?')[0];
-  const urlSearch = currentRoute.includes('?') ? currentRoute.substring(currentRoute.indexOf('?')) : '';
   const blogMatch = urlPath.match(/^\/blog\/(.+)$/);
   const blogSlug = blogMatch ? blogMatch[1] : null;
   const isBlogPostRoute = !!blogSlug;
   const isBlogIndexRoute = urlPath === '/blog' || (urlPath.startsWith('/blog') && !blogSlug);
-  const isProductsLandingRoute = urlPath === '/products';
-  const isChappalsRoute = urlPath === '/products/chappals';
   const isLeatherRoute = urlPath === '/products/leather';
-  const isCatalogueRedirectRoute = urlPath === '/catalogue' || urlPath.startsWith('/catalogue');
+  const isLegacyRedirectRoute =
+    urlPath === '/catalogue' ||
+    urlPath.startsWith('/catalogue') ||
+    urlPath === '/products/chappals' ||
+    urlPath.startsWith('/products/chappals') ||
+    urlPath === '/products';
 
   return (
     <div className="min-h-screen flex flex-col bg-cream text-ink selection:bg-gold-500 selection:text-white">
@@ -102,14 +101,10 @@ export default function App() {
           <BlogPost slug={blogSlug} onNavigate={navigate} />
         ) : isBlogIndexRoute ? (
           <BlogIndex onNavigate={navigate} />
-        ) : isProductsLandingRoute ? (
-          <ProductsLanding onNavigate={navigate} />
-        ) : isChappalsRoute ? (
-          <CataloguePage onNavigate={navigate} />
         ) : isLeatherRoute ? (
           <LeatherProductsPage onNavigate={navigate} />
-        ) : isCatalogueRedirectRoute ? (
-          <CatalogueRedirect search={urlSearch} onNavigate={navigate} />
+        ) : isLegacyRedirectRoute ? (
+          <LegacyCatalogueRedirect onNavigate={navigate} />
         ) : (
           <>
             {/* 1. Hero */}

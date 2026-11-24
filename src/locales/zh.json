@@ -167,7 +167,9 @@
     "chappalsDesc": "来自科尔哈普尔的传统手工鞋履。",
     "leatherTitle": "皮革产品",
     "leatherDesc": "真皮夹克、包袋、钱包及配饰。",
-    "explore": "探索"
+    "explore": "探索",
+    "kolhapuriDesc": "来自科尔哈普尔的传统手工凉鞋与乐福鞋。",
+    "jacketsDesc": "适合日常和正式场合的真皮夹克。"
   },
   "leather": {
     "title": "皮革产品",
@@ -190,7 +192,8 @@
       "bags": "包袋",
       "laptopBags": "电脑包",
       "duffelBags": "皮革旅行包",
-      "hats": "帽子"
+      "hats": "帽子",
+      "kolhapuriChappals": "科尔哈普尔凉鞋与乐福鞋"
     },
     "download": "下载目录 (PDF)",
     "downloadHint": "所有皮革产品及编码与详情"

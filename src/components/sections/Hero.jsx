@@ -144,11 +144,11 @@ export default function Hero({ onNavigate }) {
             {/* Tertiary Catalogue Link */}
             <div className="mt-4">
               <a
-                href="/products"
+                href="/products/leather"
                 onClick={(e) => {
                   if (onNavigate) {
                     e.preventDefault();
-                    onNavigate('/products');
+                    onNavigate('/products/leather');
                   }
                 }}
                 className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-gold-300/90 hover:text-gold-200 underline underline-offset-4 decoration-gold-400/40 hover:decoration-gold-300 transition-colors"

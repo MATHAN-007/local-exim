@@ -12,10 +12,10 @@ export default function DownloadCatalogueButton({
   labelKey = 'catalogue.download',
 }) {
   const { t } = useTranslation();
-  const activeFile = file || siteConfig.catalogueDownload?.file || '/downloads/Local-Exim-Catalogue.pdf';
-  const activeSizeLabel = sizeLabel || siteConfig.catalogueDownload?.sizeLabel || 'PDF · 1.8 MB';
-  const downloadName = activeFile.split('/').pop() || 'Local-Exim-Catalogue.pdf';
-  const labelText = t(labelKey, { defaultValue: t('catalogue.download') });
+  const activeFile = file || siteConfig.catalogueDownload?.file || '/downloads/Local-Exim-Leather-Catalogue.pdf';
+  const activeSizeLabel = sizeLabel || siteConfig.catalogueDownload?.sizeLabel || 'PDF · 0.8 MB';
+  const downloadName = activeFile.split('/').pop() || 'Local-Exim-Leather-Catalogue.pdf';
+  const labelText = t(labelKey, { defaultValue: t('leather.download', { defaultValue: t('catalogue.download') }) });
 
   if (variant === 'link') {
     return (

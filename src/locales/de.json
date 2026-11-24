@@ -167,7 +167,9 @@
     "chappalsDesc": "Traditionelles handgefertigtes Schuhwerk aus Kolhapur.",
     "leatherTitle": "Lederprodukte",
     "leatherDesc": "Jacken, Taschen, Geldbörsen und Accessoires aus echtem Leder.",
-    "explore": "Entdecken"
+    "explore": "Entdecken",
+    "kolhapuriDesc": "Traditionelle handgefertigte Chappals und Loafer aus Kolhapur.",
+    "jacketsDesc": "Echte Lederjacken für Alltag und festliche Anlässe."
   },
   "leather": {
     "title": "Lederprodukte",
@@ -190,7 +192,8 @@
       "bags": "Taschen",
       "laptopBags": "Laptoptaschen",
       "duffelBags": "Leder-Reisetaschen",
-      "hats": "Hüte"
+      "hats": "Hüte",
+      "kolhapuriChappals": "Kolhapuri Chappals & Loafer"
     },
     "download": "Katalog herunterladen (PDF)",
     "downloadHint": "Alle Lederprodukte mit Codes und Details"

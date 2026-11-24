@@ -1,5 +1,5 @@
 {
-  "_note": "Leather Products catalogue -- 17 products across all categories from public/leather/*.webp",
+  "_note": "Leather Products is now the ONLY product catalogue (Chappals catalogue retired entirely per client request). 'kolhapuri-chappals-loafers' is a new subcategory holding 4 chappal products carried over from the old catalogue plus the existing buckle-loafer (recoded KC-05, moved out of 'shoes'). 'shoes', 'bags' and 'leather-duffel-bags' now have zero products -- show their filter chip with the empty/coming-soon state. 4 products still carry excludeUntilReview=true (visible third-party branding) and must stay hidden: monogram-snap-purse, multipocket-leather-backpack, reversible-leather-belt, dalery-crossbody-bag.",
   "categories": [
     {
       "id": "leather-jackets",
@@ -44,6 +44,10 @@
     {
       "id": "hats",
       "nameKey": "leather.cat.hats"
+    },
+    {
+      "id": "kolhapuri-chappals-loafers",
+      "nameKey": "leather.cat.kolhapuriChappals"
     }
   ],
   "products": [
@@ -61,7 +65,8 @@
       "name": "Felt Outback Hat",
       "category": "hats",
       "image": "/leather/felt-outback-hat.webp",
-      "photoQuality": "ok"
+      "photoQuality": "ok",
+      "reviewNote": "This hat is wool felt with a leather-look trim band, not full leather -- confirm this is listed accurately."
     },
     {
       "id": "croc-texture-leather-briefcase",
@@ -77,7 +82,10 @@
       "name": "Monogram Snap Purse",
       "category": "ladies-purse",
       "image": "/leather/monogram-snap-purse.webp",
-      "photoQuality": "ok"
+      "photoQuality": "ok",
+      "needsReview": true,
+      "reviewNote": "Gold 'A' clasp looks like a monogram or brand mark -- confirm this isn't a third-party branded item before listing.",
+      "excludeUntilReview": true
     },
     {
       "id": "zip-leather-jacket",
@@ -109,13 +117,16 @@
       "name": "Multi-Pocket Leather Backpack",
       "category": "laptop-bags",
       "image": "/leather/multipocket-leather-backpack.webp",
-      "photoQuality": "ok"
+      "photoQuality": "ok",
+      "needsReview": true,
+      "reviewNote": "Carries a visible 'MT MaheTri' brand mark embossed on the front pocket -- this is another company's branding, not Local Exim's. Confirm sourcing rights or replace with an unbranded photo before publishing.",
+      "excludeUntilReview": true
     },
     {
       "id": "buckle-loafer",
-      "code": "SH-01",
+      "code": "KC-05",
       "name": "Leather Buckle Loafer",
-      "category": "shoes",
+      "category": "kolhapuri-chappals-loafers",
       "image": "/leather/buckle-loafer.webp",
       "photoQuality": "ok"
     },
@@ -125,7 +136,10 @@
       "name": "Reversible Leather Belt",
       "category": "belts",
       "image": "/leather/reversible-leather-belt.webp",
-      "photoQuality": "ok"
+      "photoQuality": "ok",
+      "needsReview": true,
+      "reviewNote": "Buckle is engraved 'HONMA', a known golf-equipment brand. Very likely a genuine third-party branded product -- do not list as a generic Local Exim item without confirmed rights.",
+      "excludeUntilReview": true
     },
     {
       "id": "twotone-bifold-wallet",
@@ -149,14 +163,7 @@
       "name": "Leather Messenger Briefcase",
       "category": "laptop-bags",
       "image": "/leather/messenger-briefcase-bag.webp",
-      "photoQuality": "ok"
-    },
-    {
-      "id": "leather-messenger-shoulder-bag",
-      "code": "LB-04",
-      "name": "Leather Messenger Shoulder Bag",
-      "category": "laptop-bags",
-      "image": "/leather/messenger-briefcase-bag-alt.webp",
+      "altImage": "/leather/messenger-briefcase-bag-alt.webp",
       "photoQuality": "ok"
     },
     {
@@ -165,7 +172,8 @@
       "name": "Leather Conference Folder",
       "category": "leather-folders",
       "image": "/leather/leather-conference-folder.webp",
-      "photoQuality": "ok"
+      "photoQuality": "ok",
+      "reviewNote": "Shown in 4 colourways (maroon, black, tan, brown) in one photo -- listed as one product; split into separate colour variants later if the client wants."
     },
     {
       "id": "dalery-crossbody-bag",
@@ -173,7 +181,10 @@
       "name": "Leather Crossbody Bag",
       "category": "ladies-handbags",
       "image": "/leather/dalery-crossbody-bag.webp",
-      "photoQuality": "ok"
+      "photoQuality": "ok",
+      "needsReview": true,
+      "reviewNote": "Carries a visible 'DALERY' brand mark embossed on the front -- another company's branding, not Local Exim's. Confirm sourcing rights or replace with an unbranded photo before publishing.",
+      "excludeUntilReview": true
     },
     {
       "id": "biker-leather-jacket",
@@ -181,6 +192,38 @@
       "name": "Black Biker Leather Jacket",
       "category": "leather-jackets",
       "image": "/leather/biker-leather-jacket.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "sankeshwari-kolhapuri-chappal",
+      "code": "KC-01",
+      "name": "Sankeshwari Kolhapuri",
+      "category": "kolhapuri-chappals-loafers",
+      "image": "/leather/sankeshwari-kolhapuri-chappal.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "chatai-majdi-chappal",
+      "code": "KC-02",
+      "name": "Chatai Majdi",
+      "category": "kolhapuri-chappals-loafers",
+      "image": "/leather/chatai-majdi-chappal.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "ladies-bingri-kolhapuri-chappal",
+      "code": "KC-03",
+      "name": "Ladies Bingri Kolhapuri",
+      "category": "kolhapuri-chappals-loafers",
+      "image": "/leather/ladies-bingri-kolhapuri-chappal.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "premium-kolhapuri-shoe-chappal",
+      "code": "KC-04",
+      "name": "Premium Kolhapuri Shoe",
+      "category": "kolhapuri-chappals-loafers",
+      "image": "/leather/premium-kolhapuri-shoe-chappal.webp",
       "photoQuality": "ok"
     }
   ]
