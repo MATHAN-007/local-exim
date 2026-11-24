@@ -52,7 +52,7 @@ CAT_LABELS = {c["id"]: c["nameKey"].rsplit(".", 1)[-1] for c in data["categories
 # Human-readable category titles for the PDF (mirrors leather.cat.* English values)
 CAT_TITLES = {
     "leather-jackets": "Leather Jackets", "belts": "Belts", "wallets": "Wallets",
-    "ladies-purse": "Ladies Purse", "ladies-handbags": "Ladies Handbags", "shoes": "Shoes",
+    "ladies-purse": "Ladies Purse", "ladies-handbags": "Ladies Handbags", "loafers": "Loafers",
     "leather-folders": "Leather Folders", "bags": "Bags", "laptop-bags": "Laptop Bags",
     "leather-duffel-bags": "Leather Duffel Bags", "hats": "Hats", "kolhapuri-chappals-loafers": "Kolhapuri Chappals & Loafers",
 }

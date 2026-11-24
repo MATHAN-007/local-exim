@@ -12,7 +12,7 @@ export const siteConfig = {
   },
   catalogueDownload: {
     file: "/downloads/Local-Exim-Leather-Catalogue.pdf",
-    sizeLabel: "PDF · 0.8 MB"
+    sizeLabel: "PDF · 1.1 MB"
   },
   homeCollections: [
     {

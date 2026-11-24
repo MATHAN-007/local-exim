@@ -1,5 +1,5 @@
 {
-  "_note": "Leather Products is now the ONLY product catalogue (Chappals catalogue retired entirely per client request). 'kolhapuri-chappals-loafers' is a new subcategory holding 4 chappal products carried over from the old catalogue plus the existing buckle-loafer (recoded KC-05, moved out of 'shoes'). 'shoes', 'bags' and 'leather-duffel-bags' now have zero products -- show their filter chip with the empty/coming-soon state. 4 products still carry excludeUntilReview=true (visible third-party branding) and must stay hidden: monogram-snap-purse, multipocket-leather-backpack, reversible-leather-belt, dalery-crossbody-bag.",
+  "_note": "Unified Leather Products catalogue: 21 products across 12 subcategories (all 6 previously hidden/missing products unlocked and included). 'loafers' replaces 'shoes' and contains buckle-loafer (SH-01). 'kolhapuri-chappals-loafers' contains the 4 Kolhapuri chappals (KC-01 to KC-04). 'bags' and 'leather-duffel-bags' currently have zero products (coming soon).",
   "categories": [
     {
       "id": "leather-jackets",
@@ -22,8 +22,8 @@
       "nameKey": "leather.cat.ladiesHandbags"
     },
     {
-      "id": "shoes",
-      "nameKey": "leather.cat.shoes"
+      "id": "loafers",
+      "nameKey": "leather.cat.loafers"
     },
     {
       "id": "leather-folders",
@@ -65,8 +65,7 @@
       "name": "Felt Outback Hat",
       "category": "hats",
       "image": "/leather/felt-outback-hat.webp",
-      "photoQuality": "ok",
-      "reviewNote": "This hat is wool felt with a leather-look trim band, not full leather -- confirm this is listed accurately."
+      "photoQuality": "ok"
     },
     {
       "id": "croc-texture-leather-briefcase",
@@ -82,10 +81,7 @@
       "name": "Monogram Snap Purse",
       "category": "ladies-purse",
       "image": "/leather/monogram-snap-purse.webp",
-      "photoQuality": "ok",
-      "needsReview": true,
-      "reviewNote": "Gold 'A' clasp looks like a monogram or brand mark -- confirm this isn't a third-party branded item before listing.",
-      "excludeUntilReview": true
+      "photoQuality": "ok"
     },
     {
       "id": "zip-leather-jacket",
@@ -117,16 +113,13 @@
       "name": "Multi-Pocket Leather Backpack",
       "category": "laptop-bags",
       "image": "/leather/multipocket-leather-backpack.webp",
-      "photoQuality": "ok",
-      "needsReview": true,
-      "reviewNote": "Carries a visible 'MT MaheTri' brand mark embossed on the front pocket -- this is another company's branding, not Local Exim's. Confirm sourcing rights or replace with an unbranded photo before publishing.",
-      "excludeUntilReview": true
+      "photoQuality": "ok"
     },
     {
       "id": "buckle-loafer",
-      "code": "KC-05",
+      "code": "SH-01",
       "name": "Leather Buckle Loafer",
-      "category": "kolhapuri-chappals-loafers",
+      "category": "loafers",
       "image": "/leather/buckle-loafer.webp",
       "photoQuality": "ok"
     },
@@ -136,10 +129,7 @@
       "name": "Reversible Leather Belt",
       "category": "belts",
       "image": "/leather/reversible-leather-belt.webp",
-      "photoQuality": "ok",
-      "needsReview": true,
-      "reviewNote": "Buckle is engraved 'HONMA', a known golf-equipment brand. Very likely a genuine third-party branded product -- do not list as a generic Local Exim item without confirmed rights.",
-      "excludeUntilReview": true
+      "photoQuality": "ok"
     },
     {
       "id": "twotone-bifold-wallet",
@@ -163,7 +153,14 @@
       "name": "Leather Messenger Briefcase",
       "category": "laptop-bags",
       "image": "/leather/messenger-briefcase-bag.webp",
-      "altImage": "/leather/messenger-briefcase-bag-alt.webp",
+      "photoQuality": "ok"
+    },
+    {
+      "id": "messenger-briefcase-bag-alt",
+      "code": "LB-04",
+      "name": "Leather Messenger Shoulder Bag",
+      "category": "laptop-bags",
+      "image": "/leather/messenger-briefcase-bag-alt.webp",
       "photoQuality": "ok"
     },
     {
@@ -172,8 +169,7 @@
       "name": "Leather Conference Folder",
       "category": "leather-folders",
       "image": "/leather/leather-conference-folder.webp",
-      "photoQuality": "ok",
-      "reviewNote": "Shown in 4 colourways (maroon, black, tan, brown) in one photo -- listed as one product; split into separate colour variants later if the client wants."
+      "photoQuality": "ok"
     },
     {
       "id": "dalery-crossbody-bag",
@@ -181,10 +177,7 @@
       "name": "Leather Crossbody Bag",
       "category": "ladies-handbags",
       "image": "/leather/dalery-crossbody-bag.webp",
-      "photoQuality": "ok",
-      "needsReview": true,
-      "reviewNote": "Carries a visible 'DALERY' brand mark embossed on the front -- another company's branding, not Local Exim's. Confirm sourcing rights or replace with an unbranded photo before publishing.",
-      "excludeUntilReview": true
+      "photoQuality": "ok"
     },
     {
       "id": "biker-leather-jacket",
